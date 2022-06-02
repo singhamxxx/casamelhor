@@ -1,3 +1,26 @@
 from django.contrib import admin
+from django.contrib.auth.models import Permission
+from .models import *
+from .forms import RegisterForm, AdminForm
 
-# Register your models here.
+
+class RoleAdmin(admin.ModelAdmin):
+    list_display = ["id", "role"]
+    search_fields = ["email", "phone"]
+
+    def get_ordering(self, request):
+        return ["-id"]
+
+
+class UserAdmin(admin.ModelAdmin):
+    form = AdminForm
+    list_display = ["id", "email", "phone", 'is_active']
+    search_fields = ["email", "phone"]
+
+    def get_ordering(self, request):
+        return ["-id"]
+
+
+admin.site.register(User, UserAdmin)
+admin.site.register(Role, RoleAdmin)
+admin.site.register(Permission)

@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('casamelhor.account.urls')),
+    path('api/v1/account/', include(("Casamelhor.account.urls", "account"), namespace="account")),
 ]
