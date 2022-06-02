@@ -8,6 +8,7 @@ from .middleware import *
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from datetime import datetime
 from django.shortcuts import render
+from django.db.models import Q
 
 
 def index(request):
@@ -35,7 +36,7 @@ def registration_view(request, form):
         user = User.objects.get(email=data['email'])
         user.save()
         token = default_token_generator.make_token(user)
-        url = f"http://192.168.29.72:8000/api/v1/account/user/email/verify/?token={token}&email={user.email}"
+        url = f"https://casamelhor.onrender.com/api/v1/account/user/email/verify/?token={token}&email={user.email}"
         _send_account_confirmation_email(user, url)
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
@@ -91,7 +92,7 @@ def resend_email_view(request):
     user = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email))
     if user.exists():
         token = default_token_generator.make_token(user.first())
-        url = f"http://192.168.29.72:8000/api/v1/account/user/email/verify/?token={token}&email={user.first().email}"
+        url = f"https://casamelhor.onrender.com/api/v1/account/user/email/verify/?token={token}&email={user.first().email}"
         _send_account_confirmation_email(user.first(), url)
         return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
@@ -118,7 +119,7 @@ def user_forgot_password_email_send_view(request):
     if user.exists():
         if user.first().is_email and user.first().is_phone:
             token = default_token_generator.make_token(user.first())
-            url = f"http://192.168.29.72:8000/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
+            url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
             _send_account_confirmation_email(user.first(), url)
             return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
