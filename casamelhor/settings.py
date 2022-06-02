@@ -73,9 +73,12 @@ WSGI_APPLICATION = 'casamelhor.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+Internal_db = 'postgres://root:2AOF1HCjNUPgZaypHiYl63QU4beHHrVz@dpg-cabl8o46fj38qlotfrdg-a/casamelhor'
+External_db = 'postgres://root:2AOF1HCjNUPgZaypHiYl63QU4beHHrVz@dpg-cabl8o46fj38qlotfrdg-a.oregon-postgres.render.com/casamelhor'
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://root:2AOF1HCjNUPgZaypHiYl63QU4beHHrVz@dpg-cabl8o46fj38qlotfrdg-a/casamelhor', conn_max_age=600)
+    'default': dj_database_url.config(default=Internal_db, conn_max_age=600)
 }
+AUTH_USER_MODEL = 'account.User'
 
 
 # Password validation
