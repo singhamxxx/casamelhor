@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-7y3@ul_h@am97^hx^i8^=+t=i^t&u6siw9a6i1_3l2h2-9hfut'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -73,8 +73,8 @@ WSGI_APPLICATION = 'casamelhor.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-Internal_db = 'postgres://root:2AOF1HCjNUPgZaypHiYl63QU4beHHrVz@dpg-cabl8o46fj38qlotfrdg-a/casamelhor'
-External_db = 'postgres://root:2AOF1HCjNUPgZaypHiYl63QU4beHHrVz@dpg-cabl8o46fj38qlotfrdg-a.oregon-postgres.render.com/casamelhor'
+Internal_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a/casamelhor_bop5'
+External_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a.oregon-postgres.render.com/casamelhor_bop5'
 DATABASES = {
     'default': dj_database_url.config(default=Internal_db, conn_max_age=600)
 }
