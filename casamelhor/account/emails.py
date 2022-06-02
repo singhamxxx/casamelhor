@@ -4,7 +4,7 @@ from templated_email import send_templated_mail
 def get_email_context(user, url):
     return {
         "template_name": "account/confirm",
-        "from_email": "mrmarket@manicmarket.com",
+        "from_email": "sales.shubhan@gmail.com",
         "recipient_list": [user.email],
         "context": {
             'username': user.username,
