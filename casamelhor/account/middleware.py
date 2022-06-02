@@ -51,3 +51,15 @@ class UserLoginMiddleware(MiddlewareMixin):
                 error = form.errors
                 error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
                 return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+
+
+class UserEmailVerificationMiddleware(MiddlewareMixin):
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        if request.method == "POST":
+            form = UserEmailVerificationForm(data=request.data)
+            if form.is_valid():
+                return view_func(request, form)
+            else:
+                error = form.errors
+                error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
+                return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)

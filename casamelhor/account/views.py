@@ -9,6 +9,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from datetime import datetime
 from django.shortcuts import render
 from django.db.models import Q
+from random import randint
 
 
 def index(request):
@@ -33,11 +34,11 @@ def registration_view(request, form):
     if serializer.is_valid():
         serializer.save()
         data = serializer.data
+        otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
         user = User.objects.get(email=data['email'])
+        user.email_otp = otp
         user.save()
-        token = default_token_generator.make_token(user)
-        url = f"https://casamelhor.onrender.com/api/v1/account/user/email/verify/?token={token}&email={user.email}"
-        _send_account_confirmation_email(user, url)
+        _send_account_confirmation_email(user, otp)
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
         error = serializer.errors
@@ -62,39 +63,43 @@ def user_login_view(request, form):
             serializer["token"] = token['access']
             data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
             return Response(data, status=200)
-        return Response(
-            {"data": {'email': user_obj.email, 'is_email': user_obj.is_email}, "message": "Email not verified",
-             "isSuccess": False,
-             "status": 200}, status=200)
+        return Response({"data": {'email': user_obj.email, 'is_email': user_obj.is_email}, "message": "Email not verified", "isSuccess": False,
+                         "status": 200}, status=200)
     else:
         return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
 
 
-@api_view(['GET'])
-def email_verification_view(request):
-    token = request.GET.get('token')
-    email = request.GET.get('email')
-    user = User.objects.filter(email=email)
-    if user.exists():
-        if not user.first().is_email:
-            if default_token_generator.check_token(user.first(), token):
-                user.update(is_email=True, updated_at=datetime.now())
-                return Response({"data": None, "message": "Successfully verified", "isSuccess": True, "status": 200},
-                                status=200)
-            return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
-        return Response({"data": None, "message": "Email Already verified", "isSuccess": False, "status": 200}, status=200)
-    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 404}, status=200)
+@api_view(['POST'])
+@decorator_from_middleware(UserEmailVerificationMiddleware)
+def email_verification_view(request, form):
+    otp = form.cleaned_data['otp']
+    email = form.cleaned_data['email']
+    user = User.objects.filter(email=email).first()
+    if user.is_email:
+        return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
+    if not user.email_otp:
+        return Response({"data": None, "message": "Please Resend Email otp", "isSuccess": True, "status": 200}, status=200)
+    if user.email_otp == otp:
+        user.email_otp = None
+        user.is_email = True
+        user.updated_at = datetime.now()
+        user.save()
+        return Response({"data": None, "message": "Successfully verified", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Invalid OTP", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['POST'])
-def resend_email_view(request):
-    phone_or_email = request.POST.get('phone_or_email')
-    user = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email))
-    if user.exists():
-        token = default_token_generator.make_token(user.first())
-        url = f"https://casamelhor.onrender.com/api/v1/account/user/email/verify/?token={token}&email={user.first().email}"
-        _send_account_confirmation_email(user.first(), url)
-        return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
+def resend_email_otp_view(request):
+    email = request.POST.get('email')
+    user = User.objects.filter(email=email).first()
+    if user:
+        if not user.is_email:
+            otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
+            user.email_otp = otp
+            user.save()
+            _send_account_confirmation_email(user, otp)
+            return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
+        return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
 
 
@@ -105,17 +110,15 @@ def user_password_change_view(request):
         if request.user.check_password(request.POST.get('old_password')):
             request.user.set_password(request.POST.get('password'))
             request.user.save()
-            return Response(
-                {"data": None, "isSuccess": True, "message": "Successfully password changed", "status": 200},
-                status=200)
+            return Response({"data": None, "isSuccess": True, "message": "Successfully password changed", "status": 200}, status=200)
         return Response({"data": None, "isSuccess": True, "message": "Incorrect password", "status": 200}, status=200)
     return Response({"data": None, "message": "Permission Denied", "isSuccess": False, "status": 500}, status=200)
 
 
 @api_view(['POST'])
 def user_forgot_password_email_send_view(request):
-    phone_or_email = request.POST.get('phone_or_email')
-    user = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email))
+    email = request.POST.get('email')
+    user = User.objects.filter(email=email)
     if user.exists():
         if user.first().is_email and user.first().is_phone:
             token = default_token_generator.make_token(user.first())
@@ -140,4 +143,3 @@ def user_forgot_password_view(request):
             return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
-

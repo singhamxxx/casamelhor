@@ -8,7 +8,11 @@
 {% load i18n %}
 {% load i18n_address_tags %}{% load static %}
 <div>
-  <a href="{{url}}">Confirm Verification</a>
+    {% if otp %}
+        <h2>Your Email verification One time password is <b>{{otp}}</b></h2>
+    {% elif url %}
+        <a href="{{url}}">Reset Password</a>
+    {% endif %}
 </div>
 </body>
 </html>

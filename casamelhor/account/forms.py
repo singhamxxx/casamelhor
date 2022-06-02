@@ -53,3 +53,16 @@ class UserLoginForm(forms.Form):
         return cleaned_data
 
 
+class UserEmailVerificationForm(forms.Form):
+    email = forms.EmailField(required=True)
+    otp = forms.IntegerField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['email', 'otp']
+
+    def clean(self):
+        cleaned_data = super(UserEmailVerificationForm, self).clean()
+        if not User.objects.filter(email=cleaned_data['email']).exists():
+            raise forms.ValidationError("User is not Exists!!!")
+        return cleaned_data
