@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'casamelhor.wsgi.application'
 Internal_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a/casamelhor_bop5'
 External_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a.oregon-postgres.render.com/casamelhor_bop5'
 DATABASES = {
-    'default': dj_database_url.config(default=Internal_db, conn_max_age=600)
+    'default': dj_database_url.config(default=External_db, conn_max_age=600)
 }
 AUTH_USER_MODEL = 'account.User'
 
