@@ -38,7 +38,7 @@ def registration_view(request, form):
         user = User.objects.get(email=data['email'])
         user.email_otp = otp
         user.save()
-        _send_account_confirmation_email(user, otp)
+        _send_account_confirmation_email(user, otp=otp)
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
         error = serializer.errors
@@ -97,7 +97,7 @@ def resend_email_otp_view(request):
             otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
             user.email_otp = otp
             user.save()
-            _send_account_confirmation_email(user, otp)
+            _send_account_confirmation_email(user, otp=otp)
             return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
         return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
@@ -123,7 +123,7 @@ def user_forgot_password_email_send_view(request):
         if user.first().is_email and user.first().is_phone:
             token = default_token_generator.make_token(user.first())
             url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
-            _send_account_confirmation_email(user.first(), url)
+            _send_account_confirmation_email(user.first(), url=url)
             return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
