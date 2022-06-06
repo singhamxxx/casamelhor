@@ -34,11 +34,6 @@ def registration_view(request, form):
     if serializer.is_valid():
         serializer.save()
         data = serializer.data
-        otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
-        user = User.objects.get(email=data['email'])
-        user.email_otp = otp
-        user.save()
-        _send_account_confirmation_email(user, otp=otp)
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
         error = serializer.errors
@@ -58,10 +53,17 @@ def user_login_view(request, form):
             token = serializer.validate({'email': user_obj.email, 'password': password})
             user_obj.last_login = datetime.now()
             user_obj.login_ip = get_client_ip(request)
-            user_obj.save()
-            serializer = AuthUserSerializer(instance=user_obj, many=False).data
-            serializer["token"] = token['access']
-            data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
+            if not user_obj.is_email:
+                otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
+                user_obj.email_otp = otp
+                user_obj.save()
+                _send_account_confirmation_email(user_obj, otp=otp)
+                data = {'data': None, "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
+            else:
+                user_obj.save()
+                serializer = AuthUserSerializer(instance=user_obj, many=False).data
+                serializer["token"] = token['access']
+                data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
             return Response(data, status=200)
         return Response({"data": {'email': user_obj.email, 'is_email': user_obj.is_email}, "message": "Email not verified", "isSuccess": False,
                          "status": 200}, status=200)
@@ -74,18 +76,27 @@ def user_login_view(request, form):
 def email_verification_view(request, form):
     otp = form.cleaned_data['otp']
     email = form.cleaned_data['email']
+    password = form.cleaned_data['password']
     user = User.objects.filter(email=email).first()
-    if user.is_email:
-        return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
-    if not user.email_otp:
-        return Response({"data": None, "message": "Please Resend Email otp", "isSuccess": True, "status": 200}, status=200)
-    if user.email_otp == otp:
-        user.email_otp = None
-        user.is_email = True
-        user.updated_at = datetime.now()
-        user.save()
-        return Response({"data": None, "message": "Successfully verified", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Invalid OTP", "isSuccess": False, "status": 400}, status=200)
+    if user.check_password(password):
+        if user.is_email:
+            return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
+        if not user.email_otp:
+            return Response({"data": None, "message": "Please Resend Email otp", "isSuccess": True, "status": 200}, status=200)
+        if user.email_otp == otp:
+            serializer = TokenObtainPairSerializer(data={'email': user.email, 'password': password})
+            token = serializer.validate({'email': user.email, 'password': password})
+            user.last_login = datetime.now()
+            user.login_ip = get_client_ip(request)
+            user.email_otp = None
+            user.is_email = True
+            user.updated_at = datetime.now()
+            user.save()
+            serializer = AuthUserSerializer(instance=user, many=False).data
+            serializer["token"] = token['access']
+            return Response({'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Invalid OTP", "isSuccess": False, "status": 400}, status=200)
+    return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
 
 
 @api_view(['POST'])

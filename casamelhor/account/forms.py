@@ -55,11 +55,12 @@ class UserLoginForm(forms.Form):
 
 class UserEmailVerificationForm(forms.Form):
     email = forms.EmailField(required=True)
+    password = forms.CharField(required=True, widget=forms.PasswordInput())
     otp = forms.IntegerField(required=True)
 
     class Meta:
         model = User
-        fields = ['email', 'otp']
+        fields = ['email', 'password', 'otp']
 
     def clean(self):
         cleaned_data = super(UserEmailVerificationForm, self).clean()
