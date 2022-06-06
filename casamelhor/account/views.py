@@ -48,25 +48,23 @@ def user_login_view(request, form):
     password = form.cleaned_data['password']
     user_obj = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email)).first()
     if user_obj.check_password(password):
-        if user_obj.is_email:
+        if not user_obj.is_email:
+            otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
+            user_obj.email_otp = otp
+            user_obj.save()
+            _send_account_confirmation_email(user_obj, otp=otp)
+            data = {'data': None, "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
+        else:
             serializer = TokenObtainPairSerializer(data={'email': user_obj.email, 'password': password})
             token = serializer.validate({'email': user_obj.email, 'password': password})
             user_obj.last_login = datetime.now()
             user_obj.login_ip = get_client_ip(request)
-            if not user_obj.is_email:
-                otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
-                user_obj.email_otp = otp
-                user_obj.save()
-                _send_account_confirmation_email(user_obj, otp=otp)
-                data = {'data': None, "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
-            else:
-                user_obj.save()
-                serializer = AuthUserSerializer(instance=user_obj, many=False).data
-                serializer["token"] = token['access']
-                data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
-            return Response(data, status=200)
-        return Response({"data": {'email': user_obj.email, 'is_email': user_obj.is_email}, "message": "Email not verified", "isSuccess": False,
-                         "status": 200}, status=200)
+            user_obj.save()
+            serializer = AuthUserSerializer(instance=user_obj, many=False).data
+            serializer["token"] = token['access']
+            data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
+        return Response(data, status=200)
+
     else:
         return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
 
