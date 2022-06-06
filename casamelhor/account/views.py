@@ -152,3 +152,4 @@ def user_forgot_password_view(request):
             return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
+
