@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -187,6 +188,11 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "https://casamelhor.onrender.com",
 ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^http?:\/\/\w+(\.\w+)*(:[0-9]+)?(\/.*)?$",
+]
+
 
 CORS_ALLOW_METHODS = [
     'DELETE',
