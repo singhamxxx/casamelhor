@@ -53,7 +53,8 @@ def user_login_view(request, form):
             user_obj.email_otp = otp
             user_obj.save()
             _send_account_confirmation_email(user_obj, otp=otp)
-            data = {'data': None, "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
+            data = {'data': {'email': user_obj.email, 'is_email': user_obj.is_email},
+                    "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
         else:
             serializer = TokenObtainPairSerializer(data={'email': user_obj.email, 'password': password})
             token = serializer.validate({'email': user_obj.email, 'password': password})
