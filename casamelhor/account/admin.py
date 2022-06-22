@@ -6,7 +6,6 @@ from .forms import AdminForm
 
 class RoleAdmin(admin.ModelAdmin):
     list_display = ["id", "role"]
-    search_fields = ["email", "phone"]
 
     def get_ordering(self, request):
         return ["-id"]

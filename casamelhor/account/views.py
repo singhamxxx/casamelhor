@@ -54,7 +54,8 @@ def user_login_view(request, form):
             user_obj.save()
             _send_account_confirmation_email(user_obj, otp=otp)
             data = {'data': {'email': user_obj.email, 'is_email': user_obj.is_email},
-                    "message": "Verification mail sent  on your mail, please verify", "isSuccess": True, "status": 200}
+                    "message": "Verification mail sent  on your mail, please verify",
+                    "isSuccess": True, "status": 200}
         else:
             serializer = TokenObtainPairSerializer(data={'email': user_obj.email, 'password': password})
             token = serializer.validate({'email': user_obj.email, 'password': password})
@@ -154,3 +155,8 @@ def user_forgot_password_view(request):
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
 
+
+@api_view(['GET'])
+def user_permission_view(request):
+    serializer = AuthUserGroupOFPermissionsSerializer(instance=Group.objects.filter(), many=True).data
+    return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User, Permission, Group
 from django.contrib.auth.hashers import make_password
 
 
@@ -19,3 +19,15 @@ class AuthUserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data.get('password'))
         return super(AuthUserSerializer, self).create(validated_data)
+
+
+class AuthUserPermissionsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Permission
+        fields = "__all__"
+
+
+class AuthUserGroupOFPermissionsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Group
+        fields = "__all__"
