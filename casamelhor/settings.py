@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 s = os.environ.get('SECRET_KEY')
-# s = 'django-insecure-7y3@ul_h@am97^hx^i8^=+t=i^t&u6siw9a6i1_3l2h2-9hfut'
+# print('SECRET_KEY -=-=- ', s)
+s = 'django-insecure-7y3@ul_h@am97^hx^i8^=+t=i^t&u6siw9a6i1_3l2h2-9hfut'
 SECRET_KEY = s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -125,7 +126,7 @@ LOGGING = {
 Internal_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a/casamelhor_bop5'
 External_db = 'postgres://root:NaOltA4KiQk22YYTpdO9oyEbWr4Qd22H@dpg-cac4rofho1kqg0lf092g-a.oregon-postgres.render.com/casamelhor_bop5'
 DATABASES = {
-    'default': dj_database_url.config(default=Internal_db, conn_max_age=600)
+    'default': dj_database_url.config(default=External_db, conn_max_age=600)
 }
 AUTH_USER_MODEL = 'account.User'
 

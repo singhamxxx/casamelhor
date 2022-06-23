@@ -20,6 +20,6 @@ class UserAdmin(admin.ModelAdmin):
         return ["-id"]
 
 
-admin.site.register(User, UserAdmin)
-admin.site.register(Role, RoleAdmin)
+admin.site.register(User)
+admin.site.register(Role)
 admin.site.register(Permission)
