@@ -12,7 +12,6 @@ class RoleAdmin(admin.ModelAdmin):
 
 
 class UserAdmin(admin.ModelAdmin):
-    form = AdminForm
     list_display = ["id", "email", "phone", 'is_active']
     search_fields = ["email", "phone"]
 

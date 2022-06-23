@@ -153,10 +153,34 @@ def user_forgot_password_view(request):
                 return Response({"data": None, "message": "Successfully changed password", "isSuccess": True, "status": 200}, status=200)
             return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
         return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
+    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 404}, status=200)
 
 
 @api_view(['GET'])
-def user_permission_view(request):
-    serializer = AuthUserGroupOFPermissionsSerializer(instance=Group.objects.filter(), many=True).data
+def user_group_of_permissions_view(request, id=None):
+    many = True
+    if id:
+        if Group.objects.filter(id=id).exists():
+            obj = Group.objects.filter(id=id)
+            many = False
+        else:
+            return Response({"data": None, "message": "Permission`s Group not found", "isSuccess": False, "status": 404}, status=200)
+    else:
+        obj = Group.objects.filter()
+    serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
     return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
+
+
+@api_view(['GET'])
+def user_permission_view(request, id=None):
+    many = True
+    if id:
+        if Permission.objects.filter(id=id).exists():
+            obj = Permission.objects.filter(id=id)
+            many = False
+        else:
+            return Response({"data": None, "message": "Permission not found", "isSuccess": False, "status": 404}, status=200)
+    else:
+        obj = Permission.objects.filter()
+    serializer = AuthUserPermissionsSerializer(instance=obj, many=many).data
+    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
