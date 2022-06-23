@@ -35,10 +35,10 @@ class AuthUserPermissionsSerializer(serializers.ModelSerializer):
         return obj.first().name
 
     def get_codename(self, obj):
-        return obj.first().codename
+        return obj.first().codename if isinstance(obj, QuerySet) else obj.codename
 
     def get_content_type(self, obj):
-        return obj.first().content_type.app_label
+        return obj.first().content_type.app_label if isinstance(obj, QuerySet) else obj.content_type.app_label
 
 
 class AuthUserGroupOFPermissionsSerializer(serializers.ModelSerializer):

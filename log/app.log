@@ -906,3 +906,4 @@ Traceback (most recent call last):
 TypeError: 'flat' is not valid when values_list is called with more than one field.
 2022-06-23 10:27:18,590 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
 2022-06-23 10:27:19,022 Watching for file changes with StatReloader
+2022-06-23 11:13:22,930 Watching for file changes with StatReloader
