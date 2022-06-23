@@ -32,7 +32,7 @@ class AuthUserPermissionsSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_name(self, obj):
-        return obj.first().name
+        return obj.first().name if isinstance(obj, QuerySet) else obj.name
 
     def get_codename(self, obj):
         return obj.first().codename if isinstance(obj, QuerySet) else obj.codename
