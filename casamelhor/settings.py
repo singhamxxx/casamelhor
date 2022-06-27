@@ -22,10 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-s = os.environ.get('SECRET_KEY')
-# print('SECRET_KEY -=-=- ', s)
-s = 'django-insecure-7y3@ul_h@am97^hx^i8^=+t=i^t&u6siw9a6i1_3l2h2-9hfut'
-SECRET_KEY = s
+
+SECRET_KEY = 'django-insecure-7y3@ul_h@am97^hx^i8^=+t=i^t&u6siw9a6i1_3l2h2-9hfut'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -214,3 +212,4 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+# git push singhamxxx  -   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

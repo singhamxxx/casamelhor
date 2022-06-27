@@ -1541,3 +1541,12 @@ Traceback (most recent call last):
 TypeError: 'Group' object is not callable
 2022-06-27 07:25:18,625 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-06-27 07:25:19,102 Watching for file changes with StatReloader
+2022-06-27 07:47:18,526 Watching for file changes with StatReloader
+2022-06-27 07:47:56,065 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-06-27 07:47:56,592 Watching for file changes with StatReloader
+2022-06-27 07:48:30,949 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-06-27 07:48:44,916 Watching for file changes with StatReloader
+2022-06-27 07:52:08,045 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-27 07:52:08,651 Watching for file changes with StatReloader
+2022-06-27 07:54:57,342 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-27 07:54:57,799 Watching for file changes with StatReloader

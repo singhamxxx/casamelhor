@@ -163,51 +163,63 @@ def user_forgot_password_view(request):
 
 
 @api_view(['GET'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
 def user_group_of_permissions_view(request, id=None):
-    many = True
-    if id:
-        if Group.objects.filter(id=id).exists():
-            obj = Group.objects.filter(id=id)
-            many = False
+    if request.user.is_authenticated and request.user.is_superuser:
+        many = True
+        if id:
+            if Group.objects.filter(id=id).exists():
+                obj = Group.objects.filter(id=id)
+                many = False
+            else:
+                return Response({"data": None, "message": "Permission`s Group not found", "isSuccess": False, "status": 404}, status=200)
         else:
-            return Response({"data": None, "message": "Permission`s Group not found", "isSuccess": False, "status": 404}, status=200)
-    else:
-        obj = Group.objects.filter()
-    serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
-    return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
+            obj = Group.objects.filter()
+        serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
+        return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['GET'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
 def user_permission_view(request, id=None):
-    many = True
-    if id:
-        if Permission.objects.filter(id=id).exists():
-            obj = Permission.objects.filter(id=id)
-            many = False
+    if request.user.is_authenticated and request.user.is_superuser:
+        many = True
+        if id:
+            if Permission.objects.filter(id=id).exists():
+                obj = Permission.objects.filter(id=id)
+                many = False
+            else:
+                return Response({"data": None, "message": "Permission not found", "isSuccess": False, "status": 404}, status=200)
         else:
-            return Response({"data": None, "message": "Permission not found", "isSuccess": False, "status": 404}, status=200)
-    else:
-        obj = Permission.objects.filter()
-    serializer = AuthUserPermissionsSerializer(instance=obj, many=many).data
-    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+            obj = Permission.objects.filter()
+        serializer = AuthUserPermissionsSerializer(instance=obj, many=many).data
+        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['POST'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
 @decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
 def create_user_group_of_permissions_view(request, form):
-    group, created = Group.objects.get_or_create(name=form.cleaned_data['name'])
-    group.permissions.set(form.cleaned_data['permissions'])
-    serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
-    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    if request.user.is_authenticated and request.user.is_superuser:
+        group, created = Group.objects.get_or_create(name=form.cleaned_data['name'])
+        group.permissions.set(form.cleaned_data['permissions'])
+        serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
+        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['PUT'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
 @decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
 def edit_user_group_of_permissions_view(request, id, form):
-    group = Group.objects.get(id=id)
-    if group.name != form.cleaned_data['name']:
-        group.name = form.cleaned_data['name']
-        group.save()
-    group.permissions.set(form.cleaned_data['permissions'])
-    serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
-    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    if request.user.is_authenticated and request.user.is_superuser:
+        group = Group.objects.get(id=id)
+        if group.name != form.cleaned_data['name']:
+            group.name = form.cleaned_data['name']
+            group.save()
+        group.permissions.set(form.cleaned_data['permissions'])
+        serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
+        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
