@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import User, Permission, Group
+from .models import User
+from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.hashers import make_password
 from django.db.models.query import QuerySet
 
@@ -11,15 +12,31 @@ class AuthUserSerializer(serializers.ModelSerializer):
         help_text='Leave empty if no change needed',
         style={'input_type': 'password', 'placeholder': 'Password'}
     )
+    user_permissions = serializers.ListField(write_only=True, required=False)
+    groups = serializers.ListField(write_only=True, required=False)
 
     class Meta:
         model = User
         extra_kwargs = {'password': {'write_only': True}}
         fields = "__all__"
+        extra_fields = ['permissions', 'groups']
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data.get('password'))
-        return super(AuthUserSerializer, self).create(validated_data)
+        permissions = None
+        groups = None
+        if 'user_permissions' in validated_data and validated_data['user_permissions']:
+            permissions = validated_data['user_permissions']
+        if 'groups' in validated_data and validated_data['groups']:
+            groups = validated_data['groups']
+        validated_data.pop('groups')
+        validated_data.pop('user_permissions')
+        obj = super(AuthUserSerializer, self).create(validated_data)
+        if permissions:
+            obj.user_permissions.set(permissions)
+        if groups:
+            obj.groups.set(groups)
+        return obj
 
 
 class AuthUserPermissionsSerializer(serializers.ModelSerializer):

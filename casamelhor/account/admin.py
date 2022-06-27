@@ -1,7 +1,5 @@
 from django.contrib import admin
-from django.contrib.auth.models import Permission
 from .models import *
-from .forms import AdminForm
 
 
 class RoleAdmin(admin.ModelAdmin):
@@ -19,6 +17,6 @@ class UserAdmin(admin.ModelAdmin):
         return ["-id"]
 
 
-admin.site.register(User)
-admin.site.register(Role)
+admin.site.register(User, UserAdmin)
+admin.site.register(Role, RoleAdmin)
 admin.site.register(Permission)

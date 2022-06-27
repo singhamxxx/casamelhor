@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from django.utils.decorators import decorator_from_middleware
-from rest_framework.response import Response
+from django.contrib.auth.models import Group, Permission
 from .emails import _send_account_confirmation_email
 from .serializer import *
 from django.contrib.auth.tokens import default_token_generator
@@ -29,6 +29,12 @@ def get_client_ip(request):
 @decorator_from_middleware(RegisterMiddleware)
 def registration_view(request, form):
     form.cleaned_data["login_ip"] = get_client_ip(request)
+    if 'user_permissions' in form.cleaned_data and form.cleaned_data['user_permissions']:
+        form.cleaned_data['user_permissions'] = [i.id for i in form.cleaned_data['user_permissions']]
+    groups = [form.cleaned_data['role'].id]
+    if 'groups' in form.cleaned_data and form.cleaned_data['groups']:
+        groups = groups.extend([i.id for i in form.cleaned_data['groups']])
+    form.cleaned_data['groups'] = groups
     form.cleaned_data['role'] = form.cleaned_data['role'].id
     serializer = AuthUserSerializer(data=form.cleaned_data)
     if serializer.is_valid():
@@ -37,7 +43,7 @@ def registration_view(request, form):
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
         error = serializer.errors
-        error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
+        error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
         return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 
@@ -183,4 +189,25 @@ def user_permission_view(request, id=None):
     else:
         obj = Permission.objects.filter()
     serializer = AuthUserPermissionsSerializer(instance=obj, many=many).data
+    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+
+
+@api_view(['POST'])
+@decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
+def create_user_group_of_permissions_view(request, form):
+    group, created = Group.objects.get_or_create(name=form.cleaned_data['name'])
+    group.permissions.set(form.cleaned_data['permissions'])
+    serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
+    return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+
+
+@api_view(['PUT'])
+@decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
+def edit_user_group_of_permissions_view(request, id, form):
+    group = Group.objects.get(id=id)
+    if group.name != form.cleaned_data['name']:
+        group.name = form.cleaned_data['name']
+        group.save()
+    group.permissions.set(form.cleaned_data['permissions'])
+    serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
     return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)

@@ -37,7 +37,7 @@ class RegisterMiddleware(MiddlewareMixin):
                 return view_func(request, form)
             else:
                 error = form.errors
-                error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
+                error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
                 return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 
@@ -49,7 +49,7 @@ class UserLoginMiddleware(MiddlewareMixin):
                 return view_func(request, form)
             else:
                 error = form.errors
-                error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
+                error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
                 return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 
@@ -61,5 +61,19 @@ class UserEmailVerificationMiddleware(MiddlewareMixin):
                 return view_func(request, form)
             else:
                 error = form.errors
-                error = error["__all__"][0] if "__all__" in error else "".join(key + f" {error[key][0]}\n" for key in error)
+                error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
                 return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+
+
+class AuthUserGroupOFPermissionsMiddleware(MiddlewareMixin):
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        form = AuthUserGroupOFPermissionsForm(data=request.data)
+        if form.is_valid():
+            if request.method == "POST":
+                return view_func(request, form)
+            elif request.method == "PUT":
+                return view_func(request, view_kwargs['id'], form)
+        else:
+            error = form.errors
+            error = {'error': error["__all__"][0]} if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)

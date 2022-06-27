@@ -1,5 +1,6 @@
 from django import forms
 from .models import User, Role
+from django.contrib.auth.models import Group, Permission
 from django.db.models import Q
 
 
@@ -16,6 +17,8 @@ class RegisterForm(forms.ModelForm):
     email = forms.EmailField(required=True)
     first_name = forms.CharField(required=True)
     role = forms.ModelChoiceField(queryset=Role.objects.all())
+    user_permissions = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=False)
+    groups = forms.ModelMultipleChoiceField(queryset=Group.objects.all(), required=False)
     image = forms.ImageField(required=False)
     password = forms.CharField(required=True)
     is_email = forms.BooleanField(required=False)
@@ -23,7 +26,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('phone', 'email', 'password', 'first_name', 'role', 'image', 'is_email', 'is_phone')
+        fields = ('phone', 'email', 'password', 'first_name', 'role', 'image', 'is_email', 'is_phone', 'user_permissions', 'groups')
 
     def clean(self):
         cleaned_data = super(RegisterForm, self).clean()
@@ -66,4 +69,19 @@ class UserEmailVerificationForm(forms.Form):
         cleaned_data = super(UserEmailVerificationForm, self).clean()
         if not User.objects.filter(email=cleaned_data['email']).exists():
             raise forms.ValidationError("User is not Exists!!!")
+        return cleaned_data
+
+
+class AuthUserGroupOFPermissionsForm(forms.Form):
+    name = forms.CharField(required=True)
+    permissions = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=True)
+
+    class Meta:
+        model = Group
+        fields = ['name', 'permissions']
+
+    def clean(self):
+        cleaned_data = super(AuthUserGroupOFPermissionsForm, self).clean()
+        if Group.objects.filter(name=cleaned_data['name']).exists():
+            raise forms.ValidationError("User permission`s group is already Exists!!!")
         return cleaned_data

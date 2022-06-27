@@ -11,6 +11,8 @@ urlpatterns = [
     path('user/forgot-password/', user_forgot_password_email_send_view),
     path('user/forgot-password/verify/', user_forgot_password_view),
     path('role/permission/group/get/', user_group_of_permissions_view),
+    path('role/permission/group/create/', create_user_group_of_permissions_view),
+    path('role/permission/group/edit/<int:id>/', edit_user_group_of_permissions_view),
     path('role/permission/group/get/<int:id>/', user_group_of_permissions_view),
     path('role/permission/get/', user_permission_view),
     path('role/permission/get/<int:id>/', user_permission_view),
