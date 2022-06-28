@@ -1550,3 +1550,4 @@ TypeError: 'Group' object is not callable
 2022-06-27 07:52:08,651 Watching for file changes with StatReloader
 2022-06-27 07:54:57,342 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-06-27 07:54:57,799 Watching for file changes with StatReloader
+2022-06-27 08:45:22,359 Watching for file changes with StatReloader

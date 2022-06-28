@@ -19,14 +19,13 @@ class RegisterForm(forms.ModelForm):
     role = forms.ModelChoiceField(queryset=Role.objects.all())
     user_permissions = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=False)
     groups = forms.ModelMultipleChoiceField(queryset=Group.objects.all(), required=False)
-    image = forms.ImageField(required=False)
     password = forms.CharField(required=True)
     is_email = forms.BooleanField(required=False)
     is_phone = forms.BooleanField(required=False)
 
     class Meta:
         model = User
-        fields = ('phone', 'email', 'password', 'first_name', 'role', 'image', 'is_email', 'is_phone', 'user_permissions', 'groups')
+        fields = ('phone', 'email', 'password', 'first_name', 'role', 'is_email', 'is_phone', 'user_permissions', 'groups')
 
     def clean(self):
         cleaned_data = super(RegisterForm, self).clean()
@@ -84,4 +83,20 @@ class AuthUserGroupOFPermissionsForm(forms.Form):
         cleaned_data = super(AuthUserGroupOFPermissionsForm, self).clean()
         if Group.objects.filter(name=cleaned_data['name']).exists():
             raise forms.ValidationError("User permission`s group is already Exists!!!")
+        return cleaned_data
+
+
+class AuthUserProfileForm(forms.Form):
+    image = forms.ImageField(required=False)
+    first_name = forms.CharField(required=True)
+    employee_id = forms.CharField(required=True)
+    department = forms.CharField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['image', 'first_name', 'employee_id', 'department']
+
+    def clean(self):
+        cleaned_data = super(AuthUserProfileForm, self).clean()
+
         return cleaned_data

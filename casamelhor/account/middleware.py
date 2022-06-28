@@ -65,6 +65,17 @@ class UserEmailVerificationMiddleware(MiddlewareMixin):
                 return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 
+class AuthUserProfileMiddleware(MiddlewareMixin):
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        form = AuthUserProfileForm(data=request.data)
+        if form.is_valid():
+            return view_func(request, form)
+        else:
+            error = form.errors
+            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+
+
 class AuthUserGroupOFPermissionsMiddleware(MiddlewareMixin):
     def process_view(self, request, view_func, view_args, view_kwargs):
         form = AuthUserGroupOFPermissionsForm(data=request.data)

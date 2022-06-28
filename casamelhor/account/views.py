@@ -124,6 +124,8 @@ def resend_email_otp_view(request):
 @decorator_from_middleware(TokenAuthenticationMiddleware)
 def user_password_change_view(request):
     if request.user.is_authenticated:
+        if request.POST.get('phone'):
+            request.user.phone = request.POST.get('phone')
         if request.user.check_password(request.POST.get('old_password')):
             request.user.set_password(request.POST.get('password'))
             request.user.save()
@@ -177,6 +179,21 @@ def user_group_of_permissions_view(request, id=None):
             obj = Group.objects.filter()
         serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
         return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+
+
+@api_view(['PUT'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
+def user_update_profile_view(request, form):
+    if request.user.is_authenticated:
+        serializer = AuthUserSerializer(instance=request.user, data=form.cleaned_data, many=False)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"data": serializer.data, "message": "Successfully update profile", "isSuccess": True, "status": 200}, status=200)
+        else:
+            error = serializer.errors
+            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
     return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
 
 
