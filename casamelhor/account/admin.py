@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import *
+from .forms import AdminForm
 
 
 class RoleAdmin(admin.ModelAdmin):
@@ -12,6 +13,7 @@ class RoleAdmin(admin.ModelAdmin):
 class UserAdmin(admin.ModelAdmin):
     list_display = ["id", "email", "phone", 'is_active']
     search_fields = ["email", "phone"]
+    form = AdminForm
 
     def get_ordering(self, request):
         return ["-id"]

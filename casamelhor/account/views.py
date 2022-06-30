@@ -179,22 +179,26 @@ def user_group_of_permissions_view(request, id=None):
             obj = Group.objects.filter()
         serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
         return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['PUT'])
 @decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_update_profile_view(request, form):
+def user_update_profile_view(request):
     if request.user.is_authenticated:
-        serializer = AuthUserSerializer(instance=request.user, data=form.cleaned_data, many=False)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully update profile", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+        if 'first_name' in request.POST and request.POST['first_name']:
+            request.user.first_name = request.POST['first_name']
+        if 'employee_id' in request.POST and request.POST['employee_id']:
+            request.user.employee_id = request.POST['employee_id']
+        if 'department' in request.POST and request.POST['department']:
+            request.user.department = request.POST['department']
+        if 'image' in request.FILES and request.FILES['image']:
+            image = request.FILES['image']
+            request.user.image.save(image.name, image)
+        request.user.save()
+        serializer = AuthUserSerializer(instance=request.user, many=False).data
+        return Response({"data": serializer, "message": "Successfully profile update", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['GET'])
@@ -239,4 +243,21 @@ def edit_user_group_of_permissions_view(request, id, form):
         group.permissions.set(form.cleaned_data['permissions'])
         serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
         return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+
+
+@api_view(['POST'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
+@decorator_from_middleware(VaultMiddleware)
+def create_user_vault_view(request, form):
+    if request.user.is_authenticated:
+        form.cleaned_data['user'] = request.user.id
+        serializer = VaultSerializer(data=form.cleaned_data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"data": serializer.data, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+        else:
+            error = serializer.errors
+            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
     return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User, Vault
 from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.hashers import make_password
 from django.db.models.query import QuerySet
@@ -71,3 +71,11 @@ class AuthUserGroupOFPermissionsSerializer(serializers.ModelSerializer):
 
     def get_permissions(self, obj):
         return list(obj.first().permissions.all().values('id', 'name')) if isinstance(obj, QuerySet) else list(obj.permissions.all().values('id', 'name'))
+
+
+class VaultSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Vault
+        fields = "__all__"
+

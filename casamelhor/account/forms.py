@@ -1,5 +1,5 @@
 from django import forms
-from .models import User, Role
+from .models import User, Role, document_choices, Vault
 from django.contrib.auth.models import Group, Permission
 from django.db.models import Q
 
@@ -86,7 +86,9 @@ class AuthUserGroupOFPermissionsForm(forms.Form):
         return cleaned_data
 
 
-class AuthUserProfileForm(forms.Form):
+class AuthUserProfileForm(forms.ModelForm):
+    phone = forms.CharField(required=False)
+    email = forms.EmailField(required=False)
     image = forms.ImageField(required=False)
     first_name = forms.CharField(required=True)
     employee_id = forms.CharField(required=True)
@@ -94,9 +96,37 @@ class AuthUserProfileForm(forms.Form):
 
     class Meta:
         model = User
-        fields = ['image', 'first_name', 'employee_id', 'department']
+        fields = ['phone', 'email', 'image', 'first_name', 'employee_id', 'department']
 
     def clean(self):
         cleaned_data = super(AuthUserProfileForm, self).clean()
+        return cleaned_data
 
+
+class VaultForm(forms.ModelForm):
+    is_indian = forms.BooleanField(required=True)
+    type = forms.ChoiceField(choices=document_choices, required=False)
+    document = forms.ImageField(required=False)
+    passport_photo = forms.ImageField(required=False)
+    visa_photo = forms.ImageField(required=False)
+    address1 = forms.CharField(widget=forms.TextInput(), required=False)
+    address2 = forms.CharField(widget=forms.TextInput(), required=False)
+    city = forms.CharField(required=False)
+    country = forms.CharField(required=False)
+    zip_code = forms.CharField(required=False)
+    passport_number = forms.CharField(required=False)
+    passport_country_of_issued = forms.CharField(required=False)
+    passport_date_of_issued = forms.DateField(input_formats="%Y-%m-%d", required=False)
+    passport_expire_date = forms.DateField(input_formats="%Y-%m-%d", required=False)
+    visa_issued_date = forms.DateField(input_formats="%Y-%m-%d", required=False)
+    visa_expire_date = forms.DateField(input_formats="%Y-%m-%d", required=False)
+
+    class Meta:
+        model = Vault
+        fields = ['is_indian', 'type', 'document', 'passport_photo', 'visa_photo', 'address1', 'address2', 'city',
+                  'country', 'zip_code', 'passport_number', 'passport_country_of_issued', 'passport_date_of_issued',
+                  'passport_expire_date', 'visa_issued_date', 'visa_expire_date']
+
+    def clean(self):
+        cleaned_data = super(VaultForm, self).clean()
         return cleaned_data

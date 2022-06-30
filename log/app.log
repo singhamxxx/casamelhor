@@ -1551,3 +1551,1516 @@ TypeError: 'Group' object is not callable
 2022-06-27 07:54:57,342 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-06-27 07:54:57,799 Watching for file changes with StatReloader
 2022-06-27 08:45:22,359 Watching for file changes with StatReloader
+2022-06-28 12:43:38,234 Watching for file changes with StatReloader
+2022-06-29 07:03:54,451 Watching for file changes with StatReloader
+2022-06-29 07:38:45,512 Not Found: /favicon.ico
+2022-06-29 07:43:40,996 Internal Server Error: /admin/account/user/22/change/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 404, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 183, in render
+    template = context.template.engine.select_template(template_name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/engine.py", line 180, in select_template
+    raise TemplateDoesNotExist(', '.join(not_found))
+django.template.exceptions.TemplateDoesNotExist: versatileimagefield/forms/widgets/versatile_image.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 195, in render
+    return template.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 172, in render
+    return self._render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 994, in render
+    return render_value_in_context(output, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/base.py", line 973, in render_value_in_context
+    value = str(value)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/html.py", line 376, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/boundfield.py", line 93, in as_widget
+    return widget.render(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/versatileimagefield/widgets.py", line 137, in render
+    rendered = super(VersatileImagePPOIClickWidget, self).render(name, value, attrs=attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/widgets.py", line 247, in render
+    return self._render(self.template_name, context, renderer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/widgets.py", line 252, in _render
+    return mark_safe(renderer.render(template_name, context))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/renderers.py", line 25, in render
+    return template.render(context, request=request).strip()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: versatileimagefield/forms/widgets/versatile_image.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: versatileimagefield/forms/widgets/versatile_image.html
+2022-06-29 08:53:58,143 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/admin.py changed, reloading.
+2022-06-29 08:53:58,956 Watching for file changes with StatReloader
+2022-06-29 09:01:39,822 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+TypeError: user_update_profile_view() missing 1 required positional argument: 'form'
+2022-06-29 09:02:59,467 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 09:02:59,899 Watching for file changes with StatReloader
+2022-06-29 09:04:02,846 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:04:03,536 Watching for file changes with StatReloader
+2022-06-29 09:04:41,885 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 71, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 372, in full_clean
+    self._clean_fields()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 387, in _clean_fields
+    initial = self.get_initial_for_field(field, name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 485, in get_initial_for_field
+    value = self.initial.get(field_name, field.initial)
+AttributeError: 'User' object has no attribute 'get'
+2022-06-29 09:06:15,095 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:06:15,552 Watching for file changes with StatReloader
+2022-06-29 09:06:23,910 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 73, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 372, in full_clean
+    self._clean_fields()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 387, in _clean_fields
+    initial = self.get_initial_for_field(field, name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 485, in get_initial_for_field
+    value = self.initial.get(field_name, field.initial)
+AttributeError: 'User' object has no attribute 'get'
+2022-06-29 09:07:23,599 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:07:24,060 Watching for file changes with StatReloader
+2022-06-29 09:08:11,629 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 73, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 372, in full_clean
+    self._clean_fields()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 387, in _clean_fields
+    initial = self.get_initial_for_field(field, name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 485, in get_initial_for_field
+    value = self.initial.get(field_name, field.initial)
+AttributeError: 'User' object has no attribute 'get'
+2022-06-29 09:08:19,872 Watching for file changes with StatReloader
+2022-06-29 09:08:27,632 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 73, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 372, in full_clean
+    self._clean_fields()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 387, in _clean_fields
+    initial = self.get_initial_for_field(field, name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 485, in get_initial_for_field
+    value = self.initial.get(field_name, field.initial)
+AttributeError: 'User' object has no attribute 'get'
+2022-06-29 09:08:40,912 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:08:41,347 Watching for file changes with StatReloader
+2022-06-29 09:08:49,774 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 73, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 372, in full_clean
+    self._clean_fields()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 387, in _clean_fields
+    initial = self.get_initial_for_field(field, name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 485, in get_initial_for_field
+    value = self.initial.get(field_name, field.initial)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1416, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1435, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1306, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+2022-06-29 09:11:47,903 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:11:48,556 Watching for file changes with StatReloader
+2022-06-29 09:12:28,964 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:12:29,438 Watching for file changes with StatReloader
+2022-06-29 09:13:02,673 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 09:13:03,329 Watching for file changes with StatReloader
+2022-06-29 09:13:08,048 Importing BlpImagePlugin
+2022-06-29 09:13:08,059 Importing BmpImagePlugin
+2022-06-29 09:13:08,060 Importing BufrStubImagePlugin
+2022-06-29 09:13:08,060 Importing CurImagePlugin
+2022-06-29 09:13:08,061 Importing DcxImagePlugin
+2022-06-29 09:13:08,062 Importing DdsImagePlugin
+2022-06-29 09:13:08,062 Importing EpsImagePlugin
+2022-06-29 09:13:08,064 Importing FitsImagePlugin
+2022-06-29 09:13:08,064 Importing FitsStubImagePlugin
+2022-06-29 09:13:08,065 Importing FliImagePlugin
+2022-06-29 09:13:08,065 Importing FpxImagePlugin
+2022-06-29 09:13:08,066 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-29 09:13:08,066 Importing FtexImagePlugin
+2022-06-29 09:13:08,067 Importing GbrImagePlugin
+2022-06-29 09:13:08,068 Importing GifImagePlugin
+2022-06-29 09:13:08,068 Importing GribStubImagePlugin
+2022-06-29 09:13:08,068 Importing Hdf5StubImagePlugin
+2022-06-29 09:13:08,069 Importing IcnsImagePlugin
+2022-06-29 09:13:08,071 Importing IcoImagePlugin
+2022-06-29 09:13:08,072 Importing ImImagePlugin
+2022-06-29 09:13:08,073 Importing ImtImagePlugin
+2022-06-29 09:13:08,074 Importing IptcImagePlugin
+2022-06-29 09:13:08,074 Importing JpegImagePlugin
+2022-06-29 09:13:08,074 Importing Jpeg2KImagePlugin
+2022-06-29 09:13:08,074 Importing McIdasImagePlugin
+2022-06-29 09:13:08,075 Importing MicImagePlugin
+2022-06-29 09:13:08,076 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-29 09:13:08,076 Importing MpegImagePlugin
+2022-06-29 09:13:08,076 Importing MpoImagePlugin
+2022-06-29 09:13:08,077 Importing MspImagePlugin
+2022-06-29 09:13:08,077 Importing PalmImagePlugin
+2022-06-29 09:13:08,085 Importing PcdImagePlugin
+2022-06-29 09:13:08,086 Importing PcxImagePlugin
+2022-06-29 09:13:08,086 Importing PdfImagePlugin
+2022-06-29 09:13:08,096 Importing PixarImagePlugin
+2022-06-29 09:13:08,096 Importing PngImagePlugin
+2022-06-29 09:13:08,096 Importing PpmImagePlugin
+2022-06-29 09:13:08,096 Importing PsdImagePlugin
+2022-06-29 09:13:08,097 Importing SgiImagePlugin
+2022-06-29 09:13:08,097 Importing SpiderImagePlugin
+2022-06-29 09:13:08,098 Importing SunImagePlugin
+2022-06-29 09:13:08,098 Importing TgaImagePlugin
+2022-06-29 09:13:08,099 Importing TiffImagePlugin
+2022-06-29 09:13:08,099 Importing WebPImagePlugin
+2022-06-29 09:13:08,129 Importing WmfImagePlugin
+2022-06-29 09:13:08,130 Importing XbmImagePlugin
+2022-06-29 09:13:08,131 Importing XpmImagePlugin
+2022-06-29 09:13:08,132 Importing XVThumbImagePlugin
+2022-06-29 09:27:32,959 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-29 09:27:33,505 Watching for file changes with StatReloader
+2022-06-29 09:27:44,578 Importing BlpImagePlugin
+2022-06-29 09:27:44,579 Importing BmpImagePlugin
+2022-06-29 09:27:44,579 Importing BufrStubImagePlugin
+2022-06-29 09:27:44,580 Importing CurImagePlugin
+2022-06-29 09:27:44,580 Importing DcxImagePlugin
+2022-06-29 09:27:44,580 Importing DdsImagePlugin
+2022-06-29 09:27:44,581 Importing EpsImagePlugin
+2022-06-29 09:27:44,581 Importing FitsImagePlugin
+2022-06-29 09:27:44,582 Importing FitsStubImagePlugin
+2022-06-29 09:27:44,582 Importing FliImagePlugin
+2022-06-29 09:27:44,582 Importing FpxImagePlugin
+2022-06-29 09:27:44,583 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-29 09:27:44,583 Importing FtexImagePlugin
+2022-06-29 09:27:44,583 Importing GbrImagePlugin
+2022-06-29 09:27:44,584 Importing GifImagePlugin
+2022-06-29 09:27:44,584 Importing GribStubImagePlugin
+2022-06-29 09:27:44,584 Importing Hdf5StubImagePlugin
+2022-06-29 09:27:44,584 Importing IcnsImagePlugin
+2022-06-29 09:27:44,585 Importing IcoImagePlugin
+2022-06-29 09:27:44,586 Importing ImImagePlugin
+2022-06-29 09:27:44,587 Importing ImtImagePlugin
+2022-06-29 09:27:44,587 Importing IptcImagePlugin
+2022-06-29 09:27:44,587 Importing JpegImagePlugin
+2022-06-29 09:27:44,588 Importing Jpeg2KImagePlugin
+2022-06-29 09:27:44,588 Importing McIdasImagePlugin
+2022-06-29 09:27:44,588 Importing MicImagePlugin
+2022-06-29 09:27:44,588 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-29 09:27:44,588 Importing MpegImagePlugin
+2022-06-29 09:27:44,589 Importing MpoImagePlugin
+2022-06-29 09:27:44,589 Importing MspImagePlugin
+2022-06-29 09:27:44,589 Importing PalmImagePlugin
+2022-06-29 09:27:44,590 Importing PcdImagePlugin
+2022-06-29 09:27:44,591 Importing PcxImagePlugin
+2022-06-29 09:27:44,591 Importing PdfImagePlugin
+2022-06-29 09:27:44,598 Importing PixarImagePlugin
+2022-06-29 09:27:44,598 Importing PngImagePlugin
+2022-06-29 09:27:44,598 Importing PpmImagePlugin
+2022-06-29 09:27:44,598 Importing PsdImagePlugin
+2022-06-29 09:27:44,598 Importing SgiImagePlugin
+2022-06-29 09:27:44,599 Importing SpiderImagePlugin
+2022-06-29 09:27:44,599 Importing SunImagePlugin
+2022-06-29 09:27:44,599 Importing TgaImagePlugin
+2022-06-29 09:27:44,600 Importing TiffImagePlugin
+2022-06-29 09:27:44,600 Importing WebPImagePlugin
+2022-06-29 09:27:44,600 Importing WmfImagePlugin
+2022-06-29 09:27:44,601 Importing XbmImagePlugin
+2022-06-29 09:27:44,602 Importing XpmImagePlugin
+2022-06-29 09:27:44,603 Importing XVThumbImagePlugin
+2022-06-29 09:43:07,460 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 09:43:07,898 Watching for file changes with StatReloader
+2022-06-29 09:43:12,741 Importing BlpImagePlugin
+2022-06-29 09:43:12,742 Importing BmpImagePlugin
+2022-06-29 09:43:12,742 Importing BufrStubImagePlugin
+2022-06-29 09:43:12,743 Importing CurImagePlugin
+2022-06-29 09:43:12,743 Importing DcxImagePlugin
+2022-06-29 09:43:12,743 Importing DdsImagePlugin
+2022-06-29 09:43:12,744 Importing EpsImagePlugin
+2022-06-29 09:43:12,744 Importing FitsImagePlugin
+2022-06-29 09:43:12,744 Importing FitsStubImagePlugin
+2022-06-29 09:43:12,745 Importing FliImagePlugin
+2022-06-29 09:43:12,745 Importing FpxImagePlugin
+2022-06-29 09:43:12,745 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-29 09:43:12,745 Importing FtexImagePlugin
+2022-06-29 09:43:12,746 Importing GbrImagePlugin
+2022-06-29 09:43:12,746 Importing GifImagePlugin
+2022-06-29 09:43:12,746 Importing GribStubImagePlugin
+2022-06-29 09:43:12,746 Importing Hdf5StubImagePlugin
+2022-06-29 09:43:12,747 Importing IcnsImagePlugin
+2022-06-29 09:43:12,748 Importing IcoImagePlugin
+2022-06-29 09:43:12,748 Importing ImImagePlugin
+2022-06-29 09:43:12,749 Importing ImtImagePlugin
+2022-06-29 09:43:12,750 Importing IptcImagePlugin
+2022-06-29 09:43:12,750 Importing JpegImagePlugin
+2022-06-29 09:43:12,750 Importing Jpeg2KImagePlugin
+2022-06-29 09:43:12,750 Importing McIdasImagePlugin
+2022-06-29 09:43:12,751 Importing MicImagePlugin
+2022-06-29 09:43:12,751 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-29 09:43:12,751 Importing MpegImagePlugin
+2022-06-29 09:43:12,752 Importing MpoImagePlugin
+2022-06-29 09:43:12,752 Importing MspImagePlugin
+2022-06-29 09:43:12,752 Importing PalmImagePlugin
+2022-06-29 09:43:12,753 Importing PcdImagePlugin
+2022-06-29 09:43:12,754 Importing PcxImagePlugin
+2022-06-29 09:43:12,754 Importing PdfImagePlugin
+2022-06-29 09:43:12,761 Importing PixarImagePlugin
+2022-06-29 09:43:12,762 Importing PngImagePlugin
+2022-06-29 09:43:12,762 Importing PpmImagePlugin
+2022-06-29 09:43:12,762 Importing PsdImagePlugin
+2022-06-29 09:43:12,762 Importing SgiImagePlugin
+2022-06-29 09:43:12,762 Importing SpiderImagePlugin
+2022-06-29 09:43:12,763 Importing SunImagePlugin
+2022-06-29 09:43:12,763 Importing TgaImagePlugin
+2022-06-29 09:43:12,763 Importing TiffImagePlugin
+2022-06-29 09:43:12,763 Importing WebPImagePlugin
+2022-06-29 09:43:12,764 Importing WmfImagePlugin
+2022-06-29 09:43:12,764 Importing XbmImagePlugin
+2022-06-29 09:43:12,766 Importing XpmImagePlugin
+2022-06-29 09:43:12,767 Importing XVThumbImagePlugin
+2022-06-29 09:52:07,241 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 09:52:07,695 Watching for file changes with StatReloader
+2022-06-29 10:22:10,103 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:22:10,705 Watching for file changes with StatReloader
+2022-06-29 10:26:38,009 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:26:38,741 Watching for file changes with StatReloader
+2022-06-29 10:31:19,480 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:31:19,916 Watching for file changes with StatReloader
+2022-06-29 10:31:27,436 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py", line 189, in user_update_profile_view
+    request.user(**request.POST).save()
+TypeError: 'User' object is not callable
+2022-06-29 10:32:38,224 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:32:38,745 Watching for file changes with StatReloader
+2022-06-29 10:33:34,499 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:33:35,051 Watching for file changes with StatReloader
+2022-06-29 10:33:51,949 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:33:52,408 Watching for file changes with StatReloader
+2022-06-29 10:34:25,688 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:34:26,181 Watching for file changes with StatReloader
+2022-06-29 10:44:24,965 Internal Server Error: /api/v1/account/update/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.OperationalError: SSL SYSCALL error: EOF detected
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework_simplejwt/authentication.py", line 40, in authenticate
+    return self.get_user(validated_token), validated_token
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework_simplejwt/authentication.py", line 119, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.OperationalError: SSL SYSCALL error: EOF detected
+
+2022-06-29 10:57:53,860 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 10:57:54,438 Watching for file changes with StatReloader
+2022-06-29 11:29:15,429 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 11:29:16,567 Watching for file changes with StatReloader
+2022-06-29 11:50:32,726 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-29 11:50:33,270 Watching for file changes with StatReloader
+2022-06-29 11:54:00,370 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 11:54:00,997 Watching for file changes with StatReloader
+2022-06-29 11:55:54,644 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 11:55:55,164 Watching for file changes with StatReloader
+2022-06-29 12:02:06,678 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 12:02:07,161 Watching for file changes with StatReloader
+2022-06-29 12:16:49,148 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 12:16:49,802 Watching for file changes with StatReloader
+2022-06-29 12:31:46,632 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-29 12:31:47,609 Watching for file changes with StatReloader
+2022-06-30 06:51:41,093 Watching for file changes with StatReloader
+2022-06-30 07:11:51,657 Watching for file changes with StatReloader
+2022-06-30 07:16:41,502 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/urls.py changed, reloading.
+2022-06-30 07:16:41,947 Watching for file changes with StatReloader
+2022-06-30 07:23:32,073 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-30 07:23:32,522 Watching for file changes with StatReloader
+2022-06-30 07:28:37,039 Method Not Allowed: /api/v1/account/user/vault/create/
+2022-06-30 07:29:13,435 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-30 07:29:14,089 Watching for file changes with StatReloader
+2022-06-30 07:29:25,192 Importing BlpImagePlugin
+2022-06-30 07:29:25,194 Importing BmpImagePlugin
+2022-06-30 07:29:25,194 Importing BufrStubImagePlugin
+2022-06-30 07:29:25,194 Importing CurImagePlugin
+2022-06-30 07:29:25,195 Importing DcxImagePlugin
+2022-06-30 07:29:25,195 Importing DdsImagePlugin
+2022-06-30 07:29:25,196 Importing EpsImagePlugin
+2022-06-30 07:29:25,197 Importing FitsImagePlugin
+2022-06-30 07:29:25,198 Importing FitsStubImagePlugin
+2022-06-30 07:29:25,199 Importing FliImagePlugin
+2022-06-30 07:29:25,199 Importing FpxImagePlugin
+2022-06-30 07:29:25,200 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 07:29:25,200 Importing FtexImagePlugin
+2022-06-30 07:29:25,201 Importing GbrImagePlugin
+2022-06-30 07:29:25,201 Importing GifImagePlugin
+2022-06-30 07:29:25,201 Importing GribStubImagePlugin
+2022-06-30 07:29:25,202 Importing Hdf5StubImagePlugin
+2022-06-30 07:29:25,202 Importing IcnsImagePlugin
+2022-06-30 07:29:25,204 Importing IcoImagePlugin
+2022-06-30 07:29:25,204 Importing ImImagePlugin
+2022-06-30 07:29:25,205 Importing ImtImagePlugin
+2022-06-30 07:29:25,206 Importing IptcImagePlugin
+2022-06-30 07:29:25,207 Importing JpegImagePlugin
+2022-06-30 07:29:25,207 Importing Jpeg2KImagePlugin
+2022-06-30 07:29:25,207 Importing McIdasImagePlugin
+2022-06-30 07:29:25,207 Importing MicImagePlugin
+2022-06-30 07:29:25,208 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 07:29:25,208 Importing MpegImagePlugin
+2022-06-30 07:29:25,208 Importing MpoImagePlugin
+2022-06-30 07:29:25,209 Importing MspImagePlugin
+2022-06-30 07:29:25,209 Importing PalmImagePlugin
+2022-06-30 07:29:25,220 Importing PcdImagePlugin
+2022-06-30 07:29:25,220 Importing PcxImagePlugin
+2022-06-30 07:29:25,220 Importing PdfImagePlugin
+2022-06-30 07:29:25,229 Importing PixarImagePlugin
+2022-06-30 07:29:25,229 Importing PngImagePlugin
+2022-06-30 07:29:25,229 Importing PpmImagePlugin
+2022-06-30 07:29:25,229 Importing PsdImagePlugin
+2022-06-30 07:29:25,230 Importing SgiImagePlugin
+2022-06-30 07:29:25,230 Importing SpiderImagePlugin
+2022-06-30 07:29:25,231 Importing SunImagePlugin
+2022-06-30 07:29:25,232 Importing TgaImagePlugin
+2022-06-30 07:29:25,233 Importing TiffImagePlugin
+2022-06-30 07:29:25,233 Importing WebPImagePlugin
+2022-06-30 07:29:25,269 Importing WmfImagePlugin
+2022-06-30 07:29:25,270 Importing XbmImagePlugin
+2022-06-30 07:29:25,272 Importing XpmImagePlugin
+2022-06-30 07:29:25,273 Importing XVThumbImagePlugin
+2022-06-30 07:29:25,584 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:32:13,701 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:50:58,379 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:52:33,487 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:58:11,526 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-30 07:58:12,003 Watching for file changes with StatReloader
+2022-06-30 07:58:16,957 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:59:02,733 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-30 07:59:03,340 Watching for file changes with StatReloader
+2022-06-30 07:59:10,256 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 07:59:44,313 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 08:55:17,657 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-30 08:55:18,085 Watching for file changes with StatReloader
+2022-06-30 08:56:18,196 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 08:57:02,962 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-30 08:57:03,641 Watching for file changes with StatReloader
+2022-06-30 08:57:08,757 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 08:58:38,391 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-06-30 08:58:38,849 Watching for file changes with StatReloader
+2022-06-30 09:09:52,264 Unauthorized: /api/v1/account/user/vault/create/
+2022-06-30 09:10:40,233 Importing BlpImagePlugin
+2022-06-30 09:10:40,235 Importing BmpImagePlugin
+2022-06-30 09:10:40,235 Importing BufrStubImagePlugin
+2022-06-30 09:10:40,235 Importing CurImagePlugin
+2022-06-30 09:10:40,235 Importing DcxImagePlugin
+2022-06-30 09:10:40,236 Importing DdsImagePlugin
+2022-06-30 09:10:40,236 Importing EpsImagePlugin
+2022-06-30 09:10:40,237 Importing FitsImagePlugin
+2022-06-30 09:10:40,238 Importing FitsStubImagePlugin
+2022-06-30 09:10:40,238 Importing FliImagePlugin
+2022-06-30 09:10:40,239 Importing FpxImagePlugin
+2022-06-30 09:10:40,239 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 09:10:40,239 Importing FtexImagePlugin
+2022-06-30 09:10:40,240 Importing GbrImagePlugin
+2022-06-30 09:10:40,240 Importing GifImagePlugin
+2022-06-30 09:10:40,240 Importing GribStubImagePlugin
+2022-06-30 09:10:40,240 Importing Hdf5StubImagePlugin
+2022-06-30 09:10:40,241 Importing IcnsImagePlugin
+2022-06-30 09:10:40,242 Importing IcoImagePlugin
+2022-06-30 09:10:40,242 Importing ImImagePlugin
+2022-06-30 09:10:40,243 Importing ImtImagePlugin
+2022-06-30 09:10:40,243 Importing IptcImagePlugin
+2022-06-30 09:10:40,244 Importing JpegImagePlugin
+2022-06-30 09:10:40,244 Importing Jpeg2KImagePlugin
+2022-06-30 09:10:40,244 Importing McIdasImagePlugin
+2022-06-30 09:10:40,244 Importing MicImagePlugin
+2022-06-30 09:10:40,244 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 09:10:40,244 Importing MpegImagePlugin
+2022-06-30 09:10:40,245 Importing MpoImagePlugin
+2022-06-30 09:10:40,245 Importing MspImagePlugin
+2022-06-30 09:10:40,245 Importing PalmImagePlugin
+2022-06-30 09:10:40,246 Importing PcdImagePlugin
+2022-06-30 09:10:40,246 Importing PcxImagePlugin
+2022-06-30 09:10:40,247 Importing PdfImagePlugin
+2022-06-30 09:10:40,254 Importing PixarImagePlugin
+2022-06-30 09:10:40,255 Importing PngImagePlugin
+2022-06-30 09:10:40,255 Importing PpmImagePlugin
+2022-06-30 09:10:40,255 Importing PsdImagePlugin
+2022-06-30 09:10:40,255 Importing SgiImagePlugin
+2022-06-30 09:10:40,256 Importing SpiderImagePlugin
+2022-06-30 09:10:40,256 Importing SunImagePlugin
+2022-06-30 09:10:40,256 Importing TgaImagePlugin
+2022-06-30 09:10:40,257 Importing TiffImagePlugin
+2022-06-30 09:10:40,257 Importing WebPImagePlugin
+2022-06-30 09:10:40,258 Importing WmfImagePlugin
+2022-06-30 09:10:40,258 Importing XbmImagePlugin
+2022-06-30 09:10:40,259 Importing XpmImagePlugin
+2022-06-30 09:10:40,260 Importing XVThumbImagePlugin
+2022-06-30 09:10:40,330 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 09:17:35,252 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-30 09:17:35,724 Watching for file changes with StatReloader
+2022-06-30 10:17:12,256 Watching for file changes with StatReloader
+2022-06-30 10:17:48,075 Importing BlpImagePlugin
+2022-06-30 10:17:48,076 Importing BmpImagePlugin
+2022-06-30 10:17:48,077 Importing BufrStubImagePlugin
+2022-06-30 10:17:48,077 Importing CurImagePlugin
+2022-06-30 10:17:48,077 Importing DcxImagePlugin
+2022-06-30 10:17:48,078 Importing DdsImagePlugin
+2022-06-30 10:17:48,078 Importing EpsImagePlugin
+2022-06-30 10:17:48,079 Importing FitsImagePlugin
+2022-06-30 10:17:48,080 Importing FitsStubImagePlugin
+2022-06-30 10:17:48,080 Importing FliImagePlugin
+2022-06-30 10:17:48,080 Importing FpxImagePlugin
+2022-06-30 10:17:48,081 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:17:48,081 Importing FtexImagePlugin
+2022-06-30 10:17:48,081 Importing GbrImagePlugin
+2022-06-30 10:17:48,081 Importing GifImagePlugin
+2022-06-30 10:17:48,082 Importing GribStubImagePlugin
+2022-06-30 10:17:48,082 Importing Hdf5StubImagePlugin
+2022-06-30 10:17:48,082 Importing IcnsImagePlugin
+2022-06-30 10:17:48,083 Importing IcoImagePlugin
+2022-06-30 10:17:48,083 Importing ImImagePlugin
+2022-06-30 10:17:48,084 Importing ImtImagePlugin
+2022-06-30 10:17:48,085 Importing IptcImagePlugin
+2022-06-30 10:17:48,085 Importing JpegImagePlugin
+2022-06-30 10:17:48,085 Importing Jpeg2KImagePlugin
+2022-06-30 10:17:48,085 Importing McIdasImagePlugin
+2022-06-30 10:17:48,085 Importing MicImagePlugin
+2022-06-30 10:17:48,086 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:17:48,086 Importing MpegImagePlugin
+2022-06-30 10:17:48,086 Importing MpoImagePlugin
+2022-06-30 10:17:48,086 Importing MspImagePlugin
+2022-06-30 10:17:48,086 Importing PalmImagePlugin
+2022-06-30 10:17:48,088 Importing PcdImagePlugin
+2022-06-30 10:17:48,088 Importing PcxImagePlugin
+2022-06-30 10:17:48,088 Importing PdfImagePlugin
+2022-06-30 10:17:48,096 Importing PixarImagePlugin
+2022-06-30 10:17:48,097 Importing PngImagePlugin
+2022-06-30 10:17:48,097 Importing PpmImagePlugin
+2022-06-30 10:17:48,097 Importing PsdImagePlugin
+2022-06-30 10:17:48,097 Importing SgiImagePlugin
+2022-06-30 10:17:48,098 Importing SpiderImagePlugin
+2022-06-30 10:17:48,098 Importing SunImagePlugin
+2022-06-30 10:17:48,098 Importing TgaImagePlugin
+2022-06-30 10:17:48,099 Importing TiffImagePlugin
+2022-06-30 10:17:48,099 Importing WebPImagePlugin
+2022-06-30 10:17:48,100 Importing WmfImagePlugin
+2022-06-30 10:17:48,100 Importing XbmImagePlugin
+2022-06-30 10:17:48,101 Importing XpmImagePlugin
+2022-06-30 10:17:48,101 Importing XVThumbImagePlugin
+2022-06-30 10:17:48,174 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 10:26:58,423 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.OperationalError: SSL SYSCALL error: EOF detected
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework_simplejwt/authentication.py", line 40, in authenticate
+    return self.get_user(validated_token), validated_token
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework_simplejwt/authentication.py", line 119, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.OperationalError: SSL SYSCALL error: EOF detected
+
+2022-06-30 10:27:05,630 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 10:38:15,120 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py changed, reloading.
+2022-06-30 10:38:15,575 Watching for file changes with StatReloader
+2022-06-30 10:38:20,137 Importing BlpImagePlugin
+2022-06-30 10:38:20,138 Importing BmpImagePlugin
+2022-06-30 10:38:20,141 Importing BufrStubImagePlugin
+2022-06-30 10:38:20,142 Importing CurImagePlugin
+2022-06-30 10:38:20,142 Importing DcxImagePlugin
+2022-06-30 10:38:20,143 Importing DdsImagePlugin
+2022-06-30 10:38:20,143 Importing EpsImagePlugin
+2022-06-30 10:38:20,144 Importing FitsImagePlugin
+2022-06-30 10:38:20,144 Importing FitsStubImagePlugin
+2022-06-30 10:38:20,145 Importing FliImagePlugin
+2022-06-30 10:38:20,145 Importing FpxImagePlugin
+2022-06-30 10:38:20,146 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:38:20,146 Importing FtexImagePlugin
+2022-06-30 10:38:20,146 Importing GbrImagePlugin
+2022-06-30 10:38:20,146 Importing GifImagePlugin
+2022-06-30 10:38:20,147 Importing GribStubImagePlugin
+2022-06-30 10:38:20,147 Importing Hdf5StubImagePlugin
+2022-06-30 10:38:20,147 Importing IcnsImagePlugin
+2022-06-30 10:38:20,148 Importing IcoImagePlugin
+2022-06-30 10:38:20,149 Importing ImImagePlugin
+2022-06-30 10:38:20,149 Importing ImtImagePlugin
+2022-06-30 10:38:20,150 Importing IptcImagePlugin
+2022-06-30 10:38:20,150 Importing JpegImagePlugin
+2022-06-30 10:38:20,150 Importing Jpeg2KImagePlugin
+2022-06-30 10:38:20,150 Importing McIdasImagePlugin
+2022-06-30 10:38:20,150 Importing MicImagePlugin
+2022-06-30 10:38:20,151 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:38:20,151 Importing MpegImagePlugin
+2022-06-30 10:38:20,151 Importing MpoImagePlugin
+2022-06-30 10:38:20,151 Importing MspImagePlugin
+2022-06-30 10:38:20,151 Importing PalmImagePlugin
+2022-06-30 10:38:20,152 Importing PcdImagePlugin
+2022-06-30 10:38:20,153 Importing PcxImagePlugin
+2022-06-30 10:38:20,153 Importing PdfImagePlugin
+2022-06-30 10:38:20,160 Importing PixarImagePlugin
+2022-06-30 10:38:20,160 Importing PngImagePlugin
+2022-06-30 10:38:20,160 Importing PpmImagePlugin
+2022-06-30 10:38:20,161 Importing PsdImagePlugin
+2022-06-30 10:38:20,161 Importing SgiImagePlugin
+2022-06-30 10:38:20,161 Importing SpiderImagePlugin
+2022-06-30 10:38:20,162 Importing SunImagePlugin
+2022-06-30 10:38:20,162 Importing TgaImagePlugin
+2022-06-30 10:38:20,162 Importing TiffImagePlugin
+2022-06-30 10:38:20,162 Importing WebPImagePlugin
+2022-06-30 10:38:20,163 Importing WmfImagePlugin
+2022-06-30 10:38:20,164 Importing XbmImagePlugin
+2022-06-30 10:38:20,165 Importing XpmImagePlugin
+2022-06-30 10:38:20,165 Importing XVThumbImagePlugin
+2022-06-30 10:38:20,415 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2022-06-30 10:38:41,007 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-30 10:38:41,459 Watching for file changes with StatReloader
+2022-06-30 10:45:49,977 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-30 10:45:50,478 Watching for file changes with StatReloader
+2022-06-30 10:46:00,852 Importing BlpImagePlugin
+2022-06-30 10:46:00,853 Importing BmpImagePlugin
+2022-06-30 10:46:00,853 Importing BufrStubImagePlugin
+2022-06-30 10:46:00,853 Importing CurImagePlugin
+2022-06-30 10:46:00,853 Importing DcxImagePlugin
+2022-06-30 10:46:00,854 Importing DdsImagePlugin
+2022-06-30 10:46:00,854 Importing EpsImagePlugin
+2022-06-30 10:46:00,855 Importing FitsImagePlugin
+2022-06-30 10:46:00,855 Importing FitsStubImagePlugin
+2022-06-30 10:46:00,856 Importing FliImagePlugin
+2022-06-30 10:46:00,856 Importing FpxImagePlugin
+2022-06-30 10:46:00,856 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:46:00,856 Importing FtexImagePlugin
+2022-06-30 10:46:00,857 Importing GbrImagePlugin
+2022-06-30 10:46:00,857 Importing GifImagePlugin
+2022-06-30 10:46:00,857 Importing GribStubImagePlugin
+2022-06-30 10:46:00,857 Importing Hdf5StubImagePlugin
+2022-06-30 10:46:00,858 Importing IcnsImagePlugin
+2022-06-30 10:46:00,859 Importing IcoImagePlugin
+2022-06-30 10:46:00,859 Importing ImImagePlugin
+2022-06-30 10:46:00,860 Importing ImtImagePlugin
+2022-06-30 10:46:00,861 Importing IptcImagePlugin
+2022-06-30 10:46:00,861 Importing JpegImagePlugin
+2022-06-30 10:46:00,861 Importing Jpeg2KImagePlugin
+2022-06-30 10:46:00,861 Importing McIdasImagePlugin
+2022-06-30 10:46:00,861 Importing MicImagePlugin
+2022-06-30 10:46:00,862 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:46:00,862 Importing MpegImagePlugin
+2022-06-30 10:46:00,862 Importing MpoImagePlugin
+2022-06-30 10:46:00,863 Importing MspImagePlugin
+2022-06-30 10:46:00,863 Importing PalmImagePlugin
+2022-06-30 10:46:00,864 Importing PcdImagePlugin
+2022-06-30 10:46:00,864 Importing PcxImagePlugin
+2022-06-30 10:46:00,864 Importing PdfImagePlugin
+2022-06-30 10:46:00,872 Importing PixarImagePlugin
+2022-06-30 10:46:00,872 Importing PngImagePlugin
+2022-06-30 10:46:00,872 Importing PpmImagePlugin
+2022-06-30 10:46:00,872 Importing PsdImagePlugin
+2022-06-30 10:46:00,873 Importing SgiImagePlugin
+2022-06-30 10:46:00,873 Importing SpiderImagePlugin
+2022-06-30 10:46:00,873 Importing SunImagePlugin
+2022-06-30 10:46:00,874 Importing TgaImagePlugin
+2022-06-30 10:46:00,874 Importing TiffImagePlugin
+2022-06-30 10:46:00,874 Importing WebPImagePlugin
+2022-06-30 10:46:00,875 Importing WmfImagePlugin
+2022-06-30 10:46:00,875 Importing XbmImagePlugin
+2022-06-30 10:46:00,877 Importing XpmImagePlugin
+2022-06-30 10:46:00,877 Importing XVThumbImagePlugin
+2022-06-30 10:46:31,107 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/models.py changed, reloading.
+2022-06-30 10:46:31,541 Watching for file changes with StatReloader
+2022-06-30 10:47:58,373 Watching for file changes with StatReloader
+2022-06-30 10:48:10,112 Importing BlpImagePlugin
+2022-06-30 10:48:10,113 Importing BmpImagePlugin
+2022-06-30 10:48:10,113 Importing BufrStubImagePlugin
+2022-06-30 10:48:10,113 Importing CurImagePlugin
+2022-06-30 10:48:10,113 Importing DcxImagePlugin
+2022-06-30 10:48:10,114 Importing DdsImagePlugin
+2022-06-30 10:48:10,114 Importing EpsImagePlugin
+2022-06-30 10:48:10,115 Importing FitsImagePlugin
+2022-06-30 10:48:10,115 Importing FitsStubImagePlugin
+2022-06-30 10:48:10,116 Importing FliImagePlugin
+2022-06-30 10:48:10,116 Importing FpxImagePlugin
+2022-06-30 10:48:10,116 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:48:10,116 Importing FtexImagePlugin
+2022-06-30 10:48:10,117 Importing GbrImagePlugin
+2022-06-30 10:48:10,117 Importing GifImagePlugin
+2022-06-30 10:48:10,117 Importing GribStubImagePlugin
+2022-06-30 10:48:10,117 Importing Hdf5StubImagePlugin
+2022-06-30 10:48:10,118 Importing IcnsImagePlugin
+2022-06-30 10:48:10,119 Importing IcoImagePlugin
+2022-06-30 10:48:10,119 Importing ImImagePlugin
+2022-06-30 10:48:10,120 Importing ImtImagePlugin
+2022-06-30 10:48:10,120 Importing IptcImagePlugin
+2022-06-30 10:48:10,121 Importing JpegImagePlugin
+2022-06-30 10:48:10,121 Importing Jpeg2KImagePlugin
+2022-06-30 10:48:10,121 Importing McIdasImagePlugin
+2022-06-30 10:48:10,121 Importing MicImagePlugin
+2022-06-30 10:48:10,122 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:48:10,122 Importing MpegImagePlugin
+2022-06-30 10:48:10,122 Importing MpoImagePlugin
+2022-06-30 10:48:10,122 Importing MspImagePlugin
+2022-06-30 10:48:10,123 Importing PalmImagePlugin
+2022-06-30 10:48:10,124 Importing PcdImagePlugin
+2022-06-30 10:48:10,124 Importing PcxImagePlugin
+2022-06-30 10:48:10,124 Importing PdfImagePlugin
+2022-06-30 10:48:10,132 Importing PixarImagePlugin
+2022-06-30 10:48:10,133 Importing PngImagePlugin
+2022-06-30 10:48:10,133 Importing PpmImagePlugin
+2022-06-30 10:48:10,133 Importing PsdImagePlugin
+2022-06-30 10:48:10,133 Importing SgiImagePlugin
+2022-06-30 10:48:10,133 Importing SpiderImagePlugin
+2022-06-30 10:48:10,134 Importing SunImagePlugin
+2022-06-30 10:48:10,134 Importing TgaImagePlugin
+2022-06-30 10:48:10,134 Importing TiffImagePlugin
+2022-06-30 10:48:10,134 Importing WebPImagePlugin
+2022-06-30 10:48:10,135 Importing WmfImagePlugin
+2022-06-30 10:48:10,135 Importing XbmImagePlugin
+2022-06-30 10:48:10,136 Importing XpmImagePlugin
+2022-06-30 10:48:10,137 Importing XVThumbImagePlugin
+2022-06-30 10:48:37,954 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-06-30 10:48:38,504 Watching for file changes with StatReloader
+2022-06-30 10:48:50,236 Importing BlpImagePlugin
+2022-06-30 10:48:50,237 Importing BmpImagePlugin
+2022-06-30 10:48:50,237 Importing BufrStubImagePlugin
+2022-06-30 10:48:50,238 Importing CurImagePlugin
+2022-06-30 10:48:50,238 Importing DcxImagePlugin
+2022-06-30 10:48:50,239 Importing DdsImagePlugin
+2022-06-30 10:48:50,239 Importing EpsImagePlugin
+2022-06-30 10:48:50,240 Importing FitsImagePlugin
+2022-06-30 10:48:50,240 Importing FitsStubImagePlugin
+2022-06-30 10:48:50,240 Importing FliImagePlugin
+2022-06-30 10:48:50,241 Importing FpxImagePlugin
+2022-06-30 10:48:50,241 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:48:50,241 Importing FtexImagePlugin
+2022-06-30 10:48:50,242 Importing GbrImagePlugin
+2022-06-30 10:48:50,242 Importing GifImagePlugin
+2022-06-30 10:48:50,242 Importing GribStubImagePlugin
+2022-06-30 10:48:50,242 Importing Hdf5StubImagePlugin
+2022-06-30 10:48:50,243 Importing IcnsImagePlugin
+2022-06-30 10:48:50,244 Importing IcoImagePlugin
+2022-06-30 10:48:50,244 Importing ImImagePlugin
+2022-06-30 10:48:50,245 Importing ImtImagePlugin
+2022-06-30 10:48:50,245 Importing IptcImagePlugin
+2022-06-30 10:48:50,245 Importing JpegImagePlugin
+2022-06-30 10:48:50,245 Importing Jpeg2KImagePlugin
+2022-06-30 10:48:50,245 Importing McIdasImagePlugin
+2022-06-30 10:48:50,246 Importing MicImagePlugin
+2022-06-30 10:48:50,246 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:48:50,246 Importing MpegImagePlugin
+2022-06-30 10:48:50,246 Importing MpoImagePlugin
+2022-06-30 10:48:50,246 Importing MspImagePlugin
+2022-06-30 10:48:50,247 Importing PalmImagePlugin
+2022-06-30 10:48:50,248 Importing PcdImagePlugin
+2022-06-30 10:48:50,248 Importing PcxImagePlugin
+2022-06-30 10:48:50,248 Importing PdfImagePlugin
+2022-06-30 10:48:50,256 Importing PixarImagePlugin
+2022-06-30 10:48:50,256 Importing PngImagePlugin
+2022-06-30 10:48:50,256 Importing PpmImagePlugin
+2022-06-30 10:48:50,257 Importing PsdImagePlugin
+2022-06-30 10:48:50,257 Importing SgiImagePlugin
+2022-06-30 10:48:50,257 Importing SpiderImagePlugin
+2022-06-30 10:48:50,257 Importing SunImagePlugin
+2022-06-30 10:48:50,258 Importing TgaImagePlugin
+2022-06-30 10:48:50,258 Importing TiffImagePlugin
+2022-06-30 10:48:50,258 Importing WebPImagePlugin
+2022-06-30 10:48:50,259 Importing WmfImagePlugin
+2022-06-30 10:48:50,259 Importing XbmImagePlugin
+2022-06-30 10:48:50,260 Importing XpmImagePlugin
+2022-06-30 10:48:50,261 Importing XVThumbImagePlugin
+2022-06-30 10:48:51,239 Internal Server Error: /api/v1/account/user/vault/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 98, in process_view
+    return view_func(request, form)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py", line 257, in create_user_vault_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1358, in as_sql
+    value_rows = [
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/versatileimagefield/fields.py", line 80, in pre_save
+    file = super(VersatileImageField, self).pre_save(model_instance, add)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 90, in save
+    setattr(self.instance, self.field.attname, self.name)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/versatileimagefield/files.py", line 42, in __set__
+    self.field.update_ppoi_field(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/versatileimagefield/fields.py", line 103, in update_ppoi_field
+    file = getattr(instance, self.attname)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/versatileimagefield/files.py", line 82, in __get__
+    ppoi = instance.__dict__[attr.field.ppoi_field]
+KeyError: 'ppoi'
+2022-06-30 10:54:55,568 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/models.py changed, reloading.
+2022-06-30 10:54:56,013 Watching for file changes with StatReloader
+2022-06-30 10:55:35,862 Watching for file changes with StatReloader
+2022-06-30 10:55:44,855 Importing BlpImagePlugin
+2022-06-30 10:55:44,857 Importing BmpImagePlugin
+2022-06-30 10:55:44,857 Importing BufrStubImagePlugin
+2022-06-30 10:55:44,857 Importing CurImagePlugin
+2022-06-30 10:55:44,857 Importing DcxImagePlugin
+2022-06-30 10:55:44,858 Importing DdsImagePlugin
+2022-06-30 10:55:44,858 Importing EpsImagePlugin
+2022-06-30 10:55:44,859 Importing FitsImagePlugin
+2022-06-30 10:55:44,859 Importing FitsStubImagePlugin
+2022-06-30 10:55:44,859 Importing FliImagePlugin
+2022-06-30 10:55:44,860 Importing FpxImagePlugin
+2022-06-30 10:55:44,860 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-06-30 10:55:44,860 Importing FtexImagePlugin
+2022-06-30 10:55:44,861 Importing GbrImagePlugin
+2022-06-30 10:55:44,861 Importing GifImagePlugin
+2022-06-30 10:55:44,861 Importing GribStubImagePlugin
+2022-06-30 10:55:44,861 Importing Hdf5StubImagePlugin
+2022-06-30 10:55:44,862 Importing IcnsImagePlugin
+2022-06-30 10:55:44,862 Importing IcoImagePlugin
+2022-06-30 10:55:44,863 Importing ImImagePlugin
+2022-06-30 10:55:44,863 Importing ImtImagePlugin
+2022-06-30 10:55:44,864 Importing IptcImagePlugin
+2022-06-30 10:55:44,864 Importing JpegImagePlugin
+2022-06-30 10:55:44,864 Importing Jpeg2KImagePlugin
+2022-06-30 10:55:44,864 Importing McIdasImagePlugin
+2022-06-30 10:55:44,865 Importing MicImagePlugin
+2022-06-30 10:55:44,865 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-06-30 10:55:44,865 Importing MpegImagePlugin
+2022-06-30 10:55:44,865 Importing MpoImagePlugin
+2022-06-30 10:55:44,866 Importing MspImagePlugin
+2022-06-30 10:55:44,866 Importing PalmImagePlugin
+2022-06-30 10:55:44,867 Importing PcdImagePlugin
+2022-06-30 10:55:44,867 Importing PcxImagePlugin
+2022-06-30 10:55:44,867 Importing PdfImagePlugin
+2022-06-30 10:55:44,876 Importing PixarImagePlugin
+2022-06-30 10:55:44,876 Importing PngImagePlugin
+2022-06-30 10:55:44,876 Importing PpmImagePlugin
+2022-06-30 10:55:44,876 Importing PsdImagePlugin
+2022-06-30 10:55:44,877 Importing SgiImagePlugin
+2022-06-30 10:55:44,877 Importing SpiderImagePlugin
+2022-06-30 10:55:44,877 Importing SunImagePlugin
+2022-06-30 10:55:44,878 Importing TgaImagePlugin
+2022-06-30 10:55:44,878 Importing TiffImagePlugin
+2022-06-30 10:55:44,878 Importing WebPImagePlugin
+2022-06-30 10:55:44,879 Importing WmfImagePlugin
+2022-06-30 10:55:44,879 Importing XbmImagePlugin
+2022-06-30 10:55:44,880 Importing XpmImagePlugin
+2022-06-30 10:55:44,881 Importing XVThumbImagePlugin
