@@ -73,11 +73,11 @@ class UserEmailVerificationForm(forms.Form):
 
 class AuthUserGroupOFPermissionsForm(forms.Form):
     name = forms.CharField(required=True)
-    permissions = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=True)
+    group = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=True)
 
     class Meta:
         model = Group
-        fields = ['name', 'permissions']
+        fields = ['name', 'group']
 
     def clean(self):
         cleaned_data = super(AuthUserGroupOFPermissionsForm, self).clean()

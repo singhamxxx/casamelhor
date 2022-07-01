@@ -27,7 +27,7 @@ class CustomUserManager(BaseUserManager):
 
 class Role(models.Model):
     role = models.CharField(max_length=100, unique=True)
-    permission = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='role_permission')
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='role_group', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
