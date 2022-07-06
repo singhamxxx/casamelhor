@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'casamelhor.account',
+    'casamelhor.property',
     'corsheaders',
     'rest_framework',
 ]

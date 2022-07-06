@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('casamelhor.account.urls')),
     path('api/v1/account/', include(("casamelhor.account.urls", "account"), namespace="account")),
+    path('api/v1/property/', include(("casamelhor.property.urls", "property"), namespace="property")),
 ]

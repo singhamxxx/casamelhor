@@ -3920,3 +3920,958 @@ Original exception text was: 'Role' object has no attribute 'permission'.
 2022-07-01 10:12:01,421 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
 2022-07-01 10:12:01,953 Watching for file changes with StatReloader
 2022-07-01 10:16:52,078 Not Found: /favicon.ico
+2022-07-04 06:56:10,876 Watching for file changes with StatReloader
+2022-07-04 06:56:33,320 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-07-04 06:56:34,820 Watching for file changes with StatReloader
+2022-07-04 06:57:13,601 Watching for file changes with StatReloader
+2022-07-04 06:57:30,114 Watching for file changes with StatReloader
+2022-07-04 06:58:20,195 Watching for file changes with StatReloader
+2022-07-04 06:59:08,447 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-04 06:59:08,907 Watching for file changes with StatReloader
+2022-07-04 07:00:15,676 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-04 07:00:16,091 Watching for file changes with StatReloader
+2022-07-04 07:00:37,478 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-04 07:00:37,889 Watching for file changes with StatReloader
+2022-07-04 07:50:10,704 Watching for file changes with StatReloader
+2022-07-04 07:55:23,918 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/urls.py changed, reloading.
+2022-07-04 07:55:24,470 Watching for file changes with StatReloader
+2022-07-05 10:01:09,114 Watching for file changes with StatReloader
+2022-07-05 10:17:09,602 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-05 10:17:10,358 Watching for file changes with StatReloader
+2022-07-05 10:18:51,243 Unauthorized: /api/v1/property/amenities/create/
+2022-07-05 10:19:00,705 Internal Server Error: /api/v1/property/amenities/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 12, in process_view
+    if request.method == "POST":
+AttributeError: 'AmenitiesView' object has no attribute 'method'
+2022-07-05 10:34:28,173 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-05 10:34:28,657 Watching for file changes with StatReloader
+2022-07-05 10:34:36,421 Internal Server Error: /api/v1/property/amenities/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 13, in process_view
+    if request.method == "POST":
+AttributeError: 'AmenitiesView' object has no attribute 'method'
+2022-07-05 10:35:58,369 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 10:35:58,849 Watching for file changes with StatReloader
+2022-07-05 10:37:03,534 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-05 10:37:03,975 Watching for file changes with StatReloader
+2022-07-05 10:37:08,985 Internal Server Error: /api/v1/property/amenities/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 17, in process_view
+    return view_func(request, form)
+TypeError: create_amenities_view() missing 1 required positional argument: 'form'
+2022-07-05 10:37:24,005 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-05 10:37:24,545 Watching for file changes with StatReloader
+2022-07-05 10:37:50,760 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-05 10:37:51,200 Watching for file changes with StatReloader
+2022-07-05 10:37:57,306 Internal Server Error: /api/v1/property/amenities/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 15, in process_view
+    return view_func(request, form)
+TypeError: create_amenities_view() missing 1 required positional argument: 'form'
+2022-07-05 10:38:42,922 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 10:38:43,397 Watching for file changes with StatReloader
+2022-07-05 10:39:00,284 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 10:39:00,740 Watching for file changes with StatReloader
+2022-07-05 10:39:07,433 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 10:39:07,974 Watching for file changes with StatReloader
+2022-07-05 10:39:24,058 Internal Server Error: /api/v1/property/amenities/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "property_amenities" does not exist
+LINE 1: INSERT INTO "property_amenities" ("name", "is_active", "crea...
+                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 15, in process_view
+    return view_func(request, form)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create_amenities_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "property_amenities" does not exist
+LINE 1: INSERT INTO "property_amenities" ("name", "is_active", "crea...
+                    ^
+
+2022-07-05 10:53:54,939 Watching for file changes with StatReloader
+2022-07-05 11:03:34,577 Method Not Allowed: /api/v1/property/amenities/get/
+2022-07-05 11:03:46,835 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:03:47,300 Watching for file changes with StatReloader
+2022-07-05 11:41:27,321 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:41:27,838 Watching for file changes with StatReloader
+2022-07-05 11:44:50,408 Watching for file changes with StatReloader
+2022-07-05 11:45:14,386 Method Not Allowed: /api/v1/property/amenities/edit/1/
+2022-07-05 11:46:04,609 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:46:05,069 Watching for file changes with StatReloader
+2022-07-05 11:46:13,006 Internal Server Error: /api/v1/property/amenities/edit/1/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 18, in process_view
+    return view_func(request, form)
+TypeError: edit_amenities_view() missing 1 required positional argument: 'id'
+2022-07-05 11:48:05,357 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-05 11:48:05,811 Watching for file changes with StatReloader
+2022-07-05 11:48:28,829 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:48:29,313 Watching for file changes with StatReloader
+2022-07-05 11:49:30,254 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:49:31,080 Watching for file changes with StatReloader
+2022-07-05 11:51:50,017 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:51:50,783 Watching for file changes with StatReloader
+2022-07-05 11:53:29,232 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 11:53:29,692 Watching for file changes with StatReloader
+2022-07-05 12:01:18,764 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-05 12:01:19,266 Watching for file changes with StatReloader
+2022-07-05 12:08:40,605 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:08:41,209 Watching for file changes with StatReloader
+2022-07-05 12:08:55,052 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:08:55,516 Watching for file changes with StatReloader
+2022-07-05 12:09:21,902 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:09:22,406 Watching for file changes with StatReloader
+2022-07-05 12:24:33,205 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:24:33,718 Watching for file changes with StatReloader
+2022-07-05 12:31:56,644 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:31:57,936 Watching for file changes with StatReloader
+2022-07-05 12:34:04,123 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:34:04,644 Watching for file changes with StatReloader
+2022-07-05 12:38:36,909 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-05 12:38:37,444 Watching for file changes with StatReloader
+2022-07-05 12:38:52,356 Watching for file changes with StatReloader
+2022-07-05 12:42:11,615 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:42:12,104 Watching for file changes with StatReloader
+2022-07-05 12:43:12,432 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:43:13,230 Watching for file changes with StatReloader
+2022-07-05 12:46:38,210 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:46:39,219 Watching for file changes with StatReloader
+2022-07-05 12:48:12,102 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:48:12,603 Watching for file changes with StatReloader
+2022-07-05 12:48:36,966 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:48:37,715 Watching for file changes with StatReloader
+2022-07-05 12:48:45,468 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 85, in create_amenities_group_view
+    error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 85, in <dictcomp>
+    error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+KeyError: 0
+2022-07-05 12:49:02,958 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:49:04,588 Watching for file changes with StatReloader
+2022-07-05 12:49:11,096 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 85, in create_amenities_group_view
+    error = error["__all__"] if "__all__" in error else {key: error[key][0] for key in error}
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 85, in <dictcomp>
+    error = error["__all__"] if "__all__" in error else {key: error[key][0] for key in error}
+KeyError: 0
+2022-07-05 12:49:28,325 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:49:29,570 Watching for file changes with StatReloader
+2022-07-05 12:49:50,458 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:49:52,034 Watching for file changes with StatReloader
+2022-07-05 12:50:54,344 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:50:55,046 Watching for file changes with StatReloader
+2022-07-05 12:52:34,661 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:52:36,145 Watching for file changes with StatReloader
+2022-07-05 12:52:46,485 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 32, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 374, in full_clean
+    self._post_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 408, in _post_clean
+    self.instance = construct_instance(self, self.instance, opts.fields, opts.exclude)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 63, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 910, in save_form_data
+    setattr(instance, self.name, data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "AmenitiesGroup.amenity" must be a "Amenities" instance.
+2022-07-05 12:54:34,576 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:54:36,244 Watching for file changes with StatReloader
+2022-07-05 12:55:07,298 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 32, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 374, in full_clean
+    self._post_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 408, in _post_clean
+    self.instance = construct_instance(self, self.instance, opts.fields, opts.exclude)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 63, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 910, in save_form_data
+    setattr(instance, self.name, data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "AmenitiesGroup.amenity" must be a "Amenities" instance.
+2022-07-05 12:55:40,077 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:55:40,788 Watching for file changes with StatReloader
+2022-07-05 12:55:55,565 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 32, in process_view
+    if form.is_valid():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 170, in errors
+    self.full_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/forms.py", line 374, in full_clean
+    self._post_clean()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 408, in _post_clean
+    self.instance = construct_instance(self, self.instance, opts.fields, opts.exclude)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 63, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 910, in save_form_data
+    setattr(instance, self.name, data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "AmenitiesGroup.amenity" must be a "Amenities" instance.
+2022-07-05 12:56:39,812 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-05 12:56:40,624 Watching for file changes with StatReloader
+2022-07-05 12:57:14,446 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:57:15,596 Watching for file changes with StatReloader
+2022-07-05 12:58:14,009 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-05 12:58:14,540 Watching for file changes with StatReloader
+2022-07-05 12:58:23,347 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (1, test, f, 2022-07-05 12:58:22.443662+00, 2022-07-05 12:58:22.443688+00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 81, in create_amenities_group_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (1, test, f, 2022-07-05 12:58:22.443662+00, 2022-07-05 12:58:22.443688+00, null).
+
+2022-07-05 12:59:15,085 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 12:59:15,919 Watching for file changes with StatReloader
+2022-07-05 12:59:26,116 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (2, test, f, 2022-07-05 12:59:25.020826+00, 2022-07-05 12:59:25.020866+00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 82, in create_amenities_group_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (2, test, f, 2022-07-05 12:59:25.020826+00, 2022-07-05 12:59:25.020866+00, null).
+
+2022-07-05 13:00:01,476 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-05 13:00:02,037 Watching for file changes with StatReloader
+2022-07-05 13:00:26,415 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-05 13:00:27,145 Watching for file changes with StatReloader
+2022-07-06 06:23:39,336 Watching for file changes with StatReloader
+2022-07-06 06:24:50,594 Method Not Allowed: /api/v1/property/amenities/group/get/
+2022-07-06 06:24:53,969 Internal Server Error: /api/v1/property/amenities/group/get/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: amenities_group_view() missing 1 required positional argument: 'request'
+2022-07-06 06:25:09,605 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 06:25:11,407 Watching for file changes with StatReloader
+2022-07-06 06:26:17,478 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:26:19,384 Watching for file changes with StatReloader
+2022-07-06 06:26:52,275 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (5, test3, f, 2022-07-06 06:26:51.177225+00, 2022-07-06 06:26:51.17725+00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 81, in create_amenities_group_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (5, test3, f, 2022-07-06 06:26:51.177225+00, 2022-07-06 06:26:51.17725+00, null).
+
+2022-07-06 06:30:19,845 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:30:20,481 Watching for file changes with StatReloader
+2022-07-06 06:30:31,075 Watching for file changes with StatReloader
+2022-07-06 06:40:40,726 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:40:41,355 Watching for file changes with StatReloader
+2022-07-06 06:41:16,281 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (6, test3, f, 2022-07-06 06:41:15.210704+00, 2022-07-06 06:41:15.210728+00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 81, in create_amenities_group_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (6, test3, f, 2022-07-06 06:41:15.210704+00, 2022-07-06 06:41:15.210728+00, null).
+
+2022-07-06 06:46:26,063 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:46:26,619 Watching for file changes with StatReloader
+2022-07-06 06:46:38,424 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:46:38,915 Watching for file changes with StatReloader
+2022-07-06 06:46:54,975 Internal Server Error: /api/v1/property/amenities/group/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (7, test3, f, 2022-07-06 06:46:54.164834+00, 2022-07-06 06:46:54.164861+00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 33, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 81, in create_amenities_group_view
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "amenity_id" of relation "property_amenitiesgroup" violates not-null constraint
+DETAIL:  Failing row contains (7, test3, f, 2022-07-06 06:46:54.164834+00, 2022-07-06 06:46:54.164861+00, null).
+
+2022-07-06 06:47:46,415 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:47:47,371 Watching for file changes with StatReloader
+2022-07-06 06:47:53,444 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:47:54,166 Watching for file changes with StatReloader
+2022-07-06 06:48:57,874 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 06:48:59,280 Watching for file changes with StatReloader
+2022-07-06 06:49:21,449 Method Not Allowed: /api/v1/property/amenities/group/get/
+2022-07-06 06:57:20,741 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 06:57:21,310 Watching for file changes with StatReloader
+2022-07-06 06:58:02,491 Internal Server Error: /api/v1/property/amenities/group/edit/8/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 15, in process_view
+    instance = Amenities.objects.get(id=view_kwargs['id'])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+casamelhor.property.models.Amenities.DoesNotExist: Amenities matching query does not exist.
+2022-07-06 06:58:38,003 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-06 06:58:38,778 Watching for file changes with StatReloader
+2022-07-06 07:12:48,814 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 07:12:49,250 Watching for file changes with StatReloader
+2022-07-06 07:13:38,963 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 07:13:39,439 Watching for file changes with StatReloader
+2022-07-06 07:14:07,699 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 07:14:08,169 Watching for file changes with StatReloader
+2022-07-06 07:14:15,585 Internal Server Error: /api/v1/property/amenities/group/edit/8/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 31, in process_view
+    form = AmenitiesGroupForm(request.data, initial=instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/forms/models.py", line 305, in __init__
+    object_data.update(initial)
+TypeError: 'AmenitiesGroup' object is not iterable
+2022-07-06 07:15:38,745 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py changed, reloading.
+2022-07-06 07:15:39,201 Watching for file changes with StatReloader
+2022-07-06 07:16:13,019 Unauthorized: /api/v1/property/amenities/get/
+2022-07-06 07:17:54,918 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 07:17:55,376 Watching for file changes with StatReloader
+2022-07-06 07:18:27,329 Method Not Allowed: /api/v1/property/amenities/group/delete/8/
+2022-07-06 07:19:53,662 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 07:19:54,113 Watching for file changes with StatReloader
