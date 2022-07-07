@@ -4875,3 +4875,118 @@ TypeError: 'AmenitiesGroup' object is not iterable
 2022-07-06 07:18:27,329 Method Not Allowed: /api/v1/property/amenities/group/delete/8/
 2022-07-06 07:19:53,662 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
 2022-07-06 07:19:54,113 Watching for file changes with StatReloader
+2022-07-06 08:52:49,416 Watching for file changes with StatReloader
+2022-07-06 08:54:34,249 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 08:54:34,880 Watching for file changes with StatReloader
+2022-07-06 08:54:58,054 Internal Server Error: /api/v1/property/amenities/attribute/get/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: amenities_attribute_view() missing 1 required positional argument: 'request'
+2022-07-06 08:55:10,346 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 08:55:10,901 Watching for file changes with StatReloader
+2022-07-06 08:57:56,712 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 08:57:57,199 Watching for file changes with StatReloader
+2022-07-06 08:58:25,986 Internal Server Error: /api/v1/property/amenities/attribute/edit/1/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/middleware.py", line 48, in process_view
+    return view_func(request, form, id)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 154, in edit_amenities_attribute_view
+    form.cleaned_data['amenity_group_id'] = form.cleaned_data['amenity_group_id'].id
+KeyError: 'amenity_group_id'
+2022-07-06 08:58:37,669 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 08:58:38,117 Watching for file changes with StatReloader
+2022-07-06 08:59:12,942 Method Not Allowed: /api/v1/property/amenities/attribute/get/1/
+2022-07-06 09:09:46,008 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 09:09:46,647 Watching for file changes with StatReloader
+2022-07-06 09:15:18,240 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 09:15:18,759 Watching for file changes with StatReloader
+2022-07-06 09:15:39,595 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/urls.py changed, reloading.
+2022-07-06 09:15:40,160 Watching for file changes with StatReloader
+2022-07-06 09:17:12,215 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 09:17:12,652 Watching for file changes with StatReloader
+2022-07-06 09:18:58,407 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 09:18:59,013 Watching for file changes with StatReloader
+2022-07-06 09:55:24,811 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-06 09:55:25,546 Watching for file changes with StatReloader
+2022-07-06 09:58:26,017 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 09:58:26,624 Watching for file changes with StatReloader
+2022-07-06 10:30:01,810 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 10:30:02,690 Watching for file changes with StatReloader
+2022-07-06 10:50:39,904 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-06 10:50:40,625 Watching for file changes with StatReloader
+2022-07-06 11:20:55,921 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 11:20:56,412 Watching for file changes with StatReloader
+2022-07-06 11:28:59,738 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 11:29:00,339 Watching for file changes with StatReloader
+2022-07-06 11:30:16,561 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 11:30:17,046 Watching for file changes with StatReloader
+2022-07-06 11:38:10,440 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-06 11:38:10,911 Watching for file changes with StatReloader
+2022-07-06 11:38:26,791 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/models.py changed, reloading.
+2022-07-06 11:38:27,280 Watching for file changes with StatReloader
+2022-07-06 11:41:15,283 Watching for file changes with StatReloader
+2022-07-06 11:51:54,608 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 11:51:55,099 Watching for file changes with StatReloader
+2022-07-06 11:52:56,112 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 11:52:56,595 Watching for file changes with StatReloader
+2022-07-06 11:54:11,773 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 11:54:12,260 Watching for file changes with StatReloader
+2022-07-06 12:03:01,442 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 12:03:01,940 Watching for file changes with StatReloader
+2022-07-06 12:05:15,442 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:05:16,569 Watching for file changes with StatReloader
+2022-07-06 12:05:44,174 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:05:45,228 Watching for file changes with StatReloader
+2022-07-06 12:08:48,264 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 12:08:48,736 Watching for file changes with StatReloader
+2022-07-06 12:09:21,208 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:09:22,056 Watching for file changes with StatReloader
+2022-07-06 12:15:36,268 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-06 12:15:36,892 Watching for file changes with StatReloader
+2022-07-06 12:16:02,062 Method Not Allowed: /api/v1/property/get/
+2022-07-06 12:22:17,157 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-06 12:22:17,779 Watching for file changes with StatReloader
+2022-07-06 12:28:12,852 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:28:13,502 Watching for file changes with StatReloader
+2022-07-06 12:29:49,969 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:29:50,552 Watching for file changes with StatReloader
+2022-07-06 12:30:41,757 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-06 12:30:42,710 Watching for file changes with StatReloader
+                                                                                                                                                                                                                                           2022-07-06 12:52:30,797 Watching for file changes with StatReloader

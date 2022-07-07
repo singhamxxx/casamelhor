@@ -39,12 +39,29 @@ class AmenitiesGroupMiddleware(MiddlewareMixin):
 
 class AmenitiesAttributeMiddleware(MiddlewareMixin):
     def process_view(self, request, view_func, view_args, view_kwargs):
-        if request.method == "POST":
-            user = request.user if request.user.is_authenticated else None
-            form = AmenitiesAttributeForm(request.data, initial=user)
-            if form.is_valid():
-                return view_func(request, form)
-            else:
-                error = form.errors
-                error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-                return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+        id, instance = None, None
+        if request.method == "PUT":
+            id = view_kwargs['id']
+            instance = AmenitiesAttribute.objects.get(id=view_kwargs['id'])
+        form = AmenitiesAttributeForm(request.data, instance=instance)
+        if form.is_valid():
+            return view_func(request, form, id)
+        else:
+            error = form.errors
+            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+
+
+class PropertyMiddleware(MiddlewareMixin):
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        id, instance = None, None
+        if request.method == "PUT":
+            id = view_kwargs['id']
+            instance = Property.objects.get(id=view_kwargs['id'])
+        form = PropertyForm(request.data, instance=instance)
+        if form.is_valid():
+            return view_func(request, form, id)
+        else:
+            error = form.errors
+            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)

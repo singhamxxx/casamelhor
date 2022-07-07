@@ -21,3 +21,10 @@ class AmenitiesAttributeForm(forms.ModelForm):
     class Meta:
         model = AmenitiesAttribute
         fields = '__all__'
+
+
+class PropertyForm(forms.ModelForm):
+
+    class Meta:
+        model = Property
+        fields = '__all__'
