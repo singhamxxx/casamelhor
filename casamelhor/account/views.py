@@ -35,7 +35,8 @@ def registration_view(request, form):
     if 'groups' in form.cleaned_data and form.cleaned_data['groups']:
         groups = groups.extend([i.id for i in form.cleaned_data['groups']])
     form.cleaned_data['groups'] = groups
-    form.cleaned_data['role'] = form.cleaned_data['role'].id
+    form.cleaned_data['role_id'] = form.cleaned_data['role'].id
+    print(form.cleaned_data)
     serializer = AuthUserSerializer(data=form.cleaned_data)
     if serializer.is_valid():
         serializer.save()
@@ -43,7 +44,7 @@ def registration_view(request, form):
         return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
     else:
         error = serializer.errors
-        error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
+        error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
         return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 

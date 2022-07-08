@@ -51,15 +51,16 @@ class AuthUserSerializer(serializers.ModelSerializer):
         help_text='Leave empty if no change needed',
         style={'input_type': 'password', 'placeholder': 'Password'}
     )
-    user_permissions = AuthUserPermissionsSerializer(many=True)
-    groups = AuthUserGroupOFPermissionsSerializer(many=True)
-    role = RoleSerializer(many=False, read_only=True)
+    user_permissions = AuthUserPermissionsSerializer(many=True, read_only=True)
+    groups = AuthUserGroupOFPermissionsSerializer(many=True, read_only=True)
+    role = RoleSerializer(read_only=True)
 
     class Meta:
         model = User
-        extra_kwargs = {'password': {'write_only': True}}
-        fields = "__all__"
-        extra_fields = ['permissions', 'groups']
+        extra_kwargs = {'password': {'write_only': True}, 'role_id': {'source': 'role', 'write_only': True}}
+        fields = ["email", "phone", "first_name", "last_name", "role", "is_superuser", "is_staff", "is_active", "date_joined", "employee_id",
+                  "department", "is_email", "is_phone", "updated_at", "user_permissions", "groups", "role_id", "password"]
+        extra_fields = ['user_permissions', 'groups', 'role_id']
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data.get('password'))
@@ -67,10 +68,10 @@ class AuthUserSerializer(serializers.ModelSerializer):
         groups = None
         if 'user_permissions' in validated_data and validated_data['user_permissions']:
             permissions = validated_data['user_permissions']
+            validated_data.pop('user_permissions')
         if 'groups' in validated_data and validated_data['groups']:
             groups = validated_data['groups']
-        validated_data.pop('groups')
-        validated_data.pop('user_permissions')
+            validated_data.pop('groups')
         obj = super(AuthUserSerializer, self).create(validated_data)
         if permissions:
             obj.user_permissions.set(permissions)
