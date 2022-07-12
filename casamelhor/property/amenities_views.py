@@ -3,6 +3,55 @@ from django.utils.decorators import decorator_from_middleware
 from ..account.middleware import TokenAuthenticationMiddleware
 from .middleware import *
 from .serializer import *
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import RetrieveModelMixin, ListModelMixin, CreateModelMixin, UpdateModelMixin, DestroyModelMixin
+import json
+
+
+class AmenitiesListView(ListModelMixin, GenericAPIView):
+    serializer_class = AmenitiesSerializer
+    queryset = Amenities.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+
+
+class AmenitiesRetrieveView(RetrieveModelMixin, GenericAPIView):
+    serializer_class = AmenitiesSerializer
+    queryset = Amenities.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=False)
+        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+
+
+class AmenitiesCreateView(CreateModelMixin, GenericAPIView):
+    serializer_class = AmenitiesSerializer
+    queryset = Amenities.objects.all()
+
+    def post(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset)
+        return self.create(request, *args, **kwargs)
+
+
+class AmenitiesUpdateView(UpdateModelMixin, GenericAPIView):
+    serializer_class = AmenitiesSerializer
+    queryset = Amenities.objects.all()
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+
+class AmenitiesDestroyView(DestroyModelMixin, GenericAPIView):
+    serializer_class = AmenitiesSerializer
+    queryset = Amenities.objects.all()
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
 
 
 @api_view(['GET'])

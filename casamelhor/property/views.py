@@ -3,6 +3,7 @@ from django.utils.decorators import decorator_from_middleware
 from ..account.middleware import TokenAuthenticationMiddleware
 from .middleware import *
 from .serializer import *
+from rest_framework import generics
 
 
 @api_view(['GET'])

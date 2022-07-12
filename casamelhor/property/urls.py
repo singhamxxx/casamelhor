@@ -3,11 +3,11 @@ from .amenities_views import *
 from .views import *
 
 urlpatterns = [
-    path('amenities/get/', amenities_view, name='amenities_get'),
-    path('amenities/get/<int:id>/', amenities_view, name='amenities_get_one'),
-    path('amenities/create/', create_amenities_view, name='amenities_create'),
-    path('amenities/edit/<int:id>/', edit_amenities_view, name='amenities_edit'),
-    path('amenities/delete/<int:id>/', delete_amenities_view, name='amenities_delete'),
+    path('amenities/get/', AmenitiesListView.as_view(), name='amenities_get'),
+    path('amenities/get/<int:pk>/', AmenitiesRetrieveView.as_view(), name='amenities_get_one'),
+    path('amenities/create/', AmenitiesCreateView.as_view(), name='amenities_create'),
+    path('amenities/edit/<int:pk>/', AmenitiesUpdateView.as_view(), name='amenities_edit'),
+    path('amenities/delete/<int:pk>/', AmenitiesDestroyView.as_view(), name='amenities_delete'),
 
     path('amenities/group/get/', amenities_group_view, name='amenities_group_get'),
     path('amenities/group/get/<int:id>/', amenities_group_view, name='amenities_group_get_one'),

@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .account.views import schema_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('casamelhor.account.urls')),
+    path('', schema_view),
     path('api/v1/account/', include(("casamelhor.account.urls", "account"), namespace="account")),
     path('api/v1/property/', include(("casamelhor.property.urls", "property"), namespace="property")),
 ]
