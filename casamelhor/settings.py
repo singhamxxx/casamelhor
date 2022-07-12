@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'casamelhor.property',
     'corsheaders',
     'rest_framework',
-    'rest_framework_swagger',
+    # 'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
