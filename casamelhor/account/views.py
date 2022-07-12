@@ -11,9 +11,9 @@ from django.shortcuts import render
 from django.db.models import Q
 from random import randint
 
-# from rest_framework_swagger.views import get_swagger_view
-#
-# schema_view = get_swagger_view(title='Pastebin API')
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Pastebin API')
 
 
 def get_client_ip(request):
