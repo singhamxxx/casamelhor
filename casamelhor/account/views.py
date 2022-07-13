@@ -10,6 +10,7 @@ from datetime import datetime
 from django.shortcuts import render
 from django.db.models import Q
 from random import randint
+import json
 
 from rest_framework_swagger.views import get_swagger_view
 
@@ -240,7 +241,7 @@ def edit_user_group_of_permissions_view(request, id, form):
         if group.name != form.cleaned_data['name']:
             group.name = form.cleaned_data['name']
             group.save()
-        group.permissions.set(form.cleaned_data['permissions'])
+        group.permissions.set(form.cleaned_data['group'])
         serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
         return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)

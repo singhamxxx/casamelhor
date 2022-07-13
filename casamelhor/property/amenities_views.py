@@ -16,6 +16,11 @@ class AmenitiesView(ListModelMixin, CreateModelMixin, DestroyModelMixin, UpdateM
         serializer = self.get_serializer(queryset, many=True)
         return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
 
+    def retrieve(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=False)
+        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
