@@ -5,10 +5,9 @@ from .middleware import *
 from .serializer import *
 from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import RetrieveModelMixin, ListModelMixin, CreateModelMixin, UpdateModelMixin, DestroyModelMixin
-import json
 
 
-class AmenitiesListView(ListModelMixin, GenericAPIView):
+class AmenitiesView(ListModelMixin, CreateModelMixin, DestroyModelMixin, UpdateModelMixin, GenericAPIView):
     serializer_class = AmenitiesSerializer
     queryset = Amenities.objects.all()
 
@@ -16,6 +15,15 @@ class AmenitiesListView(ListModelMixin, GenericAPIView):
         queryset = self.filter_queryset(self.get_queryset())
         serializer = self.get_serializer(queryset, many=True)
         return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
 
 
 class AmenitiesRetrieveView(RetrieveModelMixin, GenericAPIView):
@@ -33,8 +41,6 @@ class AmenitiesCreateView(CreateModelMixin, GenericAPIView):
     queryset = Amenities.objects.all()
 
     def post(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset)
         return self.create(request, *args, **kwargs)
 
 

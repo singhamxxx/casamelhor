@@ -5606,3 +5606,29 @@ AttributeError: 'collections.OrderedDict' object has no attribute 'results'
 2022-07-12 07:19:21,987 Not Found: /favicon.ico
 2022-07-12 07:34:27,692 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
 2022-07-12 07:34:28,845 Watching for file changes with StatReloader
+2022-07-13 06:41:24,950 Watching for file changes with StatReloader
+2022-07-13 06:41:34,419 Not Found: /favicon.ico
+2022-07-13 06:54:43,039 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-07-13 06:54:43,636 Watching for file changes with StatReloader
+2022-07-13 06:55:24,188 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 06:55:24,640 Watching for file changes with StatReloader
+2022-07-13 06:55:39,367 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 06:55:39,902 Watching for file changes with StatReloader
+2022-07-13 06:57:15,114 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 06:57:15,753 Watching for file changes with StatReloader
+2022-07-13 06:59:57,011 Watching for file changes with StatReloader
+2022-07-13 07:01:17,506 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:01:17,960 Watching for file changes with StatReloader
+2022-07-13 07:01:34,616 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:01:35,076 Watching for file changes with StatReloader
+2022-07-13 07:19:01,394 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:19:02,043 Watching for file changes with StatReloader
+2022-07-13 07:19:06,571 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:19:07,007 Watching for file changes with StatReloader
+2022-07-13 07:19:31,831 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:19:32,311 Watching for file changes with StatReloader
+2022-07-13 07:19:37,752 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 07:19:38,212 Watching for file changes with StatReloader
+2022-07-13 07:25:35,793 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-07-13 07:25:36,308 Watching for file changes with StatReloader
+2022-07-13 07:25:51,624 Watching for file changes with StatReloader

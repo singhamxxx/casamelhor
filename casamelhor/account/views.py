@@ -225,7 +225,7 @@ def user_permission_view(request, id=None):
 def create_user_group_of_permissions_view(request, form):
     if request.user.is_authenticated and request.user.is_superuser:
         group, created = Group.objects.get_or_create(name=form.cleaned_data['name'])
-        group.permissions.set(form.cleaned_data['permissions'])
+        group.permissions.set(form.cleaned_data['group'])
         serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
         return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
