@@ -3,26 +3,34 @@ from .amenities_views import *
 from .views import *
 
 urlpatterns = [
-    path('amenities/get/', AmenitiesView.as_view(), name='amenities_get'),
-    path('amenities/get/<int:pk>/', AmenitiesView.as_view(), name='amenities_get_one'),
-    path('amenities/create/', AmenitiesView.as_view(), name='amenities_create'),
-    path('amenities/edit/<int:pk>/', AmenitiesView.as_view(), name='amenities_edit'),
-    path('amenities/delete/<int:pk>/', AmenitiesView.as_view(), name='amenities_delete'),
+    path('amenities/get/', AmenitiesView.as_view({'get': 'list'})),
+    path('amenities/get/<int:pk>/', AmenitiesView.as_view({'get': 'retrieve'})),
+    path('amenities/create/', AmenitiesView.as_view({'post': 'create'})),
+    path('amenities/edit/<int:pk>/', AmenitiesView.as_view({'put': 'update'})),
+    path('amenities/delete/<int:pk>/', AmenitiesView.as_view({'delete': 'destroy'})),
 
-    path('amenities/group/get/', amenities_group_view, name='amenities_group_get'),
-    path('amenities/group/get/<int:id>/', amenities_group_view, name='amenities_group_get_one'),
-    path('amenities/group/create/', create_amenities_group_view, name='amenities_group_create'),
-    path('amenities/group/edit/<int:id>/', edit_amenities_group_view, name='amenities_group_edit'),
-    path('amenities/group/delete/<int:id>/', delete_amenities_group_view, name='amenities_group_delete'),
+    path('amenities/group/get/', AmenitiesGroupView.as_view({'get': 'list'})),
+    path('amenities/group/get/<int:pk>/', AmenitiesGroupView.as_view({'get': 'retrieve'})),
+    path('amenities/group/create/', AmenitiesGroupView.as_view({'post': 'create'})),
+    path('amenities/group/edit/<int:pk>/', AmenitiesGroupView.as_view({'put': 'update'})),
+    path('amenities/group/delete/<int:pk>/', AmenitiesGroupView.as_view({'delete': 'destroy'})),
 
-    path('amenities/attribute/get/', amenities_attribute_view, name='amenities_attribute_get'),
-    path('amenities/attribute/get/<int:id>/', amenities_attribute_view, name='amenities_attribute_get'),
-    path('amenities/attribute/create/', create_amenities_attribute_view, name='amenities_attribute_create'),
-    path('amenities/attribute/edit/<int:id>/', edit_amenities_attribute_view, name='amenities_attribute_edit'),
-    path('amenities/attribute/delete/<int:id>/', delete_amenities_attribute_view, name='amenities_attribute_delete'),
+    path('amenities/attribute/get/', AmenitiesAttributeView.as_view({'get': 'list'})),
+    path('amenities/attribute/get/<int:pk>/', AmenitiesAttributeView.as_view({'get': 'retrieve'})),
+    path('amenities/attribute/create/', AmenitiesAttributeView.as_view({'post': 'create'})),
+    path('amenities/attribute/edit/<int:pk>/', AmenitiesAttributeView.as_view({'put': 'update'})),
+    path('amenities/attribute/delete/<int:pk>/', AmenitiesAttributeView.as_view({'delete': 'destroy'})),
 
-    path('create/', create_property_view, name='property_create'),
-    path('get/', property_view, name='property_get'),
-    path('get/<int:id>/', property_view, name='property_get_one'),
-    path('edit/<int:id>/', edit_property_view, name='property_edit_one'),
+    path('create/', PropertyView.as_view({'post': 'create'}), name='property_create'),
+    path('get/', PropertyView.as_view({'get': 'list'}), name='property_get'),
+    path('get/<int:pk>/', PropertyView.as_view({'get': 'retrieve'}), name='property_get_one'),
+    path('edit/<int:pk>/', PropertyView.as_view({'put': 'update'}), name='property_edit_one'),
+    path('delete/<int:pk>/', PropertyView.as_view({'delete': 'destroy'}), name='property_destroy_one'),
+
+    path('image/create/', PropertyImageView.as_view({'post': 'create'}), name='property_image_create'),
+    path('image/get/', PropertyImageView.as_view({'get': 'list'}), name='property_image_get'),
+    path('image/get/<int:pk>/', PropertyImageView.as_view({'get': 'retrieve'}), name='property_image_get_one'),
+    path('image/edit/<int:pk>/', PropertyImageView.as_view({'put': 'update'}), name='property_image_edit_one'),
+    path('image/delete/<int:pk>/', PropertyImageView.as_view({'delete': 'destroy'}), name='property_image_destroy_one'),
+
 ]

@@ -29,19 +29,33 @@ class AmenitiesAttributeSerializer(serializers.ModelSerializer):
         extra_kwargs = {'amenity_group_id': {'source': 'amenity_group', 'write_only': True}}
 
 
+class PropertyImagesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PropertyImages
+        fields = "__all__"
+
+
 class PropertySerializer(serializers.ModelSerializer):
     property_amenities = AmenitiesAttributeSerializer(read_only=True)
+    images = serializers.ListField(child=serializers.FileField(allow_empty_file=True,  use_url=False), write_only=True, required=False)
+    property_images = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Property
         fields = ['id', 'name', 'description', 'house_number', 'building_number', 'area', 'city', 'country', 'state', 'zipcode', 'latitude',
                   'longitude', 'numbers_of_rooms', 'check_in_time', 'check_out_time', 'house_role', 'property_amenities', 'allow_booking_managers',
-                  'property_amenities_id', 'created_at', 'updated_at']
+                  'property_amenities_id', 'created_at', 'updated_at', 'images', 'property_images']
         extra_kwargs = {'property_amenities_id': {'source': 'property_amenities', 'write_only': True}}
+    
+    def get_property_images(self, obj):
+        return PropertyImagesSerializer(instance=obj.property_image.all(), many=True).data
 
-    def update(self, instance, validated_data):
-        if 'allow_booking_managers' in validated_data and validated_data['allow_booking_managers']:
-            instance.allow_booking_managers.set(validated_data['allow_booking_managers'])
-            validated_data.pop(validated_data['allow_booking_managers'])
-        super().update(instance=instance, validated_data=validated_data)
-        return instance
+    def create(self, validated_data):
+        images = validated_data.pop('images') if 'images' in validated_data and validated_data['images'] else None
+        parent = super(PropertySerializer, self).create(validated_data)
+        if images:
+            serializer = PropertyImagesSerializer(data=[{'image': i, 'property': parent.id} for i in images], many=True)
+            serializer.is_valid(raise_exception=True)
+            serializer.save()
+        return parent

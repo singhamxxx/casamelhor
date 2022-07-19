@@ -3,231 +3,91 @@ from django.utils.decorators import decorator_from_middleware
 from ..account.middleware import TokenAuthenticationMiddleware
 from .middleware import *
 from .serializer import *
-from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import RetrieveModelMixin, ListModelMixin, CreateModelMixin, UpdateModelMixin, DestroyModelMixin
+from rest_framework import viewsets
+from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
+from rest_framework.permissions import IsAdminUser
+from ..permissions import IsSuperUser
 
 
-class AmenitiesView(ListModelMixin, CreateModelMixin, DestroyModelMixin, UpdateModelMixin, GenericAPIView):
+class AmenitiesView(viewsets.ModelViewSet):
     serializer_class = AmenitiesSerializer
     queryset = Amenities.objects.all()
+    parser_classes = (FormParser,)
+    permission_classes = (IsSuperUser, )
 
-    def get(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data})
 
     def retrieve(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=False)
-        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data})
 
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+    def create(self, request, *args, **kwargs):
+        response_data = super(AmenitiesView, self).create(request, *args, **kwargs)
 
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
+    def update(self, request, *args, **kwargs):
+        response_data = super(AmenitiesView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
-
-class AmenitiesRetrieveView(RetrieveModelMixin, GenericAPIView):
-    serializer_class = AmenitiesSerializer
-    queryset = Amenities.objects.all()
-
-    def get(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=False)
-        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+    def destroy(self, request, *args, **kwargs):
+        response_data = super(AmenitiesView, self).destroy(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
 
-class AmenitiesCreateView(CreateModelMixin, GenericAPIView):
-    serializer_class = AmenitiesSerializer
-    queryset = Amenities.objects.all()
+class AmenitiesGroupView(viewsets.ModelViewSet):
+    serializer_class = AmenitiesGroupSerializer
+    queryset = AmenitiesGroup.objects.all()
+    parser_classes = (FormParser,)
+    permission_classes = (IsSuperUser, )
 
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data})
 
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data})
 
-class AmenitiesUpdateView(UpdateModelMixin, GenericAPIView):
-    serializer_class = AmenitiesSerializer
-    queryset = Amenities.objects.all()
+    def create(self, request, *args, **kwargs):
+        response_data = super(AmenitiesGroupView, self).create(request, *args, **kwargs)
 
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
+    def update(self, request, *args, **kwargs):
+        response_data = super(AmenitiesGroupView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
-class AmenitiesDestroyView(DestroyModelMixin, GenericAPIView):
-    serializer_class = AmenitiesSerializer
-    queryset = Amenities.objects.all()
-
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
-
-
-@api_view(['GET'])
-def amenities_view(request, id=None):
-    if id:
-        obj, many = Amenities.objects.get(id=id), False
-    else:
-        obj, many = Amenities.objects.filter().order_by('-created_at'), True
-    data = AmenitiesSerializer(obj, many=many).data
-    return Response({"data": data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+    def destroy(self, request, *args, **kwargs):
+        response_data = super(AmenitiesGroupView, self).destroy(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
 
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AmenitiesMiddleware)
-def create_amenities_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        serializer = AmenitiesSerializer(data=form.cleaned_data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Create Amenities", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+class AmenitiesAttributeView(viewsets.ModelViewSet):
+    serializer_class = AmenitiesAttributeSerializer
+    queryset = AmenitiesAttribute.objects.all()
+    parser_classes = (FormParser, MultiPartParser)
+    permission_classes = (IsSuperUser, )
 
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data})
 
-@api_view(['PUT'])
-@decorator_from_middleware(AmenitiesMiddleware)
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def edit_amenities_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        amenity = Amenities.objects.get(id=id)
-        serializer = AmenitiesSerializer(data=form.cleaned_data, instance=amenity, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Edit Amenities", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data})
 
+    def create(self, request, *args, **kwargs):
+        response_data = super(AmenitiesAttributeView, self).create(request, *args, **kwargs)
 
-@api_view(['DELETE'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def delete_amenities_view(request, id):
-    if request.user.is_authenticated and request.user.is_superuser:
-        Amenities.objects.get(id=id).delete()
-        return Response({"data": None, "message": "Successfully Delete Amenities", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+        return Response({"data": response_data.data})
 
+    def update(self, request, *args, **kwargs):
+        response_data = super(AmenitiesAttributeView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
 
-@api_view(['GET'])
-def amenities_group_view(request, id=None):
-    if id:
-        obj = AmenitiesGroup.objects.get(id=id)
-        many = False
-    else:
-        obj = AmenitiesGroup.objects.filter().order_by('-created_at')
-        many = True
-    data = AmenitiesGroupSerializer(obj, many=many).data
-    return Response({"data": data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
-
-
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AmenitiesGroupMiddleware)
-def create_amenities_group_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        form.cleaned_data['amenity_id'] = form.cleaned_data['amenity'].id
-        serializer = AmenitiesGroupSerializer(data=form.cleaned_data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Create Amenities Group", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['PUT'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AmenitiesGroupMiddleware)
-def edit_amenities_group_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        amenity_group = AmenitiesGroup.objects.get(id=id)
-        if 'amenity' in form.cleaned_data and form.cleaned_data['amenity']:
-            form.cleaned_data['amenity_id'] = form.cleaned_data['amenity'].id
-        serializer = AmenitiesGroupSerializer(data=form.cleaned_data, instance=amenity_group, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Edit Amenities Group", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['DELETE'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def delete_amenities_group_view(request, id):
-    if request.user.is_authenticated and request.user.is_superuser:
-        AmenitiesGroup.objects.get(id=id).delete()
-        return Response({"data": None, "message": "Successfully Delete Amenities Group", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['GET'])
-def amenities_attribute_view(request, id=None):
-    if id:
-        obj = AmenitiesAttribute.objects.get(id=id)
-        many = False
-    else:
-        obj = AmenitiesAttribute.objects.filter().order_by('-created_at')
-        many = True
-    data = AmenitiesAttributeSerializer(obj, many=many).data
-    return Response({"data": data, "message": "Successfully Get Amenities Attribute", "isSuccess": True, "status": 200}, status=200)
-
-
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AmenitiesAttributeMiddleware)
-def create_amenities_attribute_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        form.cleaned_data['amenity_group_id'] = form.cleaned_data['amenity_group'].id
-        serializer = AmenitiesAttributeSerializer(data=form.cleaned_data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Create Amenities Attribute", "isSuccess": True, "status": 200},
-                            status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['PUT'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AmenitiesAttributeMiddleware)
-def edit_amenities_attribute_view(request, form, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        amenity_attribute = AmenitiesAttribute.objects.get(id=id)
-        if 'amenity_group' in form.cleaned_data and form.cleaned_data['amenity_group']:
-            form.cleaned_data['amenity_group_id'] = form.cleaned_data['amenity_group'].id
-        serializer = AmenitiesAttributeSerializer(data=form.cleaned_data, instance=amenity_attribute, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "Successfully Edit Amenities Attribute", "isSuccess": True, "status": 200},
-                            status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['DELETE'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def delete_amenities_attribute_view(request, id):
-    if request.user.is_authenticated and request.user.is_superuser:
-        AmenitiesAttribute.objects.get(id=id).delete()
-        return Response({"data": None, "message": "Successfully Delete Amenities Attribute", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+    def destroy(self, request, *args, **kwargs):
+        response_data = super(AmenitiesAttributeView, self).destroy(request, *args, **kwargs)
+        return Response({"data": response_data.data})

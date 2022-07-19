@@ -5632,3 +5632,1140 @@ AttributeError: 'collections.OrderedDict' object has no attribute 'results'
 2022-07-13 07:25:35,793 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-07-13 07:25:36,308 Watching for file changes with StatReloader
 2022-07-13 07:25:51,624 Watching for file changes with StatReloader
+2022-07-13 12:50:37,684 Watching for file changes with StatReloader
+2022-07-13 12:50:43,625 Not Found: /favicon.ico
+2022-07-13 12:55:03,494 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 12:55:04,352 Watching for file changes with StatReloader
+2022-07-13 12:55:13,733 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-13 12:55:14,216 Watching for file changes with StatReloader
+2022-07-13 12:56:18,405 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-07-13 12:56:19,058 Watching for file changes with StatReloader
+2022-07-13 13:00:27,881 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-07-13 13:00:28,368 Watching for file changes with StatReloader
+2022-07-13 13:00:38,257 Internal Server Error: /api/v1/property/amenities/3/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py", line 22, in get
+    return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200}, status=200)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `AmenitiesSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'name'.
+2022-07-15 12:14:25,978 Watching for file changes with StatReloader
+2022-07-15 12:28:39,402 Not Found: /favicon.ico
+2022-07-15 12:52:27,350 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-15 12:52:27,891 Watching for file changes with StatReloader
+2022-07-16 07:54:56,321 Watching for file changes with StatReloader
+2022-07-16 07:56:19,703 Not Found: /favicon.ico
+2022-07-16 10:10:05,967 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 10:10:06,516 Watching for file changes with StatReloader
+2022-07-16 10:10:56,332 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-16 10:10:56,829 Watching for file changes with StatReloader
+2022-07-16 10:11:12,811 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-16 10:11:13,267 Watching for file changes with StatReloader
+2022-07-16 10:11:26,072 Unsupported Media Type: /api/v1/property/create/
+2022-07-16 10:11:40,038 Unsupported Media Type: /api/v1/property/create/
+2022-07-16 10:12:02,213 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 10:12:02,666 Watching for file changes with StatReloader
+2022-07-16 10:12:16,119 Bad Request: /api/v1/property/create/
+2022-07-16 10:44:51,362 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 10:44:51,942 Watching for file changes with StatReloader
+2022-07-16 10:45:34,704 Bad Request: /api/v1/property/edit/9/
+2022-07-16 10:48:07,082 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 10:48:07,588 Watching for file changes with StatReloader
+2022-07-16 10:49:01,503 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 10:49:01,957 Watching for file changes with StatReloader
+2022-07-16 10:49:56,907 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 10:49:57,382 Watching for file changes with StatReloader
+2022-07-16 11:04:43,488 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:04:43,983 Watching for file changes with StatReloader
+2022-07-16 11:05:01,802 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:05:02,290 Watching for file changes with StatReloader
+2022-07-16 11:16:15,349 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:16:15,798 Watching for file changes with StatReloader
+2022-07-16 11:16:33,978 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 11:16:34,440 Watching for file changes with StatReloader
+2022-07-16 11:17:16,989 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:17:17,543 Watching for file changes with StatReloader
+2022-07-16 11:29:28,703 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:29:29,198 Watching for file changes with StatReloader
+2022-07-16 11:29:39,251 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 53, in create
+    if 'images' in validated_data and validated_data['validated_data']:
+KeyError: 'validated_data'
+2022-07-16 11:29:59,621 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:30:00,079 Watching for file changes with StatReloader
+2022-07-16 11:30:06,787 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 56, in create
+    parent = super().create(**validated_data)
+TypeError: create() got an unexpected keyword argument 'name'
+2022-07-16 11:30:24,358 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:30:24,818 Watching for file changes with StatReloader
+2022-07-16 11:30:31,721 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 57, in create
+    parent = super().create(**validated_data)
+TypeError: create() got an unexpected keyword argument 'name'
+2022-07-16 11:32:24,360 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:32:24,829 Watching for file changes with StatReloader
+2022-07-16 11:34:17,107 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:34:17,579 Watching for file changes with StatReloader
+2022-07-16 11:34:25,731 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 57, in create
+    parent = super(PropertySerializer, self).create(**validated_data)
+TypeError: create() got an unexpected keyword argument 'name'
+2022-07-16 11:35:20,724 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:35:21,188 Watching for file changes with StatReloader
+2022-07-16 11:48:02,743 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 11:48:03,199 Watching for file changes with StatReloader
+2022-07-16 12:10:14,573 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:10:15,122 Watching for file changes with StatReloader
+2022-07-16 12:11:22,315 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:11:22,775 Watching for file changes with StatReloader
+2022-07-16 12:11:36,701 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:11:37,159 Watching for file changes with StatReloader
+2022-07-16 12:12:28,027 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:12:28,581 Watching for file changes with StatReloader
+2022-07-16 12:13:13,196 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:13:13,659 Watching for file changes with StatReloader
+2022-07-16 12:13:54,268 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:13:54,728 Watching for file changes with StatReloader
+2022-07-16 12:14:29,270 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:14:29,839 Watching for file changes with StatReloader
+2022-07-16 12:15:15,701 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:15:16,145 Watching for file changes with StatReloader
+2022-07-16 12:15:56,761 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 12:15:57,244 Watching for file changes with StatReloader
+2022-07-16 12:16:54,221 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:16:54,723 Watching for file changes with StatReloader
+2022-07-16 12:21:55,145 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 12:21:55,658 Watching for file changes with StatReloader
+2022-07-16 12:22:14,800 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 12:22:15,341 Watching for file changes with StatReloader
+2022-07-16 12:22:59,079 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 12:22:59,583 Watching for file changes with StatReloader
+2022-07-16 12:23:49,453 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:23:49,948 Watching for file changes with StatReloader
+2022-07-16 12:23:57,731 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-16 12:23:58,212 Watching for file changes with StatReloader
+2022-07-16 12:24:05,355 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 52, in create
+    print(validated_data.getlist('images'))
+AttributeError: 'dict' object has no attribute 'getlist'
+2022-07-16 12:24:23,502 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:24:24,087 Watching for file changes with StatReloader
+2022-07-16 12:25:42,596 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:25:43,085 Watching for file changes with StatReloader
+2022-07-16 12:26:14,399 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:26:14,866 Watching for file changes with StatReloader
+2022-07-16 12:26:23,043 Importing BlpImagePlugin
+2022-07-16 12:26:23,044 Importing BmpImagePlugin
+2022-07-16 12:26:23,044 Importing BufrStubImagePlugin
+2022-07-16 12:26:23,045 Importing CurImagePlugin
+2022-07-16 12:26:23,045 Importing DcxImagePlugin
+2022-07-16 12:26:23,050 Importing DdsImagePlugin
+2022-07-16 12:26:23,051 Importing EpsImagePlugin
+2022-07-16 12:26:23,052 Importing FitsImagePlugin
+2022-07-16 12:26:23,053 Importing FitsStubImagePlugin
+2022-07-16 12:26:23,054 Importing FliImagePlugin
+2022-07-16 12:26:23,054 Importing FpxImagePlugin
+2022-07-16 12:26:23,055 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-16 12:26:23,055 Importing FtexImagePlugin
+2022-07-16 12:26:23,056 Importing GbrImagePlugin
+2022-07-16 12:26:23,056 Importing GifImagePlugin
+2022-07-16 12:26:23,056 Importing GribStubImagePlugin
+2022-07-16 12:26:23,057 Importing Hdf5StubImagePlugin
+2022-07-16 12:26:23,057 Importing IcnsImagePlugin
+2022-07-16 12:26:23,071 Importing IcoImagePlugin
+2022-07-16 12:26:23,072 Importing ImImagePlugin
+2022-07-16 12:26:23,073 Importing ImtImagePlugin
+2022-07-16 12:26:23,074 Importing IptcImagePlugin
+2022-07-16 12:26:23,075 Importing JpegImagePlugin
+2022-07-16 12:26:23,075 Importing Jpeg2KImagePlugin
+2022-07-16 12:26:23,075 Importing McIdasImagePlugin
+2022-07-16 12:26:23,075 Importing MicImagePlugin
+2022-07-16 12:26:23,076 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-16 12:26:23,076 Importing MpegImagePlugin
+2022-07-16 12:26:23,077 Importing MpoImagePlugin
+2022-07-16 12:26:23,077 Importing MspImagePlugin
+2022-07-16 12:26:23,078 Importing PalmImagePlugin
+2022-07-16 12:26:23,080 Importing PcdImagePlugin
+2022-07-16 12:26:23,080 Importing PcxImagePlugin
+2022-07-16 12:26:23,080 Importing PdfImagePlugin
+2022-07-16 12:26:23,090 Importing PixarImagePlugin
+2022-07-16 12:26:23,091 Importing PngImagePlugin
+2022-07-16 12:26:23,091 Importing PpmImagePlugin
+2022-07-16 12:26:23,091 Importing PsdImagePlugin
+2022-07-16 12:26:23,092 Importing SgiImagePlugin
+2022-07-16 12:26:23,092 Importing SpiderImagePlugin
+2022-07-16 12:26:23,093 Importing SunImagePlugin
+2022-07-16 12:26:23,093 Importing TgaImagePlugin
+2022-07-16 12:26:23,094 Importing TiffImagePlugin
+2022-07-16 12:26:23,094 Importing WebPImagePlugin
+2022-07-16 12:26:23,134 Importing WmfImagePlugin
+2022-07-16 12:26:23,135 Importing XbmImagePlugin
+2022-07-16 12:26:23,137 Importing XpmImagePlugin
+2022-07-16 12:26:23,138 Importing XVThumbImagePlugin
+2022-07-16 12:26:25,712 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Property' object has no attribute 'images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `images` on serializer `PropertySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Property` instance.
+Original exception text was: 'Property' object has no attribute 'images'.
+2022-07-16 12:32:08,772 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:32:09,276 Watching for file changes with StatReloader
+2022-07-16 12:38:20,299 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:38:20,987 Watching for file changes with StatReloader
+2022-07-16 12:38:28,922 Bad Request: /api/v1/property/create/
+2022-07-16 12:55:28,272 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:55:28,723 Watching for file changes with StatReloader
+2022-07-16 12:55:35,936 Importing BlpImagePlugin
+2022-07-16 12:55:35,937 Importing BmpImagePlugin
+2022-07-16 12:55:35,937 Importing BufrStubImagePlugin
+2022-07-16 12:55:35,937 Importing CurImagePlugin
+2022-07-16 12:55:35,938 Importing DcxImagePlugin
+2022-07-16 12:55:35,938 Importing DdsImagePlugin
+2022-07-16 12:55:35,939 Importing EpsImagePlugin
+2022-07-16 12:55:35,940 Importing FitsImagePlugin
+2022-07-16 12:55:35,940 Importing FitsStubImagePlugin
+2022-07-16 12:55:35,940 Importing FliImagePlugin
+2022-07-16 12:55:35,941 Importing FpxImagePlugin
+2022-07-16 12:55:35,941 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-16 12:55:35,941 Importing FtexImagePlugin
+2022-07-16 12:55:35,942 Importing GbrImagePlugin
+2022-07-16 12:55:35,942 Importing GifImagePlugin
+2022-07-16 12:55:35,942 Importing GribStubImagePlugin
+2022-07-16 12:55:35,942 Importing Hdf5StubImagePlugin
+2022-07-16 12:55:35,942 Importing IcnsImagePlugin
+2022-07-16 12:55:35,943 Importing IcoImagePlugin
+2022-07-16 12:55:35,944 Importing ImImagePlugin
+2022-07-16 12:55:35,944 Importing ImtImagePlugin
+2022-07-16 12:55:35,945 Importing IptcImagePlugin
+2022-07-16 12:55:35,945 Importing JpegImagePlugin
+2022-07-16 12:55:35,945 Importing Jpeg2KImagePlugin
+2022-07-16 12:55:35,945 Importing McIdasImagePlugin
+2022-07-16 12:55:35,945 Importing MicImagePlugin
+2022-07-16 12:55:35,946 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-16 12:55:35,946 Importing MpegImagePlugin
+2022-07-16 12:55:35,946 Importing MpoImagePlugin
+2022-07-16 12:55:35,946 Importing MspImagePlugin
+2022-07-16 12:55:35,946 Importing PalmImagePlugin
+2022-07-16 12:55:35,967 Importing PcdImagePlugin
+2022-07-16 12:55:35,968 Importing PcxImagePlugin
+2022-07-16 12:55:35,968 Importing PdfImagePlugin
+2022-07-16 12:55:35,979 Importing PixarImagePlugin
+2022-07-16 12:55:35,979 Importing PngImagePlugin
+2022-07-16 12:55:35,979 Importing PpmImagePlugin
+2022-07-16 12:55:35,979 Importing PsdImagePlugin
+2022-07-16 12:55:35,979 Importing SgiImagePlugin
+2022-07-16 12:55:35,980 Importing SpiderImagePlugin
+2022-07-16 12:55:35,980 Importing SunImagePlugin
+2022-07-16 12:55:35,980 Importing TgaImagePlugin
+2022-07-16 12:55:35,981 Importing TiffImagePlugin
+2022-07-16 12:55:35,981 Importing WebPImagePlugin
+2022-07-16 12:55:35,982 Importing WmfImagePlugin
+2022-07-16 12:55:35,982 Importing XbmImagePlugin
+2022-07-16 12:55:35,984 Importing XpmImagePlugin
+2022-07-16 12:55:35,984 Importing XVThumbImagePlugin
+2022-07-16 12:55:38,574 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Property' object has no attribute 'images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `images` on serializer `PropertySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Property` instance.
+Original exception text was: 'Property' object has no attribute 'images'.
+2022-07-16 12:57:13,015 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:57:13,501 Watching for file changes with StatReloader
+2022-07-16 12:57:20,054 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 479, in to_internal_value
+    for field in fields:
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'property_images' was declared on serializer PropertySerializer, but has not been included in the 'fields' option.
+2022-07-16 12:57:29,582 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 12:57:30,048 Watching for file changes with StatReloader
+2022-07-16 12:57:37,334 Importing BlpImagePlugin
+2022-07-16 12:57:37,335 Importing BmpImagePlugin
+2022-07-16 12:57:37,335 Importing BufrStubImagePlugin
+2022-07-16 12:57:37,336 Importing CurImagePlugin
+2022-07-16 12:57:37,336 Importing DcxImagePlugin
+2022-07-16 12:57:37,336 Importing DdsImagePlugin
+2022-07-16 12:57:37,337 Importing EpsImagePlugin
+2022-07-16 12:57:37,338 Importing FitsImagePlugin
+2022-07-16 12:57:37,338 Importing FitsStubImagePlugin
+2022-07-16 12:57:37,338 Importing FliImagePlugin
+2022-07-16 12:57:37,339 Importing FpxImagePlugin
+2022-07-16 12:57:37,339 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-16 12:57:37,339 Importing FtexImagePlugin
+2022-07-16 12:57:37,340 Importing GbrImagePlugin
+2022-07-16 12:57:37,340 Importing GifImagePlugin
+2022-07-16 12:57:37,340 Importing GribStubImagePlugin
+2022-07-16 12:57:37,340 Importing Hdf5StubImagePlugin
+2022-07-16 12:57:37,340 Importing IcnsImagePlugin
+2022-07-16 12:57:37,342 Importing IcoImagePlugin
+2022-07-16 12:57:37,342 Importing ImImagePlugin
+2022-07-16 12:57:37,343 Importing ImtImagePlugin
+2022-07-16 12:57:37,343 Importing IptcImagePlugin
+2022-07-16 12:57:37,343 Importing JpegImagePlugin
+2022-07-16 12:57:37,343 Importing Jpeg2KImagePlugin
+2022-07-16 12:57:37,343 Importing McIdasImagePlugin
+2022-07-16 12:57:37,344 Importing MicImagePlugin
+2022-07-16 12:57:37,344 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-16 12:57:37,344 Importing MpegImagePlugin
+2022-07-16 12:57:37,345 Importing MpoImagePlugin
+2022-07-16 12:57:37,345 Importing MspImagePlugin
+2022-07-16 12:57:37,345 Importing PalmImagePlugin
+2022-07-16 12:57:37,347 Importing PcdImagePlugin
+2022-07-16 12:57:37,347 Importing PcxImagePlugin
+2022-07-16 12:57:37,347 Importing PdfImagePlugin
+2022-07-16 12:57:37,355 Importing PixarImagePlugin
+2022-07-16 12:57:37,355 Importing PngImagePlugin
+2022-07-16 12:57:37,355 Importing PpmImagePlugin
+2022-07-16 12:57:37,355 Importing PsdImagePlugin
+2022-07-16 12:57:37,356 Importing SgiImagePlugin
+2022-07-16 12:57:37,356 Importing SpiderImagePlugin
+2022-07-16 12:57:37,356 Importing SunImagePlugin
+2022-07-16 12:57:37,357 Importing TgaImagePlugin
+2022-07-16 12:57:37,357 Importing TiffImagePlugin
+2022-07-16 12:57:37,357 Importing WebPImagePlugin
+2022-07-16 12:57:37,358 Importing WmfImagePlugin
+2022-07-16 12:57:37,358 Importing XbmImagePlugin
+2022-07-16 12:57:37,359 Importing XpmImagePlugin
+2022-07-16 12:57:37,360 Importing XVThumbImagePlugin
+2022-07-16 13:00:15,667 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-16 13:00:16,150 Watching for file changes with StatReloader
+2022-07-18 09:34:18,981 Watching for file changes with StatReloader
+2022-07-18 09:36:21,091 Not Found: /api/v1/property/url/get/liked/
+2022-07-18 09:36:42,321 Not Found: /api/v1/property/url/search/aka/
+2022-07-18 09:37:04,702 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-18 09:37:05,234 Watching for file changes with StatReloader
+2022-07-18 10:37:05,527 Watching for file changes with StatReloader
+2022-07-18 10:39:13,277 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-18 10:39:14,280 Watching for file changes with StatReloader
+2022-07-18 10:46:44,203 Importing BlpImagePlugin
+2022-07-18 10:46:44,205 Importing BmpImagePlugin
+2022-07-18 10:46:44,205 Importing BufrStubImagePlugin
+2022-07-18 10:46:44,205 Importing CurImagePlugin
+2022-07-18 10:46:44,206 Importing DcxImagePlugin
+2022-07-18 10:46:44,207 Importing DdsImagePlugin
+2022-07-18 10:46:44,207 Importing EpsImagePlugin
+2022-07-18 10:46:44,208 Importing FitsImagePlugin
+2022-07-18 10:46:44,209 Importing FitsStubImagePlugin
+2022-07-18 10:46:44,209 Importing FliImagePlugin
+2022-07-18 10:46:44,210 Importing FpxImagePlugin
+2022-07-18 10:46:44,210 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 10:46:44,210 Importing FtexImagePlugin
+2022-07-18 10:46:44,211 Importing GbrImagePlugin
+2022-07-18 10:46:44,211 Importing GifImagePlugin
+2022-07-18 10:46:44,211 Importing GribStubImagePlugin
+2022-07-18 10:46:44,212 Importing Hdf5StubImagePlugin
+2022-07-18 10:46:44,212 Importing IcnsImagePlugin
+2022-07-18 10:46:44,214 Importing IcoImagePlugin
+2022-07-18 10:46:44,214 Importing ImImagePlugin
+2022-07-18 10:46:44,215 Importing ImtImagePlugin
+2022-07-18 10:46:44,216 Importing IptcImagePlugin
+2022-07-18 10:46:44,216 Importing JpegImagePlugin
+2022-07-18 10:46:44,216 Importing Jpeg2KImagePlugin
+2022-07-18 10:46:44,216 Importing McIdasImagePlugin
+2022-07-18 10:46:44,217 Importing MicImagePlugin
+2022-07-18 10:46:44,217 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 10:46:44,217 Importing MpegImagePlugin
+2022-07-18 10:46:44,218 Importing MpoImagePlugin
+2022-07-18 10:46:44,218 Importing MspImagePlugin
+2022-07-18 10:46:44,219 Importing PalmImagePlugin
+2022-07-18 10:46:44,221 Importing PcdImagePlugin
+2022-07-18 10:46:44,222 Importing PcxImagePlugin
+2022-07-18 10:46:44,222 Importing PdfImagePlugin
+2022-07-18 10:46:44,232 Importing PixarImagePlugin
+2022-07-18 10:46:44,233 Importing PngImagePlugin
+2022-07-18 10:46:44,233 Importing PpmImagePlugin
+2022-07-18 10:46:44,233 Importing PsdImagePlugin
+2022-07-18 10:46:44,234 Importing SgiImagePlugin
+2022-07-18 10:46:44,234 Importing SpiderImagePlugin
+2022-07-18 10:46:44,235 Importing SunImagePlugin
+2022-07-18 10:46:44,236 Importing TgaImagePlugin
+2022-07-18 10:46:44,236 Importing TiffImagePlugin
+2022-07-18 10:46:44,236 Importing WebPImagePlugin
+2022-07-18 10:46:44,283 Importing WmfImagePlugin
+2022-07-18 10:46:44,284 Importing XbmImagePlugin
+2022-07-18 10:46:44,286 Importing XpmImagePlugin
+2022-07-18 10:46:44,287 Importing XVThumbImagePlugin
+2022-07-18 10:50:48,239 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/admin.py changed, reloading.
+2022-07-18 10:50:48,723 Watching for file changes with StatReloader
+2022-07-18 10:50:52,340 Not Found: /favicon.ico
+2022-07-18 10:56:53,913 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 10:56:54,410 Watching for file changes with StatReloader
+2022-07-18 10:57:20,696 Importing BlpImagePlugin
+2022-07-18 10:57:20,697 Importing BmpImagePlugin
+2022-07-18 10:57:20,697 Importing BufrStubImagePlugin
+2022-07-18 10:57:20,698 Importing CurImagePlugin
+2022-07-18 10:57:20,698 Importing DcxImagePlugin
+2022-07-18 10:57:20,699 Importing DdsImagePlugin
+2022-07-18 10:57:20,699 Importing EpsImagePlugin
+2022-07-18 10:57:20,700 Importing FitsImagePlugin
+2022-07-18 10:57:20,700 Importing FitsStubImagePlugin
+2022-07-18 10:57:20,700 Importing FliImagePlugin
+2022-07-18 10:57:20,701 Importing FpxImagePlugin
+2022-07-18 10:57:20,701 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 10:57:20,701 Importing FtexImagePlugin
+2022-07-18 10:57:20,702 Importing GbrImagePlugin
+2022-07-18 10:57:20,702 Importing GifImagePlugin
+2022-07-18 10:57:20,702 Importing GribStubImagePlugin
+2022-07-18 10:57:20,703 Importing Hdf5StubImagePlugin
+2022-07-18 10:57:20,703 Importing IcnsImagePlugin
+2022-07-18 10:57:20,704 Importing IcoImagePlugin
+2022-07-18 10:57:20,704 Importing ImImagePlugin
+2022-07-18 10:57:20,705 Importing ImtImagePlugin
+2022-07-18 10:57:20,705 Importing IptcImagePlugin
+2022-07-18 10:57:20,705 Importing JpegImagePlugin
+2022-07-18 10:57:20,706 Importing Jpeg2KImagePlugin
+2022-07-18 10:57:20,706 Importing McIdasImagePlugin
+2022-07-18 10:57:20,706 Importing MicImagePlugin
+2022-07-18 10:57:20,706 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 10:57:20,706 Importing MpegImagePlugin
+2022-07-18 10:57:20,707 Importing MpoImagePlugin
+2022-07-18 10:57:20,707 Importing MspImagePlugin
+2022-07-18 10:57:20,707 Importing PalmImagePlugin
+2022-07-18 10:57:20,709 Importing PcdImagePlugin
+2022-07-18 10:57:20,709 Importing PcxImagePlugin
+2022-07-18 10:57:20,709 Importing PdfImagePlugin
+2022-07-18 10:57:20,750 Importing PixarImagePlugin
+2022-07-18 10:57:20,750 Importing PngImagePlugin
+2022-07-18 10:57:20,751 Importing PpmImagePlugin
+2022-07-18 10:57:20,751 Importing PsdImagePlugin
+2022-07-18 10:57:20,751 Importing SgiImagePlugin
+2022-07-18 10:57:20,751 Importing SpiderImagePlugin
+2022-07-18 10:57:20,751 Importing SunImagePlugin
+2022-07-18 10:57:20,752 Importing TgaImagePlugin
+2022-07-18 10:57:20,752 Importing TiffImagePlugin
+2022-07-18 10:57:20,752 Importing WebPImagePlugin
+2022-07-18 10:57:20,753 Importing WmfImagePlugin
+2022-07-18 10:57:20,753 Importing XbmImagePlugin
+2022-07-18 10:57:20,754 Importing XpmImagePlugin
+2022-07-18 10:57:20,755 Importing XVThumbImagePlugin
+2022-07-18 10:58:43,005 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 10:58:43,485 Watching for file changes with StatReloader
+2022-07-18 10:59:38,368 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Property() got an unexpected keyword argument 'property_images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 24, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 54, in create
+    parent = super(PropertySerializer, self).create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Property.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Property.objects.create()`. You may need to make the field read-only, or override the PropertySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Property() got an unexpected keyword argument 'property_images'
+
+2022-07-18 11:00:11,204 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:00:11,695 Watching for file changes with StatReloader
+2022-07-18 11:00:19,823 Importing BlpImagePlugin
+2022-07-18 11:00:19,824 Importing BmpImagePlugin
+2022-07-18 11:00:19,825 Importing BufrStubImagePlugin
+2022-07-18 11:00:19,825 Importing CurImagePlugin
+2022-07-18 11:00:19,825 Importing DcxImagePlugin
+2022-07-18 11:00:19,826 Importing DdsImagePlugin
+2022-07-18 11:00:19,826 Importing EpsImagePlugin
+2022-07-18 11:00:19,827 Importing FitsImagePlugin
+2022-07-18 11:00:19,827 Importing FitsStubImagePlugin
+2022-07-18 11:00:19,827 Importing FliImagePlugin
+2022-07-18 11:00:19,828 Importing FpxImagePlugin
+2022-07-18 11:00:19,828 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 11:00:19,828 Importing FtexImagePlugin
+2022-07-18 11:00:19,829 Importing GbrImagePlugin
+2022-07-18 11:00:19,829 Importing GifImagePlugin
+2022-07-18 11:00:19,829 Importing GribStubImagePlugin
+2022-07-18 11:00:19,829 Importing Hdf5StubImagePlugin
+2022-07-18 11:00:19,830 Importing IcnsImagePlugin
+2022-07-18 11:00:19,831 Importing IcoImagePlugin
+2022-07-18 11:00:19,831 Importing ImImagePlugin
+2022-07-18 11:00:19,831 Importing ImtImagePlugin
+2022-07-18 11:00:19,832 Importing IptcImagePlugin
+2022-07-18 11:00:19,832 Importing JpegImagePlugin
+2022-07-18 11:00:19,832 Importing Jpeg2KImagePlugin
+2022-07-18 11:00:19,832 Importing McIdasImagePlugin
+2022-07-18 11:00:19,832 Importing MicImagePlugin
+2022-07-18 11:00:19,833 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 11:00:19,833 Importing MpegImagePlugin
+2022-07-18 11:00:19,833 Importing MpoImagePlugin
+2022-07-18 11:00:19,833 Importing MspImagePlugin
+2022-07-18 11:00:19,834 Importing PalmImagePlugin
+2022-07-18 11:00:19,835 Importing PcdImagePlugin
+2022-07-18 11:00:19,836 Importing PcxImagePlugin
+2022-07-18 11:00:19,836 Importing PdfImagePlugin
+2022-07-18 11:00:19,876 Importing PixarImagePlugin
+2022-07-18 11:00:19,876 Importing PngImagePlugin
+2022-07-18 11:00:19,876 Importing PpmImagePlugin
+2022-07-18 11:00:19,876 Importing PsdImagePlugin
+2022-07-18 11:00:19,877 Importing SgiImagePlugin
+2022-07-18 11:00:19,877 Importing SpiderImagePlugin
+2022-07-18 11:00:19,877 Importing SunImagePlugin
+2022-07-18 11:00:19,877 Importing TgaImagePlugin
+2022-07-18 11:00:19,878 Importing TiffImagePlugin
+2022-07-18 11:00:19,878 Importing WebPImagePlugin
+2022-07-18 11:00:19,879 Importing WmfImagePlugin
+2022-07-18 11:00:19,879 Importing XbmImagePlugin
+2022-07-18 11:00:19,880 Importing XpmImagePlugin
+2022-07-18 11:00:19,880 Importing XVThumbImagePlugin
+2022-07-18 11:02:22,515 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:02:23,164 Watching for file changes with StatReloader
+2022-07-18 11:03:09,891 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:03:10,346 Watching for file changes with StatReloader
+2022-07-18 11:03:28,733 Importing BlpImagePlugin
+2022-07-18 11:03:28,735 Importing BmpImagePlugin
+2022-07-18 11:03:28,735 Importing BufrStubImagePlugin
+2022-07-18 11:03:28,735 Importing CurImagePlugin
+2022-07-18 11:03:28,735 Importing DcxImagePlugin
+2022-07-18 11:03:28,736 Importing DdsImagePlugin
+2022-07-18 11:03:28,736 Importing EpsImagePlugin
+2022-07-18 11:03:28,737 Importing FitsImagePlugin
+2022-07-18 11:03:28,737 Importing FitsStubImagePlugin
+2022-07-18 11:03:28,737 Importing FliImagePlugin
+2022-07-18 11:03:28,737 Importing FpxImagePlugin
+2022-07-18 11:03:28,738 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 11:03:28,738 Importing FtexImagePlugin
+2022-07-18 11:03:28,738 Importing GbrImagePlugin
+2022-07-18 11:03:28,738 Importing GifImagePlugin
+2022-07-18 11:03:28,738 Importing GribStubImagePlugin
+2022-07-18 11:03:28,739 Importing Hdf5StubImagePlugin
+2022-07-18 11:03:28,739 Importing IcnsImagePlugin
+2022-07-18 11:03:28,740 Importing IcoImagePlugin
+2022-07-18 11:03:28,740 Importing ImImagePlugin
+2022-07-18 11:03:28,741 Importing ImtImagePlugin
+2022-07-18 11:03:28,741 Importing IptcImagePlugin
+2022-07-18 11:03:28,741 Importing JpegImagePlugin
+2022-07-18 11:03:28,742 Importing Jpeg2KImagePlugin
+2022-07-18 11:03:28,742 Importing McIdasImagePlugin
+2022-07-18 11:03:28,742 Importing MicImagePlugin
+2022-07-18 11:03:28,742 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 11:03:28,742 Importing MpegImagePlugin
+2022-07-18 11:03:28,743 Importing MpoImagePlugin
+2022-07-18 11:03:28,743 Importing MspImagePlugin
+2022-07-18 11:03:28,743 Importing PalmImagePlugin
+2022-07-18 11:03:28,745 Importing PcdImagePlugin
+2022-07-18 11:03:28,745 Importing PcxImagePlugin
+2022-07-18 11:03:28,745 Importing PdfImagePlugin
+2022-07-18 11:03:28,786 Importing PixarImagePlugin
+2022-07-18 11:03:28,786 Importing PngImagePlugin
+2022-07-18 11:03:28,786 Importing PpmImagePlugin
+2022-07-18 11:03:28,786 Importing PsdImagePlugin
+2022-07-18 11:03:28,787 Importing SgiImagePlugin
+2022-07-18 11:03:28,787 Importing SpiderImagePlugin
+2022-07-18 11:03:28,787 Importing SunImagePlugin
+2022-07-18 11:03:28,788 Importing TgaImagePlugin
+2022-07-18 11:03:28,788 Importing TiffImagePlugin
+2022-07-18 11:03:28,788 Importing WebPImagePlugin
+2022-07-18 11:03:28,789 Importing WmfImagePlugin
+2022-07-18 11:03:28,789 Importing XbmImagePlugin
+2022-07-18 11:03:28,790 Importing XpmImagePlugin
+2022-07-18 11:03:28,791 Importing XVThumbImagePlugin
+2022-07-18 11:03:31,119 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Property' object has no attribute 'images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 24, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `images` on serializer `PropertySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Property` instance.
+Original exception text was: 'Property' object has no attribute 'images'.
+2022-07-18 11:04:35,129 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:04:35,761 Watching for file changes with StatReloader
+2022-07-18 11:04:43,705 Importing BlpImagePlugin
+2022-07-18 11:04:43,707 Importing BmpImagePlugin
+2022-07-18 11:04:43,707 Importing BufrStubImagePlugin
+2022-07-18 11:04:43,707 Importing CurImagePlugin
+2022-07-18 11:04:43,707 Importing DcxImagePlugin
+2022-07-18 11:04:43,708 Importing DdsImagePlugin
+2022-07-18 11:04:43,708 Importing EpsImagePlugin
+2022-07-18 11:04:43,709 Importing FitsImagePlugin
+2022-07-18 11:04:43,710 Importing FitsStubImagePlugin
+2022-07-18 11:04:43,710 Importing FliImagePlugin
+2022-07-18 11:04:43,711 Importing FpxImagePlugin
+2022-07-18 11:04:43,711 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 11:04:43,711 Importing FtexImagePlugin
+2022-07-18 11:04:43,711 Importing GbrImagePlugin
+2022-07-18 11:04:43,712 Importing GifImagePlugin
+2022-07-18 11:04:43,712 Importing GribStubImagePlugin
+2022-07-18 11:04:43,712 Importing Hdf5StubImagePlugin
+2022-07-18 11:04:43,712 Importing IcnsImagePlugin
+2022-07-18 11:04:43,714 Importing IcoImagePlugin
+2022-07-18 11:04:43,714 Importing ImImagePlugin
+2022-07-18 11:04:43,715 Importing ImtImagePlugin
+2022-07-18 11:04:43,715 Importing IptcImagePlugin
+2022-07-18 11:04:43,715 Importing JpegImagePlugin
+2022-07-18 11:04:43,715 Importing Jpeg2KImagePlugin
+2022-07-18 11:04:43,716 Importing McIdasImagePlugin
+2022-07-18 11:04:43,716 Importing MicImagePlugin
+2022-07-18 11:04:43,716 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 11:04:43,716 Importing MpegImagePlugin
+2022-07-18 11:04:43,716 Importing MpoImagePlugin
+2022-07-18 11:04:43,717 Importing MspImagePlugin
+2022-07-18 11:04:43,717 Importing PalmImagePlugin
+2022-07-18 11:04:43,719 Importing PcdImagePlugin
+2022-07-18 11:04:43,719 Importing PcxImagePlugin
+2022-07-18 11:04:43,719 Importing PdfImagePlugin
+2022-07-18 11:04:43,764 Importing PixarImagePlugin
+2022-07-18 11:04:43,764 Importing PngImagePlugin
+2022-07-18 11:04:43,764 Importing PpmImagePlugin
+2022-07-18 11:04:43,764 Importing PsdImagePlugin
+2022-07-18 11:04:43,765 Importing SgiImagePlugin
+2022-07-18 11:04:43,766 Importing SpiderImagePlugin
+2022-07-18 11:04:43,766 Importing SunImagePlugin
+2022-07-18 11:04:43,767 Importing TgaImagePlugin
+2022-07-18 11:04:43,767 Importing TiffImagePlugin
+2022-07-18 11:04:43,767 Importing WebPImagePlugin
+2022-07-18 11:04:43,769 Importing WmfImagePlugin
+2022-07-18 11:04:43,769 Importing XbmImagePlugin
+2022-07-18 11:04:43,770 Importing XpmImagePlugin
+2022-07-18 11:04:43,771 Importing XVThumbImagePlugin
+2022-07-18 11:04:46,139 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Property' object has no attribute 'images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 24, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `images` on serializer `PropertySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Property` instance.
+Original exception text was: 'Property' object has no attribute 'images'.
+2022-07-18 11:05:28,078 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:05:28,543 Watching for file changes with StatReloader
+2022-07-18 11:05:35,379 Bad Request: /api/v1/property/create/
+2022-07-18 11:06:14,324 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:06:14,777 Watching for file changes with StatReloader
+2022-07-18 11:06:22,385 Importing BlpImagePlugin
+2022-07-18 11:06:22,386 Importing BmpImagePlugin
+2022-07-18 11:06:22,386 Importing BufrStubImagePlugin
+2022-07-18 11:06:22,386 Importing CurImagePlugin
+2022-07-18 11:06:22,386 Importing DcxImagePlugin
+2022-07-18 11:06:22,387 Importing DdsImagePlugin
+2022-07-18 11:06:22,387 Importing EpsImagePlugin
+2022-07-18 11:06:22,388 Importing FitsImagePlugin
+2022-07-18 11:06:22,388 Importing FitsStubImagePlugin
+2022-07-18 11:06:22,388 Importing FliImagePlugin
+2022-07-18 11:06:22,389 Importing FpxImagePlugin
+2022-07-18 11:06:22,389 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 11:06:22,389 Importing FtexImagePlugin
+2022-07-18 11:06:22,390 Importing GbrImagePlugin
+2022-07-18 11:06:22,390 Importing GifImagePlugin
+2022-07-18 11:06:22,390 Importing GribStubImagePlugin
+2022-07-18 11:06:22,391 Importing Hdf5StubImagePlugin
+2022-07-18 11:06:22,391 Importing IcnsImagePlugin
+2022-07-18 11:06:22,392 Importing IcoImagePlugin
+2022-07-18 11:06:22,392 Importing ImImagePlugin
+2022-07-18 11:06:22,393 Importing ImtImagePlugin
+2022-07-18 11:06:22,394 Importing IptcImagePlugin
+2022-07-18 11:06:22,394 Importing JpegImagePlugin
+2022-07-18 11:06:22,394 Importing Jpeg2KImagePlugin
+2022-07-18 11:06:22,394 Importing McIdasImagePlugin
+2022-07-18 11:06:22,394 Importing MicImagePlugin
+2022-07-18 11:06:22,395 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 11:06:22,395 Importing MpegImagePlugin
+2022-07-18 11:06:22,395 Importing MpoImagePlugin
+2022-07-18 11:06:22,395 Importing MspImagePlugin
+2022-07-18 11:06:22,395 Importing PalmImagePlugin
+2022-07-18 11:06:22,397 Importing PcdImagePlugin
+2022-07-18 11:06:22,397 Importing PcxImagePlugin
+2022-07-18 11:06:22,397 Importing PdfImagePlugin
+2022-07-18 11:06:22,437 Importing PixarImagePlugin
+2022-07-18 11:06:22,437 Importing PngImagePlugin
+2022-07-18 11:06:22,437 Importing PpmImagePlugin
+2022-07-18 11:06:22,437 Importing PsdImagePlugin
+2022-07-18 11:06:22,438 Importing SgiImagePlugin
+2022-07-18 11:06:22,438 Importing SpiderImagePlugin
+2022-07-18 11:06:22,438 Importing SunImagePlugin
+2022-07-18 11:06:22,439 Importing TgaImagePlugin
+2022-07-18 11:06:22,439 Importing TiffImagePlugin
+2022-07-18 11:06:22,439 Importing WebPImagePlugin
+2022-07-18 11:06:22,440 Importing WmfImagePlugin
+2022-07-18 11:06:22,441 Importing XbmImagePlugin
+2022-07-18 11:06:22,442 Importing XpmImagePlugin
+2022-07-18 11:06:22,442 Importing XVThumbImagePlugin
+2022-07-18 11:06:24,730 Internal Server Error: /api/v1/property/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Property' object has no attribute 'images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 24, in create
+    response_data = super(PropertyView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `images` on serializer `PropertySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Property` instance.
+Original exception text was: 'Property' object has no attribute 'images'.
+2022-07-18 11:07:48,829 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:07:49,345 Watching for file changes with StatReloader
+2022-07-18 11:07:58,202 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:07:58,662 Watching for file changes with StatReloader
+2022-07-18 11:08:07,564 Importing BlpImagePlugin
+2022-07-18 11:08:07,565 Importing BmpImagePlugin
+2022-07-18 11:08:07,565 Importing BufrStubImagePlugin
+2022-07-18 11:08:07,566 Importing CurImagePlugin
+2022-07-18 11:08:07,566 Importing DcxImagePlugin
+2022-07-18 11:08:07,567 Importing DdsImagePlugin
+2022-07-18 11:08:07,567 Importing EpsImagePlugin
+2022-07-18 11:08:07,568 Importing FitsImagePlugin
+2022-07-18 11:08:07,569 Importing FitsStubImagePlugin
+2022-07-18 11:08:07,569 Importing FliImagePlugin
+2022-07-18 11:08:07,569 Importing FpxImagePlugin
+2022-07-18 11:08:07,570 Image: failed to import FpxImagePlugin: No module named 'olefile'
+2022-07-18 11:08:07,570 Importing FtexImagePlugin
+2022-07-18 11:08:07,570 Importing GbrImagePlugin
+2022-07-18 11:08:07,571 Importing GifImagePlugin
+2022-07-18 11:08:07,571 Importing GribStubImagePlugin
+2022-07-18 11:08:07,571 Importing Hdf5StubImagePlugin
+2022-07-18 11:08:07,571 Importing IcnsImagePlugin
+2022-07-18 11:08:07,573 Importing IcoImagePlugin
+2022-07-18 11:08:07,573 Importing ImImagePlugin
+2022-07-18 11:08:07,573 Importing ImtImagePlugin
+2022-07-18 11:08:07,574 Importing IptcImagePlugin
+2022-07-18 11:08:07,574 Importing JpegImagePlugin
+2022-07-18 11:08:07,574 Importing Jpeg2KImagePlugin
+2022-07-18 11:08:07,574 Importing McIdasImagePlugin
+2022-07-18 11:08:07,574 Importing MicImagePlugin
+2022-07-18 11:08:07,575 Image: failed to import MicImagePlugin: No module named 'olefile'
+2022-07-18 11:08:07,575 Importing MpegImagePlugin
+2022-07-18 11:08:07,575 Importing MpoImagePlugin
+2022-07-18 11:08:07,575 Importing MspImagePlugin
+2022-07-18 11:08:07,576 Importing PalmImagePlugin
+2022-07-18 11:08:07,577 Importing PcdImagePlugin
+2022-07-18 11:08:07,578 Importing PcxImagePlugin
+2022-07-18 11:08:07,578 Importing PdfImagePlugin
+2022-07-18 11:08:07,622 Importing PixarImagePlugin
+2022-07-18 11:08:07,623 Importing PngImagePlugin
+2022-07-18 11:08:07,623 Importing PpmImagePlugin
+2022-07-18 11:08:07,623 Importing PsdImagePlugin
+2022-07-18 11:08:07,624 Importing SgiImagePlugin
+2022-07-18 11:08:07,625 Importing SpiderImagePlugin
+2022-07-18 11:08:07,626 Importing SunImagePlugin
+2022-07-18 11:08:07,626 Importing TgaImagePlugin
+2022-07-18 11:08:07,627 Importing TiffImagePlugin
+2022-07-18 11:08:07,627 Importing WebPImagePlugin
+2022-07-18 11:08:07,628 Importing WmfImagePlugin
+2022-07-18 11:08:07,629 Importing XbmImagePlugin
+2022-07-18 11:08:07,631 Importing XpmImagePlugin
+2022-07-18 11:08:07,632 Importing XVThumbImagePlugin
+2022-07-18 11:09:13,638 Bad Request: /api/v1/property/edit/37/
+2022-07-18 11:09:28,743 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:09:29,228 Watching for file changes with StatReloader
+2022-07-18 11:13:02,765 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-18 11:13:03,509 Watching for file changes with StatReloader
+2022-07-18 11:16:36,559 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-18 11:16:37,014 Watching for file changes with StatReloader
+2022-07-18 11:17:19,618 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-18 11:17:20,071 Watching for file changes with StatReloader
+2022-07-19 04:34:46,241 Watching for file changes with StatReloader
+2022-07-19 04:35:21,837 Not Found: /favicon.ico
+2022-07-19 04:37:47,462 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-19 04:37:48,002 Watching for file changes with StatReloader
+2022-07-19 04:48:14,150 Watching for file changes with StatReloader
+2022-07-19 04:48:53,068 Not Found: /favicon.ico
+2022-07-19 05:06:53,330 Watching for file changes with StatReloader
+2022-07-19 05:10:38,909 Not Found: /favicon.ico
+2022-07-19 05:20:04,599 Watching for file changes with StatReloader
+2022-07-19 05:20:23,435 Not Found: /favicon.ico
+2022-07-19 05:23:21,459 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-19 05:23:22,281 Watching for file changes with StatReloader
+2022-07-19 05:27:18,326 Watching for file changes with StatReloader
+2022-07-19 05:33:49,887 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-19 05:33:50,410 Watching for file changes with StatReloader
+2022-07-19 05:41:36,398 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-19 05:41:36,923 Watching for file changes with StatReloader

@@ -28,7 +28,8 @@ class AmenitiesAttribute(models.Model):
     amenity_group = models.ForeignKey(AmenitiesGroup, on_delete=models.CASCADE, related_name="amenities_groups_attribute")
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
-    image = models.FileField(upload_to='amenities_attribute/', null=True, blank=True)
+    image = VersatileImageField(upload_to='amenities_attribute/', null=True, blank=True)
+    ppoi = PPOIField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
