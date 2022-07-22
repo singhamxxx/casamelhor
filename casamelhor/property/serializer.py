@@ -3,6 +3,7 @@ from .models import *
 from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.hashers import make_password
 from django.db.models.query import QuerySet
+from ..account.serializer import AuthUserSimpleDataSerializer
 
 
 class AmenitiesSerializer(serializers.ModelSerializer):
@@ -30,6 +31,7 @@ class AmenitiesAttributeSerializer(serializers.ModelSerializer):
 
 
 class PropertyImagesSerializer(serializers.ModelSerializer):
+    image = serializers.FileField(allow_empty_file=True, use_url=False)
 
     class Meta:
         model = PropertyImages
@@ -38,7 +40,7 @@ class PropertyImagesSerializer(serializers.ModelSerializer):
 
 class PropertySerializer(serializers.ModelSerializer):
     property_amenities = AmenitiesAttributeSerializer(read_only=True)
-    images = serializers.ListField(child=serializers.FileField(allow_empty_file=True,  use_url=False), write_only=True, required=False)
+    images = serializers.ListField(child=serializers.FileField(allow_empty_file=True, use_url=False), write_only=True, required=False)
     property_images = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
@@ -47,7 +49,7 @@ class PropertySerializer(serializers.ModelSerializer):
                   'longitude', 'numbers_of_rooms', 'check_in_time', 'check_out_time', 'house_role', 'property_amenities', 'allow_booking_managers',
                   'property_amenities_id', 'created_at', 'updated_at', 'images', 'property_images']
         extra_kwargs = {'property_amenities_id': {'source': 'property_amenities', 'write_only': True}}
-    
+
     def get_property_images(self, obj):
         return PropertyImagesSerializer(instance=obj.property_image.all(), many=True).data
 
@@ -59,3 +61,52 @@ class PropertySerializer(serializers.ModelSerializer):
             serializer.is_valid(raise_exception=True)
             serializer.save()
         return parent
+
+
+class PropertySimpleDataSerializer(serializers.ModelSerializer):
+    property_amenities = serializers.SerializerMethodField()
+    allow_booking_managers = AuthUserSimpleDataSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = Property
+        fields = "__all__"
+
+    def get_property_amenities(self, obj):
+        return obj.property_amenities.name
+
+
+class PropertyInactiveReasonsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PropertyInactiveReasons
+        fields = "__all__"
+
+
+class PropertySettingsSerializer(serializers.ModelSerializer):
+    reason = PropertyInactiveReasonsSerializer(read_only=True)
+    property = PropertySimpleDataSerializer(read_only=True)
+    property_managers = AuthUserSimpleDataSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = PropertySettings
+        fields = ["id", "property", "property_managers", "status", 'reason', 'inactive_property_from', 'inactive_property_to', 'email', 'created_at',
+                  "updated_at", 'reason_id', 'property_id', 'property_managers_id']
+        extra_kwargs = {'reason_id': {'source': 'reason', 'write_only': True}, 'property_id': {'source': 'property', 'write_only': True},
+                        'property_managers_id': {'source': 'property_managers', 'write_only': True}}
+
+
+class PropertyEmergencyContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PropertyEmergencyContact
+        fields = "__all__"
+
+
+class RoomsImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RoomsImages
+        fields = "__all__"
+
+
+class RoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = "__all__"

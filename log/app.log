@@ -6769,3 +6769,171 @@ Original exception text was: 'Property' object has no attribute 'images'.
 2022-07-19 05:33:50,410 Watching for file changes with StatReloader
 2022-07-19 05:41:36,398 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
 2022-07-19 05:41:36,923 Watching for file changes with StatReloader
+2022-07-19 06:59:10,148 Watching for file changes with StatReloader
+2022-07-19 07:27:46,076 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-19 07:27:46,533 Watching for file changes with StatReloader
+2022-07-20 04:35:34,135 Watching for file changes with StatReloader
+2022-07-20 04:49:02,139 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-07-20 04:49:03,544 Watching for file changes with StatReloader
+2022-07-20 04:58:30,096 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/urls.py changed, reloading.
+2022-07-20 04:58:30,599 Watching for file changes with StatReloader
+2022-07-20 04:58:44,837 Not Found: /favicon.ico
+2022-07-20 05:12:38,999 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-20 05:12:39,474 Watching for file changes with StatReloader
+2022-07-20 05:15:56,912 Unsupported Media Type: /property/image/create/
+2022-07-20 05:16:53,304 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 05:16:53,990 Watching for file changes with StatReloader
+2022-07-20 05:16:59,529 Unsupported Media Type: /property/image/create/
+2022-07-20 05:19:18,459 Method Not Allowed: /property/image/create/
+2022-07-20 05:19:22,101 Unsupported Media Type: /property/image/create/
+2022-07-20 05:20:49,111 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-20 05:20:49,673 Watching for file changes with StatReloader
+2022-07-20 05:20:55,305 Unsupported Media Type: /property/image/create/
+2022-07-20 05:23:39,462 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 05:23:39,939 Watching for file changes with StatReloader
+2022-07-20 05:25:28,020 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 05:25:28,670 Watching for file changes with StatReloader
+2022-07-20 05:26:10,512 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/forms.py changed, reloading.
+2022-07-20 05:26:10,971 Watching for file changes with StatReloader
+2022-07-20 05:26:18,900 Not Found: /favicon.ico
+2022-07-20 05:28:06,337 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 05:28:06,876 Watching for file changes with StatReloader
+2022-07-20 09:02:18,172 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 09:02:20,752 Watching for file changes with StatReloader
+2022-07-20 09:37:22,898 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-20 09:37:23,468 Watching for file changes with StatReloader
+2022-07-20 11:32:45,135 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/urls.py changed, reloading.
+2022-07-20 11:32:45,614 Watching for file changes with StatReloader
+2022-07-21 06:12:25,731 Watching for file changes with StatReloader
+2022-07-21 06:17:01,653 Not Found: /favicon.ico
+2022-07-21 06:17:21,516 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/urls.py changed, reloading.
+2022-07-21 06:17:22,099 Watching for file changes with StatReloader
+2022-07-21 06:21:09,310 Unsupported Media Type: /property/image/create/
+2022-07-21 06:21:31,520 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-21 06:21:32,052 Watching for file changes with StatReloader
+2022-07-21 06:21:59,348 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-07-21 06:21:59,847 Watching for file changes with StatReloader
+2022-07-21 06:22:04,368 Unsupported Media Type: /property/image/create/
+2022-07-21 06:22:22,644 Bad Request: /property/setting/create/
+2022-07-21 06:23:19,814 Method Not Allowed: /property/setting/edit/1/
+2022-07-21 06:41:09,510 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-21 06:41:10,014 Watching for file changes with StatReloader
+2022-07-21 06:44:25,144 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
+2022-07-21 06:44:25,842 Watching for file changes with StatReloader
+2022-07-21 06:44:40,348 Method Not Allowed: /property/setting/create/
+2022-07-21 06:44:47,173 Internal Server Error: /property/setting/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: PropertySettings() got an unexpected keyword argument 'property_managers_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 103, in create
+    response_data = super(PropertySettingsView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PropertySettings.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PropertySettings.objects.create()`. You may need to make the field read-only, or override the PropertySettingsSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: PropertySettings() got an unexpected keyword argument 'property_managers_id'
+
+2022-07-21 06:56:22,354 Internal Server Error: /property/setting/create/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: PropertySettings() got an unexpected keyword argument 'property_managers_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 103, in create
+    response_data = super(PropertySettingsView, self).create(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PropertySettings.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PropertySettings.objects.create()`. You may need to make the field read-only, or override the PropertySettingsSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: PropertySettings() got an unexpected keyword argument 'property_managers_id'
+
+2022-07-21 06:58:12,589 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-21 06:58:13,174 Watching for file changes with StatReloader
+2022-07-21 07:04:35,676 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-21 07:04:36,168 Watching for file changes with StatReloader
+2022-07-21 07:05:37,277 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-07-21 07:05:37,780 Watching for file changes with StatReloader
+2022-07-21 07:05:52,771 Method Not Allowed: /property/setting/edit/1/
+2022-07-21 07:06:21,868 Not Found: /property/setting/get/

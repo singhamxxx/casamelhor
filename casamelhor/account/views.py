@@ -172,7 +172,7 @@ def user_group_of_permissions_view(request, id=None):
         many = True
         if id:
             if Group.objects.filter(id=id).exists():
-                obj = Group.objects.filter(id=id)
+                obj = Group.objects.get(id=id)
                 many = False
             else:
                 return Response({"data": None, "message": "Permission`s Group not found", "isSuccess": False, "status": 404}, status=200)

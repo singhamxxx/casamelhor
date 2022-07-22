@@ -84,3 +84,10 @@ class VaultSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vault
         fields = "__all__"
+
+
+class AuthUserSimpleDataSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['email', 'role', 'employee_id', 'department', 'phone', 'image', 'is_email', 'is_phone', 'is_active', 'is_staff', 'is_superuser']

@@ -28,3 +28,11 @@ class PropertyForm(forms.ModelForm):
     class Meta:
         model = Property
         fields = '__all__'
+
+
+class PropertyImagesForm(forms.ModelForm):
+    image = forms.FileField(required=True)
+
+    class Meta:
+        model = PropertyImages
+        fields = '__all__'
