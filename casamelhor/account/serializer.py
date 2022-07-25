@@ -27,6 +27,7 @@ class AuthUserPermissionsSerializer(serializers.ModelSerializer):
 class AuthUserGroupOFPermissionsSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField(read_only=True)
     permissions = AuthUserPermissionsSerializer(many=True, read_only=True)
+    permission_ids = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Group
@@ -34,6 +35,9 @@ class AuthUserGroupOFPermissionsSerializer(serializers.ModelSerializer):
 
     def get_name(self, obj):
         return obj.first().name if isinstance(obj, QuerySet) else obj.name
+
+    def get_permission_ids(self, obj):
+        return [i.id for i in obj.permissions.all()]
 
 
 class RoleSerializer(serializers.ModelSerializer):
