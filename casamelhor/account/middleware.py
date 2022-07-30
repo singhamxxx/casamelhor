@@ -32,7 +32,7 @@ class RegisterMiddleware(MiddlewareMixin):
     def process_view(self, request, view_func, view_args, view_kwargs):
         if request.method == "POST":
             user = request.user if request.user.is_authenticated else None
-            form = RegisterForm(request.data, request.FILES, initial=user)
+            form = RegisterForm(request.data, request.FILES, instance=user)
             if form.is_valid():
                 return view_func(request, form)
             else:
