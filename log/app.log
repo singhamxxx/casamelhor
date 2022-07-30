@@ -6937,3 +6937,4 @@ TypeError: PropertySettings() got an unexpected keyword argument 'property_manag
 2022-07-21 07:05:37,780 Watching for file changes with StatReloader
 2022-07-21 07:05:52,771 Method Not Allowed: /property/setting/edit/1/
 2022-07-21 07:06:21,868 Not Found: /property/setting/get/
+2022-07-27 05:01:37,243 Watching for file changes with StatReloader

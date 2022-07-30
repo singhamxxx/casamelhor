@@ -27,25 +27,28 @@ def get_client_ip(request):
 
 
 @api_view(['POST'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
 @decorator_from_middleware(RegisterMiddleware)
 def registration_view(request, form):
-    form.cleaned_data["login_ip"] = get_client_ip(request)
-    if 'user_permissions' in form.cleaned_data and form.cleaned_data['user_permissions']:
-        form.cleaned_data['user_permissions'] = [i.id for i in form.cleaned_data['user_permissions']]
-    groups = [form.cleaned_data['role'].id]
-    if 'groups' in form.cleaned_data and form.cleaned_data['groups']:
-        groups = groups.extend([i.id for i in form.cleaned_data['groups']])
-    form.cleaned_data['groups'] = groups
-    form.cleaned_data['role_id'] = form.cleaned_data['role'].id
-    serializer = AuthUserSerializer(data=form.cleaned_data)
-    if serializer.is_valid():
-        serializer.save()
-        data = serializer.data
-        return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
-    else:
-        error = serializer.errors
-        error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
-        return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+    if request.user.is_superuser:
+        form.cleaned_data["login_ip"] = get_client_ip(request)
+        if 'user_permissions' in form.cleaned_data and form.cleaned_data['user_permissions']:
+            form.cleaned_data['user_permissions'] = [i.id for i in form.cleaned_data['user_permissions']]
+        groups = [form.cleaned_data['role'].id]
+        if 'groups' in form.cleaned_data and form.cleaned_data['groups']:
+            groups = groups.extend([i.id for i in form.cleaned_data['groups']])
+        form.cleaned_data['groups'] = groups
+        form.cleaned_data['role_id'] = form.cleaned_data['role'].id
+        serializer = AuthUserSerializer(data=form.cleaned_data)
+        if serializer.is_valid():
+            serializer.save()
+            data = serializer.data
+            return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
+        else:
+            error = serializer.errors
+            error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
+            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['POST'])
