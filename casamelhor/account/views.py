@@ -48,7 +48,8 @@ def registration_view(request, form):
             error = serializer.errors
             error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
             return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+    else:
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['POST'])
