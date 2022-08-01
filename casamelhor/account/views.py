@@ -160,7 +160,7 @@ def user_forgot_password_email_send_view(request):
     email = request.POST.get('email')
     user = User.objects.filter(email=email)
     if user.exists():
-        if user.first().is_email and user.first().is_phone:
+        if user.first().is_email:
             token = default_token_generator.make_token(user.first())
             url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
             _send_account_confirmation_email(user.first(), url=url)
