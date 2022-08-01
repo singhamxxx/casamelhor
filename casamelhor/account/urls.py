@@ -6,6 +6,7 @@ urlpatterns = [
     path('register/', registration_view),
     path('update/', user_update_profile_view),
     path('login/', user_login_view),
+    path('admin/user/get/', user_get_view),
     path('user/email/verify/', email_verification_view),
     path('user/email/resend/', resend_email_otp_view),
     path('user/vault/create/', create_user_vault_view),

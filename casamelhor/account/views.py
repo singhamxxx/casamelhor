@@ -11,6 +11,8 @@ from django.shortcuts import render
 from django.db.models import Q
 from random import randint
 import json
+from django.core.paginator import Paginator
+
 
 from rest_framework_swagger.views import get_swagger_view
 
@@ -50,6 +52,20 @@ def registration_view(request, form):
             return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
     else:
         return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+
+
+@api_view(['GET'])
+@decorator_from_middleware(TokenAuthenticationMiddleware)
+def user_get_view(request):
+    if request.user.is_superuser:
+        page = 1 if 'page' not in request.GET else request.GET['page'] if request.GET['page'] else 1
+        limit = 10 if 'limit' not in request.GET else request.GET['limit'] if request.GET['limit'] else 10
+        users = User.objects.filter().order_by("-date_joined")
+        paginator = Paginator(users, limit)
+        users = paginator.page(page)
+        serializer = AuthUserSerializer(instance=users, many=True)
+        return Response({"data": serializer.data, "isSuccess": True, "status": 200}, status=200)
+    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
 
 
 @api_view(['POST'])
