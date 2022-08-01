@@ -7006,3 +7006,145 @@ Traceback (most recent call last):
 django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: date_joined, department, email, email_otp, employee_id, first_name, groups, id, image, is_active, is_email, is_phone, is_staff, is_superuser, last_login, last_name, logentry, login_ip, password, phone, phone_otp, ppoi, property_allow_booking_manager, property_managers, role, role_id, room_allow_booking_manager, updated_at, user_permissions, users_vault
 2022-08-01 08:52:29,917 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-08-01 08:52:30,467 Watching for file changes with StatReloader
+2022-08-01 09:30:04,778 Watching for file changes with StatReloader
+2022-08-01 09:30:29,770 Internal Server Error: /api/v1/account/login/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 49, in process_view
+    return view_func(request, form)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py", line 82, in user_login_view
+    _send_account_confirmation_email(user_obj, otp=otp)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/emails.py", line 19, in _send_account_confirmation_email
+    send_templated_mail(**context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/__init__.py", line 66, in send_templated_mail
+    return connection.send(template_name, from_email, recipient_list, context,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/backends/vanilla_django.py", line 263, in send
+    e.send(fail_silently)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired x3-20020a17090aa38300b001f303d149casm8196512pjp.50 - gsmtp')
+2022-08-01 09:48:21,435 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-08-01 09:48:22,036 Watching for file changes with StatReloader
+2022-08-01 09:48:30,430 Internal Server Error: /api/v1/account/login/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 49, in process_view
+    return view_func(request, form)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py", line 82, in user_login_view
+    _send_account_confirmation_email(user_obj, otp=otp)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/emails.py", line 19, in _send_account_confirmation_email
+    send_templated_mail(**context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/__init__.py", line 66, in send_templated_mail
+    return connection.send(template_name, from_email, recipient_list, context,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/backends/vanilla_django.py", line 263, in send
+    e.send(fail_silently)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired u18-20020a17090341d200b0016dbdf7b97bsm9150835ple.266 - gsmtp')
+2022-08-01 09:51:10,939 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-08-01 09:51:11,699 Watching for file changes with StatReloader
+2022-08-01 09:51:32,828 Internal Server Error: /api/v1/account/login/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 126, in _wrapped_view
+    result = middleware.process_view(request, view_func, args, kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/middleware.py", line 49, in process_view
+    return view_func(request, form)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py", line 82, in user_login_view
+    _send_account_confirmation_email(user_obj, otp=otp)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/emails.py", line 19, in _send_account_confirmation_email
+    send_templated_mail(**context)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/__init__.py", line 66, in send_templated_mail
+    return connection.send(template_name, from_email, recipient_list, context,
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/templated_email/backends/vanilla_django.py", line 263, in send
+    e.send(fail_silently)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired t18-20020a170902e85200b0016db88f69a2sm9293329plg.141 - gsmtp')
+2022-08-01 10:31:20,954 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
+2022-08-01 10:31:21,444 Watching for file changes with StatReloader
