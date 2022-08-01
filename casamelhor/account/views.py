@@ -165,7 +165,7 @@ def user_forgot_password_email_send_view(request):
             url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
             _send_account_confirmation_email(user.first(), url=url)
             return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
-        return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
+        return Response({"data": None, "message": "Email is not verified", "isSuccess": True, "status": 200}, status=200)
     return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
 
 
