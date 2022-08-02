@@ -13,7 +13,7 @@ class AmenitiesView(viewsets.ModelViewSet):
     serializer_class = AmenitiesSerializer
     queryset = Amenities.objects.all()
     parser_classes = (FormParser, MultiPartParser)
-    permission_classes = (IsSuperUser, )
+    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -41,7 +41,7 @@ class AmenitiesGroupView(viewsets.ModelViewSet):
     serializer_class = AmenitiesGroupSerializer
     queryset = AmenitiesGroup.objects.all()
     parser_classes = (FormParser, MultiPartParser)
-    permission_classes = (IsSuperUser, )
+    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -69,7 +69,7 @@ class AmenitiesAttributeView(viewsets.ModelViewSet):
     serializer_class = AmenitiesAttributeSerializer
     queryset = AmenitiesAttribute.objects.all()
     parser_classes = (FormParser, MultiPartParser)
-    permission_classes = (IsSuperUser, )
+    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)

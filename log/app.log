@@ -7156,3 +7156,7 @@ smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web brows
 2022-08-02 10:22:32,471 Watching for file changes with StatReloader
 2022-08-02 10:24:06,718 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-08-02 10:24:07,223 Watching for file changes with StatReloader
+2022-08-02 11:05:45,736 Watching for file changes with StatReloader
+2022-08-02 11:08:20,983 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 11:08:21,508 Watching for file changes with StatReloader
+2022-08-02 11:08:31,155 Watching for file changes with StatReloader
