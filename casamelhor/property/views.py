@@ -12,7 +12,7 @@ from .forms import PropertyImagesForm
 class PropertyView(viewsets.ModelViewSet):
     serializer_class = PropertySerializer
     queryset = Property.objects.all()
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -39,7 +39,7 @@ class PropertyImageView(viewsets.ModelViewSet):
     serializer_class = PropertyImagesSerializer
     queryset = PropertyImages.objects.all()
     parser_classes = (FormParser, MultiPartParser)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -66,7 +66,7 @@ class PropertyInactiveReasonsView(viewsets.ModelViewSet):
     serializer_class = PropertyInactiveReasonsSerializer
     queryset = PropertyInactiveReasons.objects.all()
     parser_classes = (FormParser,)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -93,7 +93,7 @@ class PropertySettingsView(viewsets.ModelViewSet):
     serializer_class = PropertySettingsSerializer
     queryset = PropertySettings.objects.all()
     parser_classes = (FormParser, MultiPartParser, JSONParser)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -120,7 +120,7 @@ class PropertyEmergencyContactView(viewsets.ModelViewSet):
     serializer_class = PropertyEmergencyContactSerializer
     queryset = PropertyEmergencyContact.objects.all()
     parser_classes = (FormParser,)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
@@ -147,7 +147,7 @@ class RoomsImagesView(viewsets.ModelViewSet):
     serializer_class = RoomsImagesSerializer
     queryset = RoomsImages.objects.all()
     parser_classes = (FormParser,)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)

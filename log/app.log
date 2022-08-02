@@ -7160,3 +7160,15 @@ smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web brows
 2022-08-02 11:08:20,983 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
 2022-08-02 11:08:21,508 Watching for file changes with StatReloader
 2022-08-02 11:08:31,155 Watching for file changes with StatReloader
+2022-08-02 11:43:27,525 Watching for file changes with StatReloader
+2022-08-02 11:44:04,476 Bad Request: /api/v1/property/amenities/create/
+2022-08-02 11:55:24,666 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 11:55:25,287 Watching for file changes with StatReloader
+2022-08-02 12:03:19,830 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 12:03:20,601 Watching for file changes with StatReloader
+2022-08-02 12:03:33,551 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 12:03:34,178 Watching for file changes with StatReloader
+2022-08-02 12:12:52,417 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 12:12:53,016 Watching for file changes with StatReloader
+2022-08-02 12:33:23,993 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-02 12:33:24,485 Watching for file changes with StatReloader
