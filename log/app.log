@@ -7148,3 +7148,8 @@ Traceback (most recent call last):
 smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired t18-20020a170902e85200b0016db88f69a2sm9293329plg.141 - gsmtp')
 2022-08-01 10:31:20,954 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/settings.py changed, reloading.
 2022-08-01 10:31:21,444 Watching for file changes with StatReloader
+2022-08-02 07:56:23,327 Watching for file changes with StatReloader
+2022-08-02 08:01:10,582 Method Not Allowed: /api/v1/property/amenities/create/
+2022-08-02 08:01:14,376 Unsupported Media Type: /api/v1/property/amenities/create/
+2022-08-02 08:01:38,827 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-02 08:01:39,399 Watching for file changes with StatReloader

@@ -12,7 +12,7 @@ from ..permissions import IsSuperUser
 class AmenitiesView(viewsets.ModelViewSet):
     serializer_class = AmenitiesSerializer
     queryset = Amenities.objects.all()
-    parser_classes = (FormParser,)
+    parser_classes = (FormParser, MultiPartParser)
     permission_classes = (IsSuperUser, )
 
     def list(self, request, *args, **kwargs):
@@ -40,7 +40,7 @@ class AmenitiesView(viewsets.ModelViewSet):
 class AmenitiesGroupView(viewsets.ModelViewSet):
     serializer_class = AmenitiesGroupSerializer
     queryset = AmenitiesGroup.objects.all()
-    parser_classes = (FormParser,)
+    parser_classes = (FormParser, MultiPartParser)
     permission_classes = (IsSuperUser, )
 
     def list(self, request, *args, **kwargs):
