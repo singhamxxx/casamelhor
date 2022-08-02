@@ -157,7 +157,7 @@ def user_password_change_view(request):
 
 @api_view(['POST'])
 def user_forgot_password_email_send_view(request):
-    email = request.POST.get('email')
+    email = request.data['email']
     user = User.objects.filter(email=email)
     if user.exists():
         if user.first().is_email:
