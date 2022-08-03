@@ -220,7 +220,7 @@ def user_update_profile_view(request, id=None):
             user.email = request.data['email']
             user.is_email = False
         if 'phone' in request.data and request.data['phone']:
-            user.email = request.data['phone']
+            user.phone = request.data['phone']
             user.is_phone = False
         if 'role' in request.data and request.data['role']:
             if not Role.objects.filter(id=request.data['role']).exists():
