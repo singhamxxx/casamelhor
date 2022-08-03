@@ -56,8 +56,14 @@ def registration_view(request, form):
 
 @api_view(['GET'])
 @decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_get_view(request):
-    if request.user.is_superuser:
+def user_get_view(request, id=None):
+    if id and request.user.is_superuser or request.user.is_staff:
+        if not User.objects.filter(id=id).exists():
+            return Response({"data": None, "message": "User Not Found", "isSuccess": False, "status": 404}, status=200)
+        user = User.objects.get(id=id)
+        serializer = AuthUserSerializer(instance=user)
+        return Response({"data": serializer.data, "isSuccess": True, "status": 200}, status=200)
+    elif request.user.is_superuser or request.user.is_staff:
         page = 1 if 'page' not in request.GET else request.GET['page'] if request.GET['page'] else 1
         limit = 10 if 'limit' not in request.GET else request.GET['limit'] if request.GET['limit'] else 10
         users = User.objects.filter().order_by("-date_joined")
@@ -208,6 +214,18 @@ def user_group_of_permissions_view(request, id=None):
 def user_update_profile_view(request, id=None):
     if id and request.user.is_superuser or request.user.is_staff:
         user = User.objects.get(id=id)
+        if 'email' in request.data and request.data['email']:
+            if User.objects.filter(email=request.data['email']).exists():
+                return Response({"data": None, "message": "Email Already Exists", "isSuccess": True, "status": 409}, status=200)
+            user.email = request.data['email']
+            user.is_email = False
+        if 'phone' in request.data and request.data['phone']:
+            user.email = request.data['phone']
+            user.is_phone = False
+        if 'role' in request.data and request.data['role']:
+            if not Role.objects.filter(id=request.data['role']).exists():
+                return Response({"data": None, "message": "Role Not Exists", "isSuccess": True, "status": 404}, status=200)
+            user.role = Role.objects.get(id=request.data['role'])
     elif request.user.is_authenticated:
         user = request.user
     else:
