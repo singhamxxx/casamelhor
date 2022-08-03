@@ -27,19 +27,19 @@ class AmenitiesView(viewsets.ModelViewSet):
             response_data = super(AmenitiesView, self).create(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Create Amenity", "isSuccess": True, "status": 200})
         else:
-            return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+            return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def update(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesView, self).update(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully edit Amenity", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def destroy(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesView, self).destroy(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully delete Amenity", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
 class AmenitiesGroupView(viewsets.ModelViewSet):
@@ -60,19 +60,19 @@ class AmenitiesGroupView(viewsets.ModelViewSet):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesGroupView, self).create(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Create Amenities Group", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def update(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesGroupView, self).update(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Update Amenities Group", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def destroy(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesGroupView, self).destroy(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Delete Amenities Group", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
 class AmenitiesAttributeView(viewsets.ModelViewSet):
@@ -93,16 +93,16 @@ class AmenitiesAttributeView(viewsets.ModelViewSet):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesAttributeView, self).create(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Create Amenities Attribute", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def update(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesAttributeView, self).update(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Edit Amenities Attribute", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def destroy(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
             response_data = super(AmenitiesAttributeView, self).destroy(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully Delete Amenities Attribute", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 403}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)

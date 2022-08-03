@@ -51,7 +51,7 @@ def registration_view(request, form):
             error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
             return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
     else:
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
 @api_view(['GET'])
@@ -65,7 +65,7 @@ def user_get_view(request):
         users = paginator.page(page)
         serializer = AuthUserSerializer(instance=users, many=True)
         return Response({"data": serializer.data, "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
 @api_view(['POST'])
@@ -205,21 +205,25 @@ def user_group_of_permissions_view(request, id=None):
 
 @api_view(['PUT'])
 @decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_update_profile_view(request):
-    if request.user.is_authenticated:
-        if 'first_name' in request.POST and request.POST['first_name']:
-            request.user.first_name = request.POST['first_name']
-        if 'employee_id' in request.POST and request.POST['employee_id']:
-            request.user.employee_id = request.POST['employee_id']
-        if 'department' in request.POST and request.POST['department']:
-            request.user.department = request.POST['department']
-        if 'image' in request.FILES and request.FILES['image']:
-            image = request.FILES['image']
-            request.user.image.save(image.name, image)
-        request.user.save()
-        serializer = AuthUserSerializer(instance=request.user, many=False).data
-        return Response({"data": serializer, "message": "Successfully profile update", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+def user_update_profile_view(request, id=None):
+    if id and request.user.is_superuser or request.user.is_staff:
+        user = User.objects.get(id=id)
+    elif request.user.is_authenticated:
+        user = request.user
+    else:
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+    if 'first_name' in request.data and request.data['first_name']:
+        user.first_name = request.data['first_name']
+    if 'employee_id' in request.data and request.data['employee_id']:
+        user.employee_id = request.data['employee_id']
+    if 'department' in request.data and request.data['department']:
+        user.department = request.data['department']
+    if 'image' in request.FILES and request.FILES['image']:
+        image = request.FILES['image']
+        user.image.save(image.name, image)
+    user.save()
+    serializer = AuthUserSerializer(instance=user, many=False).data
+    return Response({"data": serializer, "message": "Successfully profile update", "isSuccess": True, "status": 200}, status=200)
 
 
 @api_view(['GET'])

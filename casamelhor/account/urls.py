@@ -5,6 +5,7 @@ urlpatterns = [
     path('', schema_view),
     path('register/', registration_view),
     path('update/', user_update_profile_view),
+    path('update/<int:id>/', user_update_profile_view),
     path('login/', user_login_view),
     path('admin/user/get/', user_get_view),
     path('user/email/verify/', email_verification_view),
