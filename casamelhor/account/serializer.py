@@ -45,7 +45,7 @@ class RoleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Role
-        fields = ('role', 'group')
+        fields = ('id', 'role', 'group')
 
 
 class AuthUserSerializer(serializers.ModelSerializer):
