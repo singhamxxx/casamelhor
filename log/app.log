@@ -7173,3 +7173,11 @@ smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web brows
 2022-08-02 12:33:23,993 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
 2022-08-02 12:33:24,485 Watching for file changes with StatReloader
 2022-08-04 05:40:11,424 Watching for file changes with StatReloader
+2022-08-04 09:45:17,811 Watching for file changes with StatReloader
+2022-08-04 09:45:53,375 Not Found: /api/v1/property/amenities/edit/3/
+2022-08-04 09:47:02,317 Bad Request: /api/v1/property/amenities/edit/4/
+2022-08-04 09:52:38,691 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-04 09:52:39,282 Watching for file changes with StatReloader
+2022-08-04 09:53:04,427 Bad Request: /api/v1/property/amenities/edit/4/
+2022-08-04 09:55:31,335 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/amenities_views.py changed, reloading.
+2022-08-04 09:55:32,042 Watching for file changes with StatReloader

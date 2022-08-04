@@ -24,13 +24,18 @@ class AmenitiesView(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
-            response_data = super(AmenitiesView, self).create(request, *args, **kwargs)
-            return Response({"data": response_data.data, "message": "Successfully Create Amenity", "isSuccess": True, "status": 200})
+            if not Amenities.objects.filter(name=request.data['name']).exists():
+                response_data = super(AmenitiesView, self).create(request, *args, **kwargs)
+                return Response({"data": response_data.data, "message": "Successfully Create Amenity", "isSuccess": True, "status": 200})
+            else:
+                return Response({"data": None, "message": "Amenities Already exists", "isSuccess": True, "status": 200})
         else:
             return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
     def update(self, request, *args, **kwargs):
         if request.user.is_superuser or request.user.is_staff:
+            if self.get_object().name != request.data['name'] and Amenities.objects.filter(name=request.data['name']).exists():
+                return Response({"data": None, "message": "Amenities Already exists", "isSuccess": True, "status": 200})
             response_data = super(AmenitiesView, self).update(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "Successfully edit Amenity", "isSuccess": True, "status": 200})
         return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
