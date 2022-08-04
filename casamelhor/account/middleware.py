@@ -78,16 +78,23 @@ class AuthUserProfileMiddleware(MiddlewareMixin):
 
 class AuthUserGroupOFPermissionsMiddleware(MiddlewareMixin):
     def process_view(self, request, view_func, view_args, view_kwargs):
-        form = AuthUserGroupOFPermissionsForm(data=request.data)
-        if form.is_valid():
-            if request.method == "POST":
+        if request.method == "POST":
+            form = AuthUserGroupOFPermissionsForm(data=request.data)
+            if form.is_valid():
                 return view_func(request, form)
-            elif request.method == "PUT":
-                return view_func(request, view_kwargs['id'], form)
-        else:
-            error = form.errors
-            error = {'error': error["__all__"][0]} if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+            else:
+                error = form.errors
+                error = {'error': error["__all__"][0]} if "__all__" in error else {key: error[key][0] for key in error}
+                return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
+        elif request.method == "PUT":
+            if Group.objects.filter(id=view_kwargs['id']).exists():
+                form = AuthUserGroupOFPermissionsForm(request.data, instance=Group.objects.get(id=view_kwargs['id']))
+                if form.is_valid():
+                    return view_func(request, view_kwargs['id'], form)
+                else:
+                    error = form.errors
+                    error = {'error': error["__all__"][0]} if "__all__" in error else {key: error[key][0] for key in error}
+                    return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
 
 
 class VaultMiddleware(MiddlewareMixin):

@@ -71,7 +71,7 @@ class UserEmailVerificationForm(forms.Form):
         return cleaned_data
 
 
-class AuthUserGroupOFPermissionsForm(forms.Form):
+class AuthUserGroupOFPermissionsForm(forms.ModelForm):
     name = forms.CharField(required=True)
     group = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=True)
 
@@ -81,8 +81,6 @@ class AuthUserGroupOFPermissionsForm(forms.Form):
 
     def clean(self):
         cleaned_data = super(AuthUserGroupOFPermissionsForm, self).clean()
-        if Group.objects.filter(name=cleaned_data['name']).exists():
-            raise forms.ValidationError("User permission`s group is already Exists!!!")
         return cleaned_data
 
 
