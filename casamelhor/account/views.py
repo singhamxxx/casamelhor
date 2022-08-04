@@ -57,7 +57,7 @@ def registration_view(request, form):
 @api_view(['GET'])
 @decorator_from_middleware(TokenAuthenticationMiddleware)
 def user_get_view(request, id=None):
-    if id and request.user.is_superuser or request.user.is_staff:
+    if id and request.user.is_superuser:
         if not User.objects.filter(id=id).exists():
             return Response({"data": None, "message": "User Not Found", "isSuccess": False, "status": 404}, status=200)
         user = User.objects.get(id=id)
