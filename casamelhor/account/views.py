@@ -293,6 +293,8 @@ def edit_user_group_of_permissions_view(request, id, form):
 @decorator_from_middleware(VaultMiddleware)
 def create_user_vault_view(request, form):
     if request.user.is_authenticated:
+        if Vault.objects.filter(user=request.user).exists():
+            return Response({"data": None, "message": "User Vault Already exists", "isSuccess": False, "status": 409}, status=200)
         form.cleaned_data['user'] = request.user.id
         serializer = VaultSerializer(data=form.cleaned_data)
         if serializer.is_valid():
