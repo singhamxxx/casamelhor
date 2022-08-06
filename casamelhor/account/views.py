@@ -13,7 +13,6 @@ from random import randint
 import json
 from django.core.paginator import Paginator
 
-
 from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='Pastebin API')
@@ -303,4 +302,4 @@ def create_user_vault_view(request, form):
             error = serializer.errors
             error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
             return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)

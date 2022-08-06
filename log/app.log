@@ -7188,3 +7188,4 @@ smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web brows
 2022-08-04 10:20:28,603 Watching for file changes with StatReloader
 2022-08-04 10:20:57,001 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e1/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
 2022-08-04 10:20:57,472 Watching for file changes with StatReloader
+2022-08-06 05:49:11,538 Watching for file changes with StatReloader
