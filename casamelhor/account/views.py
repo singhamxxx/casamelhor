@@ -297,7 +297,7 @@ def create_user_vault_view(request, form):
         serializer = VaultSerializer(data=form.cleaned_data)
         if serializer.is_valid():
             serializer.save()
-            return Response({"data": serializer.data, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+            return Response({"data": serializer.data, "message": "User Vault Create Successfully", "isSuccess": True, "status": 200}, status=200)
         else:
             error = serializer.errors
             error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
