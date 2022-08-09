@@ -63,6 +63,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
@@ -89,6 +90,9 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_URL = '/admin/login'
+LOGOUT_URL = '/admin/logout'
 
 WSGI_APPLICATION = 'casamelhor.wsgi.application'
 
