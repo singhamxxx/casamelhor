@@ -72,8 +72,8 @@ class AuthUserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True},
                         'role_id': {'source': 'role', 'write_only': True}, 'company_id': {'source': 'company', 'write_only': True}}
         fields = ["id", "email", "phone", "first_name", "last_name", "role", "is_superuser", "is_staff", "is_active", "date_joined", "employee_id",
-                  "department", "is_email", "is_phone", "updated_at", "user_permissions", "groups", "role_id", "password", 'image', 'company']
-        extra_fields = ['user_permissions', 'groups', 'role_id', 'company_id']
+                  "department", "is_email", "is_phone", "updated_at", "user_permissions", "groups", "role_id", "password", 'image', 'company',
+                  'user_permissions', 'groups', 'role_id', 'company_id']
 
     def create(self, validated_data):
         print(validated_data)

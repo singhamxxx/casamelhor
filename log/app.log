@@ -7547,3 +7547,4 @@ django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered name
 2022-08-10 09:02:20,517 Watching for file changes with StatReloader
 2022-08-10 09:02:46,714 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
 2022-08-10 09:02:47,175 Watching for file changes with StatReloader
+2022-08-10 09:49:39,605 Watching for file changes with StatReloader
