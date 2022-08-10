@@ -12,8 +12,9 @@ from django.db.models import Q
 from random import randint
 import json
 from django.core.paginator import Paginator
-
+from rest_framework import viewsets
 from rest_framework_swagger.views import get_swagger_view
+from ..permissions import IsSuperUser
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -305,3 +306,29 @@ def create_user_vault_view(request, form):
             error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
             return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
     return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+
+
+class CompanyView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = Company.objects.all()
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data})
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data})
+
+    def create(self, request, *args, **kwargs):
+        response_data = super(CompanyView, self).create(request, *args, **kwargs)
+        return Response({"data": response_data.data})
+
+    def update(self, request, *args, **kwargs):
+        response_data = super(CompanyView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data})
+
+    def destroy(self, request, *args, **kwargs):
+        response_data = super(CompanyView, self).destroy(request, *args, **kwargs)
+        return Response({"data": response_data.data})

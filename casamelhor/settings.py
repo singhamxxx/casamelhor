@@ -90,7 +90,25 @@ TEMPLATES = [
         },
     },
 ]
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },  # setting to pass token in header
+    'USE_SESSION_AUTH': True,
+    # set to True if session based authentication needed
+    'JSON_EDITOR': True,
+    'api_path': 'api/v1/',
+    'api_version': 'v1',
 
+    "is_authenticated": True,  # Set to True to enforce user authentication,
+    "is_superuser": True,  # Set to True to enforce admin only access
+    'unauthenticated_user': 'django.contrib.auth.models.AnonymousUser',
+    # unauthenticated user will be shown as Anonymous user in swagger UI.
+}
 LOGIN_URL = '/admin/login'
 LOGOUT_URL = '/admin/logout'
 

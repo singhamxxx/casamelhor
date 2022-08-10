@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Vault, Role
+from .models import User, Vault, Role, Company
 from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.hashers import make_password
 from django.db.models.query import QuerySet
@@ -48,6 +48,13 @@ class RoleSerializer(serializers.ModelSerializer):
         fields = ('id', 'role', 'group')
 
 
+class CompanySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Company
+        fields = "__all__"
+
+
 class AuthUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         write_only=True,
@@ -58,12 +65,13 @@ class AuthUserSerializer(serializers.ModelSerializer):
     user_permissions = AuthUserPermissionsSerializer(many=True, read_only=True)
     groups = AuthUserGroupOFPermissionsSerializer(many=True, read_only=True)
     role = RoleSerializer(read_only=True)
+    company = CompanySerializer(read_only=True)
 
     class Meta:
         model = User
         extra_kwargs = {'password': {'write_only': True}, 'role_id': {'source': 'role', 'write_only': True}}
         fields = ["id", "email", "phone", "first_name", "last_name", "role", "is_superuser", "is_staff", "is_active", "date_joined", "employee_id",
-                  "department", "is_email", "is_phone", "updated_at", "user_permissions", "groups", "role_id", "password", 'image']
+                  "department", "is_email", "is_phone", "updated_at", "user_permissions", "groups", "role_id", "password", 'image', 'company']
         extra_fields = ['user_permissions', 'groups', 'role_id']
 
     def create(self, validated_data):

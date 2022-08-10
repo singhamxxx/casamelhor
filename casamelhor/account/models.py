@@ -35,10 +35,26 @@ class Role(models.Model):
         return self.role
 
 
+class Company(models.Model):
+    company_name = models.CharField(max_length=255)
+    address1 = models.TextField(max_length=20000, null=True, blank=True)
+    address2 = models.TextField(max_length=20000, null=True, blank=True)
+    city = models.CharField(max_length=255, null=True, blank=True)
+    country = models.CharField(max_length=255, null=True, blank=True)
+    zip_code = models.CharField(max_length=255, null=True, blank=True)
+    gst_number = models.CharField(max_length=255, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.company_name
+
+
 class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True)
     role = models.ForeignKey(Role, on_delete=models.SET_NULL, null=True, related_name='user_role')
+    company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True, related_name='user_company')
     login_ip = models.CharField(max_length=255, null=True, blank=True)
     employee_id = models.CharField(max_length=255, null=True, blank=True)
     department = models.CharField(max_length=255, null=True, blank=True)

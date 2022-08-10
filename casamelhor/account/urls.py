@@ -21,4 +21,11 @@ urlpatterns = [
     path('role/permission/group/get/<int:id>/', user_group_of_permissions_view),
     path('role/permission/get/', user_permission_view),
     path('role/permission/get/<int:id>/', user_permission_view),
+
+    path('client/company/create/', CompanyView.as_view({'post': 'create'}), name='company_create'),
+    path('client/company/get/', CompanyView.as_view({'get': 'list'}), name='company_create'),
+    path('client/company/get/<int:id>/', CompanyView.as_view({'get': 'retrieve'}), name='company_create'),
+    path('client/company/edit/<int:id>/', CompanyView.as_view({'put': 'update'}), name='company_create'),
+    path('client/company/delete/<int:id>/', CompanyView.as_view({'delete': 'destroy'}), name='company_create'),
+
 ]
