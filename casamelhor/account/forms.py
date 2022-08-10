@@ -1,5 +1,5 @@
 from django import forms
-from .models import User, Role, document_choices, Vault
+from .models import User, Role, document_choices, Vault, Company
 from django.contrib.auth.models import Group, Permission
 from django.db.models import Q
 
@@ -17,6 +17,7 @@ class RegisterForm(forms.ModelForm):
     email = forms.EmailField(required=True)
     first_name = forms.CharField(required=True)
     role = forms.ModelChoiceField(queryset=Role.objects.all())
+    company = forms.ModelChoiceField(queryset=Company.objects.all(), required=False)
     user_permissions = forms.ModelMultipleChoiceField(queryset=Permission.objects.all(), required=False)
     groups = forms.ModelMultipleChoiceField(queryset=Group.objects.all(), required=False)
     password = forms.CharField(required=True)
@@ -25,7 +26,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('phone', 'email', 'password', 'first_name', 'role', 'is_email', 'is_phone', 'user_permissions', 'groups')
+        fields = ('phone', 'email', 'password', 'first_name', 'role', 'is_email', 'is_phone', 'company', 'user_permissions', 'groups')
 
     def clean(self):
         cleaned_data = super(RegisterForm, self).clean()

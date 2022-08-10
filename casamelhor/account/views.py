@@ -41,6 +41,8 @@ def registration_view(request, form):
             groups = groups.extend([i.id for i in form.cleaned_data['groups']])
         form.cleaned_data['groups'] = groups
         form.cleaned_data['role_id'] = form.cleaned_data['role'].id
+        form.cleaned_data['company_id'] = form.cleaned_data['company'].id
+        print(form.cleaned_data)
         serializer = AuthUserSerializer(data=form.cleaned_data)
         if serializer.is_valid():
             serializer.save()

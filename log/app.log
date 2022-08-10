@@ -7526,3 +7526,24 @@ django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered name
 2022-08-10 06:08:40,464 Watching for file changes with StatReloader
 2022-08-10 06:33:01,192 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/urls.py changed, reloading.
 2022-08-10 06:33:01,737 Watching for file changes with StatReloader
+2022-08-10 07:48:35,667 Watching for file changes with StatReloader
+2022-08-10 07:51:43,592 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
+2022-08-10 07:51:44,050 Watching for file changes with StatReloader
+2022-08-10 07:54:01,038 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
+2022-08-10 07:54:01,628 Watching for file changes with StatReloader
+2022-08-10 07:54:03,265 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-08-10 07:54:03,723 Watching for file changes with StatReloader
+2022-08-10 07:55:46,780 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-08-10 07:55:47,265 Watching for file changes with StatReloader
+2022-08-10 07:56:46,346 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-08-10 07:56:46,847 Watching for file changes with StatReloader
+2022-08-10 07:59:44,577 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-08-10 07:59:45,053 Watching for file changes with StatReloader
+2022-08-10 08:46:31,924 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
+2022-08-10 08:46:32,605 Watching for file changes with StatReloader
+2022-08-10 08:53:07,080 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/serializer.py changed, reloading.
+2022-08-10 08:53:07,873 Watching for file changes with StatReloader
+2022-08-10 09:02:19,952 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/forms.py changed, reloading.
+2022-08-10 09:02:20,517 Watching for file changes with StatReloader
+2022-08-10 09:02:46,714 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/account/views.py changed, reloading.
+2022-08-10 09:02:47,175 Watching for file changes with StatReloader
