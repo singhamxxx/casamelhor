@@ -7657,3 +7657,11 @@ django.core.exceptions.ImproperlyConfigured: Field name `amenities_group.name` i
 2022-08-15 06:10:35,432 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
 2022-08-15 06:10:35,914 Watching for file changes with StatReloader
 2022-08-15 06:10:58,646 Not Found: /favicon.ico
+2022-08-15 08:47:58,086 Watching for file changes with StatReloader
+2022-08-15 08:48:08,117 Not Found: /favicon.ico
+2022-08-15 08:48:11,528 Not Found: /media
+2022-08-15 08:48:34,935 Not Found: /media/profile
+2022-08-15 08:49:28,086 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/urls.py changed, reloading.
+2022-08-15 08:49:28,631 Watching for file changes with StatReloader
+2022-08-15 08:49:33,412 Not Found: /media/profile
+2022-08-15 08:49:50,767 Not Found: /media/profile
