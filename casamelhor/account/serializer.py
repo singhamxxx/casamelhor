@@ -76,7 +76,6 @@ class AuthUserSerializer(serializers.ModelSerializer):
                   'user_permissions', 'groups', 'role_id', 'company_id']
 
     def create(self, validated_data):
-        print(validated_data)
         validated_data['password'] = make_password(validated_data.get('password'))
         permissions = None
         groups = None
@@ -86,7 +85,6 @@ class AuthUserSerializer(serializers.ModelSerializer):
         if 'groups' in validated_data and validated_data['groups']:
             groups = validated_data['groups']
             validated_data.pop('groups')
-        print(validated_data)
         obj = super(AuthUserSerializer, self).create(validated_data)
         if permissions:
             obj.user_permissions.set(permissions)
