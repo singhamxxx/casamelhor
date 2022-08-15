@@ -6,19 +6,50 @@ from django.db.models.query import QuerySet
 from ..account.serializer import AuthUserSimpleDataSerializer
 
 
-class AmenitiesSerializer(serializers.ModelSerializer):
+class GetAmenitiesAttributeSerializer(serializers.ModelSerializer):
+    amenity_group = serializers.SerializerMethodField()
+
     class Meta:
-        model = Amenities
-        fields = "__all__"
+        model = AmenitiesAttribute
+        fields = ['id', 'name', 'is_active', 'amenity_group', 'image']
+
+    def get_amenity_group(self, obj):
+        return obj.amenity_group.name
 
 
-class AmenitiesGroupSerializer(serializers.ModelSerializer):
-    amenity = AmenitiesSerializer(read_only=True)
+class GetAmenitiesGroupSerializer(serializers.ModelSerializer):
+    amenity = serializers.SerializerMethodField()
+    amenities_groups_attribute = GetAmenitiesAttributeSerializer(many=True, read_only=True)
 
     class Meta:
         model = AmenitiesGroup
-        fields = ('id', 'name', 'is_active', 'amenity', 'amenity_id')
+        fields = ('id', 'name', 'is_active', 'amenity', 'amenities_groups_attribute')
+
+    def get_amenity(self, obj):
+        return obj.amenity.name
+
+
+class AmenitiesSerializer(serializers.ModelSerializer):
+    amenities_group = GetAmenitiesGroupSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Amenities
+        fields = ('name', 'is_active', 'created_at', 'updated_at', 'amenities_group')
+
+
+class AmenitiesGroupSerializer(serializers.ModelSerializer):
+    amenity = serializers.SerializerMethodField(read_only=True)
+    amenities_groups_attribute = GetAmenitiesAttributeSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = AmenitiesGroup
+        fields = ('id', 'name', 'is_active', 'amenity', 'amenity_id', 'amenities_groups_attribute')
         extra_kwargs = {'amenity_id': {'source': 'amenity', 'write_only': True}}
+
+    def get_amenity(self, obj):
+        data = AmenitiesSerializer(instance=obj.amenity, many=False).data
+        data.pop('amenities_group')
+        return data
 
 
 class AmenitiesAttributeSerializer(serializers.ModelSerializer):
