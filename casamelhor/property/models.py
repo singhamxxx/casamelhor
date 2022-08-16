@@ -145,3 +145,7 @@ class RoomsImages(models.Model):
 
     def __str__(self):
         return self.room.name
+
+
+class BookingProperty(models.Model):
+    pass

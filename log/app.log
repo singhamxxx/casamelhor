@@ -7665,3 +7665,5 @@ django.core.exceptions.ImproperlyConfigured: Field name `amenities_group.name` i
 2022-08-15 08:49:28,631 Watching for file changes with StatReloader
 2022-08-15 08:49:33,412 Not Found: /media/profile
 2022-08-15 08:49:50,767 Not Found: /media/profile
+2022-08-16 04:52:30,705 Watching for file changes with StatReloader
+2022-08-16 08:41:38,394 Watching for file changes with StatReloader

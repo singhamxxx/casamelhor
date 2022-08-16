@@ -24,8 +24,8 @@ urlpatterns = [
 
     path('client/company/create/', CompanyView.as_view({'post': 'create'}), name='company_create'),
     path('client/company/get/', CompanyView.as_view({'get': 'list'}), name='company_create'),
-    path('client/company/get/<int:id>/', CompanyView.as_view({'get': 'retrieve'}), name='company_create'),
-    path('client/company/edit/<int:id>/', CompanyView.as_view({'put': 'update'}), name='company_create'),
-    path('client/company/delete/<int:id>/', CompanyView.as_view({'delete': 'destroy'}), name='company_create'),
+    path('client/company/get/<int:pk>/', CompanyView.as_view({'get': 'retrieve'}), name='company_create'),
+    path('client/company/edit/<int:pk>/', CompanyView.as_view({'put': 'update'}), name='company_create'),
+    path('client/company/delete/<int:pk>/', CompanyView.as_view({'delete': 'destroy'}), name='company_create'),
 
 ]
