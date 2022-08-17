@@ -332,4 +332,5 @@ class CompanyView(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         super(CompanyView, self).destroy(request, *args, **kwargs)
-        return Response({"data": kwargs['pk'], "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
