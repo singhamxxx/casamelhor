@@ -16,7 +16,7 @@ class AmenitiesView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data, "message": "Successfully Get Amenities", "isSuccess": True, "status": 200})
+        return Response({"data": serializer.data, "message": "All Amenities Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())

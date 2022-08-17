@@ -16,23 +16,23 @@ class PropertyView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Properties Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Property Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(PropertyView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertyView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertyView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertyImageView(viewsets.ModelViewSet):
@@ -43,23 +43,23 @@ class PropertyImageView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Property Images Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Property Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(PropertyImageView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Images Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertyImageView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Images Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertyImageView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Images Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertyInactiveReasonsView(viewsets.ModelViewSet):
@@ -70,23 +70,23 @@ class PropertyInactiveReasonsView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(PropertyInactiveReasonsView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Inactive Reasons Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertyInactiveReasonsView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Inactive Reasons Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertyInactiveReasonsView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Inactive Reasons Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertySettingsView(viewsets.ModelViewSet):
@@ -97,23 +97,23 @@ class PropertySettingsView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Property Settings Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Property Settings Get All Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(PropertySettingsView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Settings Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertySettingsView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Settings Update Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertySettingsView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Settings Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertyEmergencyContactView(viewsets.ModelViewSet):
@@ -124,23 +124,23 @@ class PropertyEmergencyContactView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Property Emergency Contacts Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Property Emergency Contact Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(PropertyEmergencyContactView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Emergency Contact Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertyEmergencyContactView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Emergency Contact Update Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertyEmergencyContactView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Property Emergency Contact Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class RoomsImagesView(viewsets.ModelViewSet):
@@ -151,20 +151,20 @@ class RoomsImagesView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(RoomsImagesView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Rooms Images Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(RoomsImagesView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Rooms Images Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         response_data = super(RoomsImagesView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})

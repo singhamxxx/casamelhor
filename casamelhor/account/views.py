@@ -316,20 +316,20 @@ class CompanyView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data})
+        return Response({"data": serializer.data, "message": "Client admin Company Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
         response_data = super(CompanyView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Client admin Company Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(CompanyView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        return Response({"data": response_data.data, "message": "Client admin Company Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(CompanyView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data})
+        super(CompanyView, self).destroy(request, *args, **kwargs)
+        return Response({"data": kwargs['pk'], "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
