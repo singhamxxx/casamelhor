@@ -1,20 +1,19 @@
 from rest_framework.decorators import api_view
 from django.utils.decorators import decorator_from_middleware
-from django.contrib.auth.models import Group, Permission
 from .emails import _send_account_confirmation_email
 from .serializer import *
 from django.contrib.auth.tokens import default_token_generator
 from .middleware import *
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from datetime import datetime
-from django.shortcuts import render
 from django.db.models import Q
 from random import randint
-import json
 from django.core.paginator import Paginator
 from rest_framework import viewsets
 from rest_framework_swagger.views import get_swagger_view
 from ..permissions import IsSuperUser
+from rest_framework.permissions import IsAdminUser
+from rest_framework.parsers import MultiPartParser, FormParser
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -26,6 +25,29 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+
+class RegistrationView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
+    parser_classes = (FormParser, MultiPartParser)
+    permission_classes_by_action = [IsSuperUser, ]
+
+    def create(self, request, *args, **kwargs):
+        if request.user.is_superuser:
+            request.data["login_ip"] = get_client_ip(request)
+            if 'user_permissions' in request.data and request.data['user_permissions']:
+                request.data['user_permissions'] = [i.id for i in request.data['user_permissions']]
+            groups = [request.data['role'].id]
+            if 'groups' in request.data and request.data['groups']:
+                groups = groups.extend([i.id for i in request.data['groups']])
+            request.data['groups'] = groups
+            request.data['role_id'] = request.data['role'].id
+            request.data['company_id'] = request.data['company'].id
+            response_data = super(RegistrationView, self).create(request, *args, **kwargs)
+            return Response({"data": response_data.data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
+        else:
+            return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
 @api_view(['POST'])

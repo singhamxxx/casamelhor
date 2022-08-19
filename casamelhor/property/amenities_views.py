@@ -1,11 +1,7 @@
-from rest_framework.decorators import api_view
-from django.utils.decorators import decorator_from_middleware
-from ..account.middleware import TokenAuthenticationMiddleware
 from .middleware import *
 from .serializer import *
 from rest_framework import viewsets
-from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
-from rest_framework.permissions import IsAdminUser
+from rest_framework.parsers import MultiPartParser, FormParser
 from ..permissions import IsSuperUser
 
 
@@ -51,7 +47,7 @@ class AmenitiesGroupView(viewsets.ModelViewSet):
     serializer_class = AmenitiesGroupSerializer
     queryset = AmenitiesGroup.objects.all()
     parser_classes = (FormParser, MultiPartParser)
-    permission_classes_by_action = {'create': [IsSuperUser], 'update': [IsSuperUser], 'destroy': [IsSuperUser]}
+    permission_classes_by_action = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)

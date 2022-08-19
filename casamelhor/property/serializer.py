@@ -6,40 +6,15 @@ from django.db.models.query import QuerySet
 from ..account.serializer import AuthUserSimpleDataSerializer
 
 
-class GetAmenitiesAttributeSerializer(serializers.ModelSerializer):
-    amenity_group = serializers.SerializerMethodField()
-
-    class Meta:
-        model = AmenitiesAttribute
-        fields = ['id', 'name', 'is_active', 'amenity_group', 'image']
-
-    def get_amenity_group(self, obj):
-        return obj.amenity_group.name
-
-
-class GetAmenitiesGroupSerializer(serializers.ModelSerializer):
-    amenity = serializers.SerializerMethodField()
-    amenities_groups_attribute = GetAmenitiesAttributeSerializer(many=True, read_only=True)
-
-    class Meta:
-        model = AmenitiesGroup
-        fields = ('id', 'name', 'is_active', 'amenity', 'amenities_groups_attribute')
-
-    def get_amenity(self, obj):
-        return obj.amenity.name
-
-
 class AmenitiesSerializer(serializers.ModelSerializer):
-    amenities_group = GetAmenitiesGroupSerializer(many=True, read_only=True)
 
     class Meta:
         model = Amenities
-        fields = ('name', 'is_active', 'created_at', 'updated_at', 'amenities_group')
+        fields = ('id', 'name', 'is_active', 'created_at', 'updated_at', 'amenities_group')
 
 
 class AmenitiesGroupSerializer(serializers.ModelSerializer):
     amenity = serializers.SerializerMethodField(read_only=True)
-    amenities_groups_attribute = GetAmenitiesAttributeSerializer(many=True, read_only=True)
 
     class Meta:
         model = AmenitiesGroup
@@ -138,6 +113,25 @@ class RoomsImagesSerializer(serializers.ModelSerializer):
 
 
 class RoomSerializer(serializers.ModelSerializer):
+    images = RoomsImagesSerializer(read_only=True)
+
     class Meta:
         model = Room
         fields = "__all__"
+        extra_fields = ['images']
+
+    def create(self, validated_data):
+        if 'images' in validated_data:
+            images = validated_data.pop('images')
+            rooms_images_serializer = RoomsImagesSerializer(data=images, many=True)
+            if rooms_images_serializer.is_valid():
+                rooms_images_serializer.save()
+        return super(RoomSerializer, self).create(validated_data)
+
+    def update(self, instance, validated_data):
+        if 'images' in validated_data:
+            images = validated_data.pop('images')
+            rooms_images_serializer = RoomsImagesSerializer(data=images, many=True)
+            if rooms_images_serializer.is_valid():
+                rooms_images_serializer.save()
+        return super(RoomSerializer, self).update(instance, validated_data)

@@ -143,10 +143,9 @@ class PropertyEmergencyContactView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Property Emergency Contact Delete Successfully", "isSuccess": True, "status": 200})
 
 
-class RoomsImagesView(viewsets.ModelViewSet):
-    serializer_class = RoomsImagesSerializer
-    queryset = RoomsImages.objects.all()
-    parser_classes = (FormParser,)
+class RoomsView(viewsets.ModelViewSet):
+    serializer_class = RoomSerializer
+    queryset = Room.objects.all()
     permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
@@ -158,13 +157,13 @@ class RoomsImagesView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
-        response_data = super(RoomsImagesView, self).create(request, *args, **kwargs)
+        response_data = super(RoomsView, self).create(request, *args, **kwargs)
         return Response({"data": response_data.data, "message": "Rooms Images Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
-        response_data = super(RoomsImagesView, self).update(request, *args, **kwargs)
+        response_data = super(RoomsView, self).update(request, *args, **kwargs)
         return Response({"data": response_data.data, "message": "Rooms Images Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(RoomsImagesView, self).destroy(request, *args, **kwargs)
+        response_data = super(RoomsView, self).destroy(request, *args, **kwargs)
         return Response({"data": response_data.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})

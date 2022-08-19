@@ -59,18 +59,11 @@ urlpatterns = [
     path('emergency/contact/edit/<int:pk>/', PropertyEmergencyContactView.as_view({'put': 'update'}), name='property_emergency_contact_edit_one'),
     path('emergency/contact/delete/<int:pk>/', PropertyEmergencyContactView.as_view({'delete': 'destroy'}), name='property_emergency_contact_destroy_one'),
 
-    # Property Rooms Images urls
-    path('room/image/create/', RoomsImagesView.as_view({'post': 'create'}), name='room_image_create'),
-    path('room/image/get/', RoomsImagesView.as_view({'get': 'list'}), name='room_images_get'),
-    path('room/images/get/<int:pk>/', RoomsImagesView.as_view({'get': 'retrieve'}), name='room_image_get_one'),
-    path('room/image/edit/<int:pk>/', RoomsImagesView.as_view({'put': 'update'}), name='room_image_edit_one'),
-    path('room/image/delete/<int:pk>/', RoomsImagesView.as_view({'delete': 'destroy'}), name='room_image_destroy_one'),
-
     # Property Rooms urls
-    path('room/create/', RoomsImagesView.as_view({'post': 'create'}), name='room_create'),
-    path('rooms/get/', RoomsImagesView.as_view({'get': 'list'}), name='property_setting_get'),
-    path('room/get/<int:pk>/', RoomsImagesView.as_view({'get': 'retrieve'}), name='property_setting_get_one'),
-    path('room/edit/<int:pk>/', RoomsImagesView.as_view({'put': 'update'}), name='property_setting_edit_one'),
-    path('room/delete/<int:pk>/', RoomsImagesView.as_view({'delete': 'destroy'}), name='property_setting_destroy_one'),
+    path('room/create/', RoomsView.as_view({'post': 'create'}), name='room_create'),
+    path('rooms/get/', RoomsView.as_view({'get': 'list'}), name='property_setting_get'),
+    path('room/get/<int:pk>/', RoomsView.as_view({'get': 'retrieve'}), name='property_setting_get_one'),
+    path('room/edit/<int:pk>/', RoomsView.as_view({'put': 'update'}), name='property_setting_edit_one'),
+    path('room/delete/<int:pk>/', RoomsView.as_view({'delete': 'destroy'}), name='property_setting_destroy_one'),
 
 ]
