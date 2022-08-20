@@ -128,7 +128,7 @@ class Room(models.Model):
     preference = models.CharField(max_length=255, choices=preference_choice)
     accommodates = models.IntegerField()
     room_amenities = models.ForeignKey(AmenitiesAttribute, on_delete=models.SET_NULL, null=True, related_name="room_amenities")
-    allow_booking_managers = models.ManyToManyField(User, related_name="room_allow_booking_manager")
+    allow_booking_managers = models.ManyToManyField(User, blank=True, related_name="room_allow_booking_manager")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 

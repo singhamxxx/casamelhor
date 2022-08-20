@@ -7,7 +7,6 @@ from ..account.serializer import AuthUserSimpleDataSerializer
 
 
 class AmenitiesSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Amenities
         fields = ('id', 'name', 'is_active', 'created_at', 'updated_at', 'amenities_group')
@@ -113,25 +112,16 @@ class RoomsImagesSerializer(serializers.ModelSerializer):
 
 
 class RoomSerializer(serializers.ModelSerializer):
-    images = RoomsImagesSerializer(read_only=True)
+    room_amenities = AmenitiesAttributeSerializer(read_only=True)
+    property = PropertySimpleDataSerializer(read_only=True)
+    images = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Room
-        fields = "__all__"
-        extra_fields = ['images']
+        fields = ('id', 'property', 'name', 'description', 'numbers_of_beds', 'bed_type', 'preference', 'accommodates', 'room_amenities',
+                  'property_id', 'allow_booking_managers', 'room_amenities_id', 'created_at', 'updated_at', 'images')
+        extra_kwargs = {'property_id': {'source': 'property', 'write_only': True},
+                        'room_amenities_id': {'source': 'room_amenities', 'write_only': True}}
 
-    def create(self, validated_data):
-        if 'images' in validated_data:
-            images = validated_data.pop('images')
-            rooms_images_serializer = RoomsImagesSerializer(data=images, many=True)
-            if rooms_images_serializer.is_valid():
-                rooms_images_serializer.save()
-        return super(RoomSerializer, self).create(validated_data)
-
-    def update(self, instance, validated_data):
-        if 'images' in validated_data:
-            images = validated_data.pop('images')
-            rooms_images_serializer = RoomsImagesSerializer(data=images, many=True)
-            if rooms_images_serializer.is_valid():
-                rooms_images_serializer.save()
-        return super(RoomSerializer, self).update(instance, validated_data)
+    def get_images(self, obj):
+        return RoomsImagesSerializer(instance=obj.property_rooms_image.all(), many=True).data

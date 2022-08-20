@@ -157,8 +157,17 @@ class RoomsView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
-        response_data = super(RoomsView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Rooms Images Create Successfully", "isSuccess": True, "status": 200})
+        images = None
+        if 'images' in request.data and request.data['images']:
+            images = request.data.pop('images')
+        response_data = super(RoomsView, self).create(request, *args, **kwargs).data
+        if images:
+            data = [{'room': response_data['id'], 'image': i} for i in images]
+            serializer = RoomsImagesSerializer(data=data, many=True)
+            if serializer.is_valid():
+                serializer.save()
+        serializer = self.get_serializer(Room.objects.get(id=response_data['id']))
+        return Response({"data": serializer.data, "message": "Rooms Images Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(RoomsView, self).update(request, *args, **kwargs)
