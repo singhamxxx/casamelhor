@@ -112,7 +112,7 @@ class RoomsImagesSerializer(serializers.ModelSerializer):
 
 
 class RoomSerializer(serializers.ModelSerializer):
-    room_amenities = AmenitiesAttributeSerializer(read_only=True)
+    room_amenities = AmenitiesAttributeSerializer(read_only=True, many=True)
     property = PropertySimpleDataSerializer(read_only=True)
     images = serializers.SerializerMethodField(read_only=True)
 

@@ -3,7 +3,7 @@ from .models import *
 
 
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ["id", 'property', 'name', 'description', 'numbers_of_beds', 'bed_type', 'preference', 'accommodates', 'room_amenities',
+    list_display = ["id", 'property', 'name', 'description', 'numbers_of_beds', 'bed_type', 'preference', 'accommodates',
                     'created_at', 'updated_at']
     search_fields = ["name", "property__name"]
 
