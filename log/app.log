@@ -8515,3 +8515,8 @@ AttributeError: 'Room' object has no attribute 'images'
 2022-08-20 09:23:42,254 Watching for file changes with StatReloader
 2022-08-20 09:25:59,014 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
 2022-08-20 09:25:59,480 Watching for file changes with StatReloader
+2022-08-20 09:37:57,508 Watching for file changes with StatReloader
+2022-08-20 12:17:30,035 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/urls.py changed, reloading.
+2022-08-20 12:17:31,081 Watching for file changes with StatReloader
+2022-08-20 12:26:02,310 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-20 12:26:02,895 Watching for file changes with StatReloader

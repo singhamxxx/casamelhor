@@ -104,7 +104,12 @@ class PropertySettingsView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "Property Settings Get All Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
+        data = request.data['property_emergency_contact']
+        request.data = request.data['property_settings']
         response_data = super(PropertySettingsView, self).create(request, *args, **kwargs)
+        serializer = PropertyEmergencyContactSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
         return Response({"data": response_data.data, "message": "Property Settings Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
@@ -114,33 +119,6 @@ class PropertySettingsView(viewsets.ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         response_data = super(PropertySettingsView, self).destroy(request, *args, **kwargs)
         return Response({"data": response_data.data, "message": "Property Settings Delete Successfully", "isSuccess": True, "status": 200})
-
-
-class PropertyEmergencyContactView(viewsets.ModelViewSet):
-    serializer_class = PropertyEmergencyContactSerializer
-    queryset = PropertyEmergencyContact.objects.all()
-    parser_classes = (FormParser,)
-    permission_classes = [IsSuperUser, ]
-
-    def list(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data, "message": "All Property Emergency Contacts Get Successfully", "isSuccess": True, "status": 200})
-
-    def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.get_object())
-        return Response({"data": serializer.data, "message": "Property Emergency Contact Get Successfully", "isSuccess": True, "status": 200})
-
-    def create(self, request, *args, **kwargs):
-        response_data = super(PropertyEmergencyContactView, self).create(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Emergency Contact Create Successfully", "isSuccess": True, "status": 200})
-
-    def update(self, request, *args, **kwargs):
-        response_data = super(PropertyEmergencyContactView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Emergency Contact Update Successfully", "isSuccess": True, "status": 200})
-
-    def destroy(self, request, *args, **kwargs):
-        response_data = super(PropertyEmergencyContactView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Emergency Contact Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class RoomsView(viewsets.ModelViewSet):

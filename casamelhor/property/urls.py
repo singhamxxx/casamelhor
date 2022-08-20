@@ -52,13 +52,6 @@ urlpatterns = [
     path('inactive/reason/edit/<int:pk>/', PropertyInactiveReasonsView.as_view({'put': 'update'}), name='property_inactive_reasons_edit_one'),
     path('inactive/reason/delete/<int:pk>/', PropertyInactiveReasonsView.as_view({'delete': 'destroy'}), name='property_inactive_reasons_destroy_one'),
 
-    # Property Emergency Contact urls
-    path('emergency/contact/create/', PropertyEmergencyContactView.as_view({'post': 'create'}), name='property_emergency_contact_create'),
-    path('emergency/contacts/get/', PropertyEmergencyContactView.as_view({'get': 'list'}), name='property_emergency_contact_get'),
-    path('emergency/contact/get/<int:pk>/', PropertyEmergencyContactView.as_view({'get': 'retrieve'}), name='property_emergency_contact_get_one'),
-    path('emergency/contact/edit/<int:pk>/', PropertyEmergencyContactView.as_view({'put': 'update'}), name='property_emergency_contact_edit_one'),
-    path('emergency/contact/delete/<int:pk>/', PropertyEmergencyContactView.as_view({'delete': 'destroy'}), name='property_emergency_contact_destroy_one'),
-
     # Property Rooms urls
     path('room/create/', RoomsView.as_view({'post': 'create'}), name='room_create'),
     path('rooms/get/', RoomsView.as_view({'get': 'list'}), name='property_setting_get'),
