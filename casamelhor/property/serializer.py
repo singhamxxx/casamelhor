@@ -44,7 +44,7 @@ class PropertyImagesSerializer(serializers.ModelSerializer):
 
 
 class PropertySerializer(serializers.ModelSerializer):
-    property_amenities = AmenitiesAttributeSerializer(read_only=True)
+    property_amenities = AmenitiesAttributeSerializer(read_only=True, many=True)
     images = serializers.ListField(child=serializers.FileField(allow_empty_file=True, use_url=False), write_only=True, required=False)
     property_images = serializers.SerializerMethodField(read_only=True)
 

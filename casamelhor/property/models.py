@@ -53,7 +53,7 @@ class Property(models.Model):
     check_in_time = models.TimeField(null=True, blank=True)
     check_out_time = models.TimeField(null=True, blank=True)
     house_role = models.TextField(max_length=65500, null=True, blank=True)
-    property_amenities = models.ForeignKey(AmenitiesAttribute, on_delete=models.SET_NULL, null=True, related_name="property_amenities")
+    property_amenities = models.ManyToManyField(AmenitiesAttribute, blank=True, related_name="property_amenities")
     allow_booking_managers = models.ManyToManyField(User, related_name="property_allow_booking_manager", blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)

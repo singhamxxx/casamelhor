@@ -105,12 +105,14 @@ class PropertySettingsView(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         data = request.data['property_emergency_contact']
-        request.data = request.data['property_settings']
-        response_data = super(PropertySettingsView, self).create(request, *args, **kwargs)
+        response_data = self.get_serializer(data=request.data['property_settings'])
+        response_data.is_valid(raise_exception=True)
+        response_data.save()
         serializer = PropertyEmergencyContactSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response({"data": response_data.data, "message": "Property Settings Create Successfully", "isSuccess": True, "status": 200})
+        response = {"property_emergency_contact": serializer.data, "property_settings": response_data.data}
+        return Response({"data": response, "message": "Property Settings Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
         response_data = super(PropertySettingsView, self).update(request, *args, **kwargs)
