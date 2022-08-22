@@ -50,7 +50,11 @@ class PropertyImageView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "Property Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
-        response_data = super(PropertyImageView, self).create(request, *args, **kwargs)
+        property_id = request.data['property_id']
+        data = [{'property': property_id, 'image': i} for i in request.FILES.getlist('images')]
+        response_data = self.get_serializer(data=data, many=True)
+        response_data.is_valid(raise_exception=True)
+        response_data.save()
         return Response({"data": response_data.data, "message": "Property Images Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
