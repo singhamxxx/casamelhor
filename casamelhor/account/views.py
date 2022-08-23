@@ -359,7 +359,7 @@ class CompanyView(viewsets.ModelViewSet):
 
 
 class CasamelhorAdminView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Casamelhor Admin')
     permission_classes = [IsSuperUser, ]
 
@@ -369,7 +369,7 @@ class CasamelhorAdminView(viewsets.ModelViewSet):
 
 
 class CasamelhorBookingManagerView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Casamelhor Booking Manager')
     permission_classes = [IsSuperUser, ]
 
@@ -379,7 +379,7 @@ class CasamelhorBookingManagerView(viewsets.ModelViewSet):
 
 
 class CasamelhorPropertyManagerView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Casamelhor Property Manager')
     permission_classes = [IsSuperUser, ]
 
@@ -389,7 +389,7 @@ class CasamelhorPropertyManagerView(viewsets.ModelViewSet):
 
 
 class ClientAdminView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Client Admin')
     permission_classes = [IsSuperUser, ]
 
@@ -399,7 +399,7 @@ class ClientAdminView(viewsets.ModelViewSet):
 
 
 class ClientBookingManagerView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Client Booking Manager')
     permission_classes = [IsSuperUser, ]
 
@@ -409,7 +409,7 @@ class ClientBookingManagerView(viewsets.ModelViewSet):
 
 
 class ClientPropertyManagerView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Client Property Manager')
     permission_classes = [IsSuperUser, ]
 
@@ -419,7 +419,7 @@ class ClientPropertyManagerView(viewsets.ModelViewSet):
 
 
 class GuestView(viewsets.ModelViewSet):
-    serializer_class = CompanySerializer
+    serializer_class = AuthUserPermissionsSerializer
     queryset = User.objects.filter(role__role='Guest')
     permission_classes = [IsSuperUser, ]
 
