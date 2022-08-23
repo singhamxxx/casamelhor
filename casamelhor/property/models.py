@@ -55,6 +55,7 @@ class Property(models.Model):
     house_role = models.TextField(max_length=65500, null=True, blank=True)
     property_amenities = models.ManyToManyField(AmenitiesAttribute, blank=True, related_name="property_amenities")
     allow_booking_managers = models.ManyToManyField(User, related_name="property_allow_booking_manager", blank=True)
+    restrict_booking_managers = models.ManyToManyField(User, related_name="property_restrict_booking_manager", blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
@@ -74,7 +75,6 @@ class PropertyImages(models.Model):
 
 
 class PropertyInactiveReasons(models.Model):
-    property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name="property_reasons")
     reason = models.TextField(max_length=65500)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -129,6 +129,7 @@ class Room(models.Model):
     accommodates = models.IntegerField()
     room_amenities = models.ManyToManyField(AmenitiesAttribute, blank=True, related_name="room_amenities")
     allow_booking_managers = models.ManyToManyField(User, blank=True, related_name="room_allow_booking_manager")
+    restrict_booking_managers = models.ManyToManyField(User, blank=True, related_name="room_restrict_booking_manager")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 

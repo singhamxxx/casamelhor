@@ -52,7 +52,7 @@ class PropertySerializer(serializers.ModelSerializer):
         model = Property
         fields = ['id', 'name', 'description', 'house_number', 'building_number', 'area', 'city', 'country', 'state', 'zipcode', 'latitude',
                   'longitude', 'numbers_of_rooms', 'check_in_time', 'check_out_time', 'house_role', 'property_amenities', 'allow_booking_managers',
-                  'property_amenities_id', 'created_at', 'updated_at', 'images', 'property_images']
+                  'restrict_booking_managers', 'property_amenities_id', 'created_at', 'updated_at', 'images', 'property_images']
         extra_kwargs = {'property_amenities_id': {'source': 'property_amenities', 'write_only': True}}
 
     def get_property_images(self, obj):
@@ -119,7 +119,7 @@ class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
         fields = ('id', 'property', 'name', 'description', 'numbers_of_beds', 'bed_type', 'preference', 'accommodates', 'room_amenities',
-                  'property_id', 'allow_booking_managers', 'room_amenities_id', 'created_at', 'updated_at', 'images')
+                  'property_id', 'allow_booking_managers', 'restrict_booking_managers', 'room_amenities_id', 'created_at', 'updated_at', 'images')
         extra_kwargs = {'property_id': {'source': 'property', 'write_only': True},
                         'room_amenities_id': {'source': 'room_amenities', 'write_only': True}}
 
