@@ -69,7 +69,7 @@ class PropertyImageView(viewsets.ModelViewSet):
 class PropertyInactiveReasonsView(viewsets.ModelViewSet):
     serializer_class = PropertyInactiveReasonsSerializer
     queryset = PropertyInactiveReasons.objects.all()
-    parser_classes = (FormParser,)
+    parser_classes = (FormParser, MultiPartParser)
     permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):

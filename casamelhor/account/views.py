@@ -356,3 +356,73 @@ class CompanyView(viewsets.ModelViewSet):
         super(CompanyView, self).destroy(request, *args, **kwargs)
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
         return Response({"data": serializer.data, "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
+
+
+class CasamelhorAdminView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Casamelhor Admin')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class CasamelhorBookingManagerView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Casamelhor Booking Manager')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class CasamelhorPropertyManagerView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Casamelhor Property Manager')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class ClientAdminView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Client Admin')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class ClientBookingManagerView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Client Booking Manager')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class ClientPropertyManagerView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Client Property Manager')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class GuestView(viewsets.ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = User.objects.filter(role__role='Guest')
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})

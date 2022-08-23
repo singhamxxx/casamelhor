@@ -23,9 +23,16 @@ urlpatterns = [
     path('role/permission/get/<int:id>/', user_permission_view),
 
     path('client/company/create/', CompanyView.as_view({'post': 'create'}), name='company_create'),
-    path('client/company/get/', CompanyView.as_view({'get': 'list'}), name='company_create'),
-    path('client/company/get/<int:pk>/', CompanyView.as_view({'get': 'retrieve'}), name='company_create'),
-    path('client/company/edit/<int:pk>/', CompanyView.as_view({'put': 'update'}), name='company_create'),
-    path('client/company/delete/<int:pk>/', CompanyView.as_view({'delete': 'destroy'}), name='company_create'),
+    path('client/company/get/', CompanyView.as_view({'get': 'list'}), name='company_get'),
+    path('client/company/get/<int:pk>/', CompanyView.as_view({'get': 'retrieve'}), name='company_get_one'),
+    path('client/company/edit/<int:pk>/', CompanyView.as_view({'put': 'update'}), name='company_edit'),
+    path('client/company/delete/<int:pk>/', CompanyView.as_view({'delete': 'destroy'}), name='company_delete'),
 
+    path('casamelhor/admin/user/get/', CasamelhorAdminView.as_view({'get': 'list'}), name='casamelhor_admin_user_get'),
+    path('casamelhor/booking/manager/user/get/', CasamelhorBookingManagerView.as_view({'get': 'list'}), name='casamelhor_booking_manager_user_get'),
+    path('casamelhor/property/manager/user/get/', CasamelhorPropertyManagerView.as_view({'get': 'list'}), name='casamelhor_property_manager_user_get'),
+    path('client/admin/user/get/', ClientAdminView.as_view({'get': 'list'}), name='casamelhor_admin_user_get'),
+    path('client/booking/manager/user/get/', ClientBookingManagerView.as_view({'get': 'list'}), name='client_booking_manager_user_get'),
+    path('client/property/manager/user/get/', ClientPropertyManagerView.as_view({'get': 'list'}), name='casamelhor_property_manager_user_get'),
+    path('guest/user/get/', GuestView.as_view({'get': 'list'}), name='guest_user_get'),
 ]
