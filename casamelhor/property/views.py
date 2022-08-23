@@ -31,8 +31,9 @@ class PropertyView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Property Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(PropertyView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Delete Successfully", "isSuccess": True, "status": 200})
+        super(PropertyView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Property Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertyImageView(viewsets.ModelViewSet):
@@ -62,8 +63,9 @@ class PropertyImageView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Property Images Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(PropertyImageView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Images Delete Successfully", "isSuccess": True, "status": 200})
+        super(PropertyImageView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Property Images Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertyInactiveReasonsView(viewsets.ModelViewSet):
@@ -89,8 +91,9 @@ class PropertyInactiveReasonsView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Property Inactive Reasons Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(PropertyInactiveReasonsView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Inactive Reasons Delete Successfully", "isSuccess": True, "status": 200})
+        super(PropertyInactiveReasonsView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Property Inactive Reasons Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class PropertySettingsView(viewsets.ModelViewSet):
@@ -123,8 +126,9 @@ class PropertySettingsView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Property Settings Update Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(PropertySettingsView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Settings Delete Successfully", "isSuccess": True, "status": 200})
+        super(PropertySettingsView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Property Settings Delete Successfully", "isSuccess": True, "status": 200})
 
 
 class RoomsView(viewsets.ModelViewSet):
@@ -158,5 +162,6 @@ class RoomsView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Rooms Images Edit Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        response_data = super(RoomsView, self).destroy(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})
+        super(RoomsView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})
