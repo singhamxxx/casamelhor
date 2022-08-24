@@ -122,8 +122,16 @@ class PropertySettingsView(viewsets.ModelViewSet):
         return Response({"data": response, "message": "Property Settings Create Successfully", "isSuccess": True, "status": 200})
 
     def update(self, request, *args, **kwargs):
-        response_data = super(PropertySettingsView, self).update(request, *args, **kwargs)
-        return Response({"data": response_data.data, "message": "Property Settings Update Successfully", "isSuccess": True, "status": 200})
+        data = request.data['property_emergency_contact']
+        obj = PropertyEmergencyContact.objects.get(id=request.data['property_emergency_contact_id'])
+        response_data = self.get_serializer(data=request.data['property_settings'], instance=self.get_object(), partial=True)
+        response_data.is_valid(raise_exception=True)
+        response_data.save()
+        serializer = PropertyEmergencyContactSerializer(data=data, instance=obj, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        response = {"property_emergency_contact": serializer.data, "property_settings": response_data.data}
+        return Response({"data": response, "message": "Property Settings Update Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         super(PropertySettingsView, self).destroy(request, *args, **kwargs)

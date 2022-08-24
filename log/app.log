@@ -8764,3 +8764,64 @@ You should either call `.is_valid()` first, or access `.initial_data` instead.
 2022-08-22 11:29:35,688 Watching for file changes with StatReloader
 2022-08-22 11:30:09,232 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
 2022-08-22 11:30:09,726 Watching for file changes with StatReloader
+2022-08-24 12:16:36,704 Watching for file changes with StatReloader
+2022-08-24 12:23:23,210 Internal Server Error: /api/v1/property/setting/edit/8/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 126, in update
+    obj = PropertyEmergencyContact.objects.get(id=request.data['property_emergency_contact_id'])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+casamelhor.property.models.PropertyEmergencyContact.DoesNotExist: PropertyEmergencyContact matching query does not exist.
+2022-08-24 12:23:50,335 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-24 12:23:50,904 Watching for file changes with StatReloader
+2022-08-24 12:24:00,969 Internal Server Error: /api/v1/property/setting/edit/8/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 127, in update
+    obj = PropertyEmergencyContact.objects.get(id=request.data['property_emergency_contact_id'])
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+casamelhor.property.models.PropertyEmergencyContact.DoesNotExist: PropertyEmergencyContact matching query does not exist.
+2022-08-24 12:24:48,367 Not Found: /api/v1/property/setting/
+2022-08-24 12:25:00,935 Not Found: /api/v1/property/setting/get/
+2022-08-24 12:27:30,607 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-24 12:27:31,648 Watching for file changes with StatReloader
+2022-08-24 12:29:42,404 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-24 12:29:42,948 Watching for file changes with StatReloader
+2022-08-24 12:32:43,721 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-24 12:32:44,211 Watching for file changes with StatReloader
