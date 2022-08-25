@@ -5,8 +5,14 @@ from .middleware import *
 from .serializer import *
 from rest_framework import viewsets, renderers
 from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
-from ..permissions import IsSuperUser
+from ..permissions import IsSuperUser, IsAuthenticated
 from .forms import PropertyImagesForm
+
+
+class PropertySearchView(viewsets.ModelViewSet):
+    serializer_class = PropertySerializer
+    queryset = Property.objects.all()
+    permission_classes = [IsSuperUser, IsAuthenticated]
 
 
 class PropertyView(viewsets.ModelViewSet):
@@ -19,7 +25,7 @@ class PropertyView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "All Properties Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.get_object())
+        serializer = GetPropertySerializer(instance=self.get_object(), many=False)
         return Response({"data": serializer.data, "message": "Property Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):

@@ -127,6 +127,7 @@ class Room(models.Model):
     bed_type = models.CharField(max_length=255, choices=bed_types_choice)
     preference = models.CharField(max_length=255, choices=preference_choice)
     accommodates = models.IntegerField()
+    is_available = models.BooleanField(default=True)
     room_amenities = models.ManyToManyField(AmenitiesAttribute, blank=True, related_name="room_amenities")
     allow_booking_managers = models.ManyToManyField(User, blank=True, related_name="room_allow_booking_manager")
     restrict_booking_managers = models.ManyToManyField(User, blank=True, related_name="room_restrict_booking_manager")
@@ -146,3 +147,4 @@ class RoomsImages(models.Model):
 
     def __str__(self):
         return self.room.name
+

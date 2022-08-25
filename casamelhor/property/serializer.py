@@ -125,3 +125,39 @@ class RoomSerializer(serializers.ModelSerializer):
 
     def get_images(self, obj):
         return RoomsImagesSerializer(instance=obj.property_rooms_image.all(), many=True).data
+
+
+class GetAmenitiesAttributeSerializer(serializers.ModelSerializer):
+    is_select = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = AmenitiesAttribute
+        fields = "__all__"
+
+    def get_is_select(self, obj):
+        return True if obj.id in self.context else False
+
+
+class GetAmenitiesGroupSerializer(serializers.ModelSerializer):
+    attributes = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = AmenitiesGroup
+        fields = ('id', 'name', 'is_active', 'attributes')
+
+    def get_attributes(self, obj):
+        data = GetAmenitiesAttributeSerializer(instance=obj.amenities_groups_attribute.all(), many=True, context=self.context).data
+        return data
+
+
+class GetPropertySerializer(serializers.ModelSerializer):
+    amenities = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Property
+        fields = "__all__"
+
+    def get_amenities(self, obj):
+        ids = [i['id'] for i in obj.property_amenities.filter().values('id')]
+        data = GetAmenitiesGroupSerializer(instance=AmenitiesGroup.objects.all(), many=True, context=ids).data
+        return data

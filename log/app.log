@@ -8825,3 +8825,119 @@ casamelhor.property.models.PropertyEmergencyContact.DoesNotExist: PropertyEmerge
 2022-08-24 12:29:42,948 Watching for file changes with StatReloader
 2022-08-24 12:32:43,721 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
 2022-08-24 12:32:44,211 Watching for file changes with StatReloader
+2022-08-25 11:12:00,734 Watching for file changes with StatReloader
+2022-08-25 11:12:32,538 Unauthorized: /api/v1/property/get/32/
+2022-08-25 11:13:58,986 Internal Server Error: /api/v1/property/get/32/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in retrieve
+    return Response({"data": serializer.data, "message": "Property Get Successfully", "isSuccess": True, "status": 200})
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 1886, in to_representation
+    return method(value)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 66, in get_amenities
+    data = GetAmenitiesGroupSerializer(instance=AmenitiesGroup.objects.all(), many=True, context={'attribute': obj.property_amenities}).data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'attributes' was declared on serializer GetAmenitiesGroupSerializer, but has not been included in the 'fields' option.
+2022-08-25 11:14:52,669 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:14:53,234 Watching for file changes with StatReloader
+2022-08-25 11:15:09,266 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:15:09,921 Watching for file changes with StatReloader
+2022-08-25 11:15:48,442 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:15:48,947 Watching for file changes with StatReloader
+2022-08-25 11:18:34,439 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:18:34,930 Watching for file changes with StatReloader
+2022-08-25 11:20:34,520 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:20:35,008 Watching for file changes with StatReloader
+2022-08-25 11:23:39,911 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:23:40,410 Watching for file changes with StatReloader
+2022-08-25 11:24:24,119 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:24:24,591 Watching for file changes with StatReloader
+2022-08-25 11:30:33,654 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:30:34,386 Watching for file changes with StatReloader
+2022-08-25 11:40:22,371 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:40:22,994 Watching for file changes with StatReloader
+2022-08-25 11:40:38,783 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:40:39,254 Watching for file changes with StatReloader
+2022-08-25 11:40:46,519 Internal Server Error: /api/v1/property/get/32/
+Traceback (most recent call last):
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py", line 29, in retrieve
+    return Response({"data": serializer.data, "message": "Property Get Successfully", "isSuccess": True, "status": 200})
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/venv/lib/python3.8/site-packages/rest_framework/fields.py", line 1886, in to_representation
+    return method(value)
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 161, in get_amenities
+    ids = [i.id for i in obj.property_amenities.filter().values('id')]
+  File "/media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py", line 161, in <listcomp>
+    ids = [i.id for i in obj.property_amenities.filter().values('id')]
+AttributeError: 'dict' object has no attribute 'id'
+2022-08-25 11:41:02,517 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:41:02,986 Watching for file changes with StatReloader
+2022-08-25 11:42:48,123 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:42:48,580 Watching for file changes with StatReloader
+2022-08-25 11:43:55,823 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:43:56,329 Watching for file changes with StatReloader
+2022-08-25 11:50:24,812 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:50:25,306 Watching for file changes with StatReloader
+2022-08-25 11:51:23,334 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-25 11:51:23,814 Watching for file changes with StatReloader

@@ -30,6 +30,7 @@ urlpatterns = [
     path('get/<int:pk>/', PropertyView.as_view({'get': 'retrieve'}), name='property_get_one'),
     path('edit/<int:pk>/', PropertyView.as_view({'put': 'update'}), name='property_edit_one'),
     path('delete/<int:pk>/', PropertyView.as_view({'delete': 'destroy'}), name='property_destroy_one'),
+    path('search/get/', PropertySearchView.as_view({'post': 'create'}), name='property_search'),
 
     # Property Image urls
     path('image/create/', PropertyImageView.as_view({'post': 'create'}), name='property_image_create'),
