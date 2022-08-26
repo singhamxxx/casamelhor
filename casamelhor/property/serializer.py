@@ -106,6 +106,8 @@ class PropertyEmergencyContactSerializer(serializers.ModelSerializer):
 
 
 class RoomsImagesSerializer(serializers.ModelSerializer):
+    image = serializers.FileField(allow_empty_file=True, use_url=False)
+
     class Meta:
         model = RoomsImages
         fields = "__all__"

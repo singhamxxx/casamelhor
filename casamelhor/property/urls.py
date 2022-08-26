@@ -34,9 +34,7 @@ urlpatterns = [
 
     # Property Image urls
     path('image/create/', PropertyImageView.as_view({'post': 'create'}), name='property_image_create'),
-    path('images/get/', PropertyImageView.as_view({'get': 'list'}), name='property_image_get'),
     path('image/get/<int:pk>/', PropertyImageView.as_view({'get': 'retrieve'}), name='property_image_get_one'),
-    path('image/edit/<int:pk>/', PropertyImageView.as_view({'put': 'update'}), name='property_image_edit_one'),
     path('image/delete/<int:pk>/', PropertyImageView.as_view({'delete': 'destroy'}), name='property_image_destroy_one'),
 
     # Property Settings urls
@@ -59,6 +57,11 @@ urlpatterns = [
     path('room/edit/<int:pk>/', RoomsView.as_view({'put': 'update'}), name='room_edit_one'),
     path('room/delete/<int:pk>/', RoomsView.as_view({'delete': 'destroy'}), name='room_destroy_one'),
     path('rooms/get/<int:pk>/', PropertyRoomsView.as_view({'get': 'retrieve'}), name='property_room_get'),
+
+    # Property Rooms Images urls
+    path('room/image/create/', RoomImageView.as_view({'post': 'create'}), name='room_image_create'),
+    path('room/image/get/<int:pk>/', RoomImageView.as_view({'get': 'retrieve'}), name='room_image_get_one'),
+    path('room/image/delete/<int:pk>/', RoomImageView.as_view({'delete': 'destroy'}), name='room_image_destroy_one'),
 
     # Rooms Booking urls
     path('room/booking/create/', BookingView.as_view({'post': 'create'}), name='room_booking_create'),
