@@ -105,12 +105,8 @@ class PropertySettingsView(viewsets.ModelViewSet):
     queryset = PropertySettings.objects.all()
     permission_classes = [IsSuperUser, ]
 
-    def list(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
-        return Response({"data": serializer.data, "message": "All Property Settings Get Successfully", "isSuccess": True, "status": 200})
-
     def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.get_object())
+        serializer = GetPropertySettingSerializer(instance=Property.objects.get(id=kwargs['pk']), many=False)
         return Response({"data": serializer.data, "message": "Property Settings Get All Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
@@ -176,6 +172,16 @@ class RoomsView(viewsets.ModelViewSet):
         super(RoomsView, self).destroy(request, *args, **kwargs)
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
         return Response({"data": serializer.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})
+
+
+class PropertyRoomsView(viewsets.ModelViewSet):
+    serializer_class = GetPropertyRoomsSerializer
+    queryset = Property.objects.all()
+    permission_classes = [IsAuthenticated, ]
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data, "message": "Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
 
 class BookingView(viewsets.ModelViewSet):

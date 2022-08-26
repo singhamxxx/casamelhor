@@ -128,7 +128,6 @@ class RoomSerializer(serializers.ModelSerializer):
 
 
 class BookingSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Booking
         fields = "__all__"
@@ -168,3 +167,53 @@ class GetPropertySerializer(serializers.ModelSerializer):
         ids = [i['id'] for i in obj.property_amenities.filter().values('id')]
         data = GetAmenitiesGroupSerializer(instance=AmenitiesGroup.objects.all(), many=True, context=ids).data
         return data
+
+
+class SettingsOfPropertySerializer(serializers.ModelSerializer):
+    reason = PropertyInactiveReasonsSerializer(read_only=True)
+
+    class Meta:
+        model = PropertySettings
+        fields = "__all__"
+        extra_fields = ['reason']
+
+
+class GetPropertySettingSerializer(serializers.ModelSerializer):
+    property_settings = serializers.SerializerMethodField(read_only=True)
+    property_emergency_contact = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Property
+        fields = "__all__"
+        extra_fields = ['property_settings', 'property_emergency_contact']
+
+    def get_property_settings(self, obj):
+        return SettingsOfPropertySerializer(instance=obj.property_settings.first(), many=False).data
+
+    def get_property_emergency_contact(self, obj):
+        return PropertyEmergencyContactSerializer(instance=obj.property_emergency_contact.first(), many=False).data
+
+
+class RoomsOfPropertySerializer(serializers.ModelSerializer):
+    room_amenities = AmenitiesAttributeSerializer(read_only=True, many=True)
+    images = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Room
+        fields = "__all__"
+        extra_fields = ['room_amenities', 'images']
+
+    def get_images(self, obj):
+        return RoomsImagesSerializer(instance=obj.property_rooms_image.all(), many=True).data
+
+
+class GetPropertyRoomsSerializer(serializers.ModelSerializer):
+    property_room = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Property
+        fields = "__all__"
+        extra_fields = ['property_room', ]
+
+    def get_property_room(self, obj):
+        return RoomsOfPropertySerializer(instance=obj.property_room.first(), many=False).data

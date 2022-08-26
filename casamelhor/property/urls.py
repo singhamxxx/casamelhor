@@ -41,7 +41,6 @@ urlpatterns = [
 
     # Property Settings urls
     path('setting/create/', PropertySettingsView.as_view({'post': 'create'}), name='property_setting_create'),
-    path('settings/get/', PropertySettingsView.as_view({'get': 'list'}), name='property_setting_get'),
     path('setting/get/<int:pk>/', PropertySettingsView.as_view({'get': 'retrieve'}), name='property_setting_get_one'),
     path('setting/edit/<int:pk>/', PropertySettingsView.as_view({'put': 'update'}), name='property_setting_edit_one'),
     path('setting/delete/<int:pk>/', PropertySettingsView.as_view({'delete': 'destroy'}), name='property_setting_destroy_one'),
@@ -59,6 +58,7 @@ urlpatterns = [
     path('room/get/<int:pk>/', RoomsView.as_view({'get': 'retrieve'}), name='room_get_one'),
     path('room/edit/<int:pk>/', RoomsView.as_view({'put': 'update'}), name='room_edit_one'),
     path('room/delete/<int:pk>/', RoomsView.as_view({'delete': 'destroy'}), name='room_destroy_one'),
+    path('rooms/get/<int:pk>/', PropertyRoomsView.as_view({'get': 'retrieve'}), name='property_room_get'),
 
     # Rooms Booking urls
     path('room/booking/create/', BookingView.as_view({'post': 'create'}), name='room_booking_create'),
