@@ -127,6 +127,13 @@ class RoomSerializer(serializers.ModelSerializer):
         return RoomsImagesSerializer(instance=obj.property_rooms_image.all(), many=True).data
 
 
+class BookingSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Booking
+        fields = "__all__"
+
+
 class GetAmenitiesAttributeSerializer(serializers.ModelSerializer):
     is_select = serializers.SerializerMethodField(read_only=True)
 

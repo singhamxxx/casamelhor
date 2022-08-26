@@ -5,14 +5,14 @@ from .middleware import *
 from .serializer import *
 from rest_framework import viewsets, renderers
 from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
-from ..permissions import IsSuperUser, IsAuthenticated
+from ..permissions import IsSuperUser, IsAuthenticated, IsBookingUser, IsCasamelhorPropertyManagerUser
 from .forms import PropertyImagesForm
 
 
 class PropertySearchView(viewsets.ModelViewSet):
     serializer_class = PropertySerializer
     queryset = Property.objects.all()
-    permission_classes = [IsSuperUser, IsAuthenticated]
+    permission_classes = [IsSuperUser, IsCasamelhorPropertyManagerUser]
 
 
 class PropertyView(viewsets.ModelViewSet):
@@ -45,7 +45,6 @@ class PropertyView(viewsets.ModelViewSet):
 class PropertyImageView(viewsets.ModelViewSet):
     serializer_class = PropertyImagesSerializer
     queryset = PropertyImages.objects.all()
-    parser_classes = (FormParser, MultiPartParser)
     permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
@@ -77,7 +76,6 @@ class PropertyImageView(viewsets.ModelViewSet):
 class PropertyInactiveReasonsView(viewsets.ModelViewSet):
     serializer_class = PropertyInactiveReasonsSerializer
     queryset = PropertyInactiveReasons.objects.all()
-    parser_classes = (FormParser, MultiPartParser)
     permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
@@ -105,7 +103,6 @@ class PropertyInactiveReasonsView(viewsets.ModelViewSet):
 class PropertySettingsView(viewsets.ModelViewSet):
     serializer_class = PropertySettingsSerializer
     queryset = PropertySettings.objects.all()
-    parser_classes = (FormParser, MultiPartParser, JSONParser)
     permission_classes = [IsSuperUser, ]
 
     def list(self, request, *args, **kwargs):
@@ -179,3 +176,31 @@ class RoomsView(viewsets.ModelViewSet):
         super(RoomsView, self).destroy(request, *args, **kwargs)
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
         return Response({"data": serializer.data, "message": "Rooms Images Delete Successfully", "isSuccess": True, "status": 200})
+
+
+class BookingView(viewsets.ModelViewSet):
+    serializer_class = BookingSerializer
+    queryset = Booking.objects.all()
+    permission_classes = [IsBookingUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data, "message": "Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
+
+    def create(self, request, *args, **kwargs):
+        request.data['booked_by'] = request.user.id
+        response_data = super(BookingView, self).create(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "Property Inactive Reasons Create Successfully", "isSuccess": True, "status": 200})
+
+    def update(self, request, *args, **kwargs):
+        response_data = super(BookingView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "Property Inactive Reasons Edit Successfully", "isSuccess": True, "status": 200})
+
+    def destroy(self, request, *args, **kwargs):
+        super(BookingView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Property Inactive Reasons Delete Successfully", "isSuccess": True, "status": 200})

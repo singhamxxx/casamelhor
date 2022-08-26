@@ -148,3 +148,22 @@ class RoomsImages(models.Model):
     def __str__(self):
         return self.room.name
 
+
+booking_status = [('Booking Confirmed', 'Booking Confirmed'), ('Checked-In', 'Checked-In'), ('No Show marked', 'No Show marked'),
+                  ('Stay Dates Modified', 'Stay Dates Modified'), ('Checked-Out', 'Checked-Out'), ('Cancelled', 'Cancelled')]
+
+
+class Booking(models.Model):
+    booked_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_user")
+    room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True, blank=True, related_name="booking_room")
+    check_in_date = models.DateField(null=True, blank=True)
+    check_out_date = models.DateField(null=True, blank=True)
+    no_of_night = models.IntegerField()
+    status = models.CharField(max_length=255, choices=booking_status)
+    guest = models.ManyToManyField(User, blank=True, related_name="booking_guest_users")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.room.name
+
