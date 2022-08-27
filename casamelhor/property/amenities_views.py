@@ -1,8 +1,8 @@
-from .middleware import *
 from .serializer import *
 from rest_framework import viewsets
 from rest_framework.parsers import MultiPartParser, FormParser
 from ..permissions import IsSuperUser
+from rest_framework.response import Response
 
 
 class AmenitiesView(viewsets.ModelViewSet):

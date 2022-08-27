@@ -82,7 +82,7 @@ document_choices = (('Aadhar card', 'Aadhar card'), ('Driving Licence', 'Driving
 
 
 class Vault(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users_vault")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="users_vault")
     is_indian = models.BooleanField(default=True)
     type = models.CharField(max_length=255, choices=document_choices, null=True, blank=True)
     document = VersatileImageField(upload_to="profile/", ppoi_field='ppoi', null=True, blank=True)

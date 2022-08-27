@@ -1,20 +1,15 @@
-from rest_framework.decorators import api_view
-from django.utils.decorators import decorator_from_middleware
 from .emails import _send_account_confirmation_email
 from .serializer import *
 from django.contrib.auth.tokens import default_token_generator
-from .middleware import *
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from datetime import datetime
 from django.db.models import Q
 from random import randint
-from django.core.paginator import Paginator
 from rest_framework import viewsets
 from rest_framework_swagger.views import get_swagger_view
 from ..permissions import IsSuperUser
-from rest_framework.permissions import IsAdminUser
-from rest_framework.parsers import MultiPartParser, FormParser
-
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
+from rest_framework.response import Response
 schema_view = get_swagger_view(title='Pastebin API')
 
 
@@ -30,305 +25,174 @@ def get_client_ip(request):
 class RegistrationView(viewsets.ModelViewSet):
     serializer_class = AuthUserSerializer
     queryset = User.objects.all()
-    parser_classes = (FormParser, MultiPartParser)
-    permission_classes_by_action = [IsSuperUser, ]
+    permission_classes_by_action = [IsAuthenticated, ]
+
+    def list(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+            return Response({"data": serializer.data, "message": "All Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data, "message": "Property Inactive Reasons Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):
-        if request.user.is_superuser:
+        if request.user.is_superuser or request.user.is_staff:
             request.data["login_ip"] = get_client_ip(request)
             if 'user_permissions' in request.data and request.data['user_permissions']:
                 request.data['user_permissions'] = [i.id for i in request.data['user_permissions']]
-            groups = [request.data['role'].id]
+            groups = [request.data['role']]
             if 'groups' in request.data and request.data['groups']:
                 groups = groups.extend([i.id for i in request.data['groups']])
             request.data['groups'] = groups
-            request.data['role_id'] = request.data['role'].id
-            request.data['company_id'] = request.data['company'].id
+            request.data['role_id'] = request.data['role']
+            request.data['company_id'] = request.data['company']
             response_data = super(RegistrationView, self).create(request, *args, **kwargs)
             return Response({"data": response_data.data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
-        else:
-            return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
+    def update(self, request, *args, **kwargs):
+        response_data = super(RegistrationView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "User Successfully Update", "isSuccess": True, "status": 200})
 
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(RegisterMiddleware)
-def registration_view(request, form):
-    if request.user.is_superuser:
-        form.cleaned_data["login_ip"] = get_client_ip(request)
-        if 'user_permissions' in form.cleaned_data and form.cleaned_data['user_permissions']:
-            form.cleaned_data['user_permissions'] = [i.id for i in form.cleaned_data['user_permissions']]
-        groups = [form.cleaned_data['role'].id]
-        if 'groups' in form.cleaned_data and form.cleaned_data['groups']:
-            groups = groups.extend([i.id for i in form.cleaned_data['groups']])
-        form.cleaned_data['groups'] = groups
-        form.cleaned_data['role_id'] = form.cleaned_data['role'].id
-        form.cleaned_data['company_id'] = form.cleaned_data['company'].id
-        serializer = AuthUserSerializer(data=form.cleaned_data)
-        if serializer.is_valid():
-            serializer.save()
-            data = serializer.data
-            return Response({"data": data, "message": "User Successfully Created", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"] if "__all__" in error else {key: error[key] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    else:
+    def destroy(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            super(RegistrationView, self).destroy(request, *args, **kwargs)
+            serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+            return Response({"data": serializer.data, "message": "User Delete Successfully", "isSuccess": True, "status": 200})
         return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
 
 
-@api_view(['GET'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_get_view(request, id=None):
-    if id and request.user.is_superuser:
-        if not User.objects.filter(id=id).exists():
-            return Response({"data": None, "message": "User Not Found", "isSuccess": False, "status": 404}, status=200)
-        user = User.objects.get(id=id)
-        serializer = AuthUserSerializer(instance=user)
-        return Response({"data": serializer.data, "isSuccess": True, "status": 200}, status=200)
-    elif request.user.is_superuser or request.user.is_staff:
-        page = 1 if 'page' not in request.GET else request.GET['page'] if request.GET['page'] else 1
-        limit = 10 if 'limit' not in request.GET else request.GET['limit'] if request.GET['limit'] else 10
-        users = User.objects.filter().order_by("-date_joined")
-        paginator = Paginator(users, limit)
-        users = paginator.page(page)
-        serializer = AuthUserSerializer(instance=users, many=True)
-        return Response({"data": serializer.data, "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+class LoginView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
 
+    def create(self, request, *args, **kwargs):
 
-@api_view(['POST'])
-@decorator_from_middleware(UserLoginMiddleware)
-def user_login_view(request, form):
-    phone_or_email = form.cleaned_data['phone_or_email']
-    password = form.cleaned_data['password']
-    user_obj = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email)).first()
-    if user_obj.check_password(password):
-        if not user_obj.is_email:
-            otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
-            user_obj.email_otp = otp
-            user_obj.save()
-            _send_account_confirmation_email(user_obj, otp=otp)
-            data = {'data': {'email': user_obj.email, 'is_email': user_obj.is_email},
-                    "message": "Verification mail sent  on your mail, please verify",
-                    "isSuccess": True, "status": 200}
+        phone_or_email = request.data['phone_or_email']
+        password = request.data['password']
+        user_obj = User.objects.filter(Q(email=phone_or_email) | Q(phone=phone_or_email)).first()
+        if user_obj.check_password(password):
+            if not user_obj.is_email:
+                otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
+                user_obj.email_otp = otp
+                user_obj.save()
+                _send_account_confirmation_email(user_obj, otp=otp)
+                data = {'data': {'email': user_obj.email, 'is_email': user_obj.is_email},
+                        "message": "Verification mail sent  on your mail, please verify",
+                        "isSuccess": True, "status": 200}
+            else:
+                serializer = TokenObtainPairSerializer(data={'email': user_obj.email, 'password': password})
+                token = serializer.validate({'email': user_obj.email, 'password': password})
+                user_obj.last_login = datetime.now()
+                user_obj.login_ip = get_client_ip(request)
+                user_obj.save()
+                serializer = AuthUserSerializer(instance=user_obj, many=False).data
+                serializer["token"] = token['access']
+                data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
+            return Response(data, status=200)
         else:
-            serializer = TokenObtainPairSerializer(data={'email': user_obj.email, 'password': password})
-            token = serializer.validate({'email': user_obj.email, 'password': password})
-            user_obj.last_login = datetime.now()
-            user_obj.login_ip = get_client_ip(request)
-            user_obj.save()
-            serializer = AuthUserSerializer(instance=user_obj, many=False).data
-            serializer["token"] = token['access']
-            data = {'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200}
-        return Response(data, status=200)
+            return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
 
-    else:
+
+class EmailVerificationView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        otp = int(request.data['otp'])
+        email = request.data['email']
+        password = request.data['password']
+        user = User.objects.filter(email=email).first()
+        if user.check_password(password):
+            if user.is_email:
+                return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
+            if not user.email_otp:
+                return Response({"data": None, "message": "Please Resend Email otp", "isSuccess": True, "status": 200}, status=200)
+            if user.email_otp == otp:
+                serializer = TokenObtainPairSerializer(data={'email': user.email, 'password': password})
+                token = serializer.validate({'email': user.email, 'password': password})
+                user.last_login = datetime.now()
+                user.login_ip = get_client_ip(request)
+                user.email_otp = None
+                user.is_email = True
+                user.updated_at = datetime.now()
+                user.save()
+                serializer = AuthUserSerializer(instance=user, many=False).data
+                serializer["token"] = token['access']
+                return Response({'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200})
+            return Response({"data": None, "message": "Invalid OTP", "isSuccess": False, "status": 400}, status=200)
         return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
 
 
-@api_view(['POST'])
-@decorator_from_middleware(UserEmailVerificationMiddleware)
-def email_verification_view(request, form):
-    otp = form.cleaned_data['otp']
-    email = form.cleaned_data['email']
-    password = form.cleaned_data['password']
-    user = User.objects.filter(email=email).first()
-    if user.check_password(password):
-        if user.is_email:
-            return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
-        if not user.email_otp:
-            return Response({"data": None, "message": "Please Resend Email otp", "isSuccess": True, "status": 200}, status=200)
-        if user.email_otp == otp:
-            serializer = TokenObtainPairSerializer(data={'email': user.email, 'password': password})
-            token = serializer.validate({'email': user.email, 'password': password})
-            user.last_login = datetime.now()
-            user.login_ip = get_client_ip(request)
-            user.email_otp = None
-            user.is_email = True
-            user.updated_at = datetime.now()
-            user.save()
-            serializer = AuthUserSerializer(instance=user, many=False).data
-            serializer["token"] = token['access']
-            return Response({'data': serializer, "message": "Successfully Login", "isSuccess": True, "status": 200})
-        return Response({"data": None, "message": "Invalid OTP", "isSuccess": False, "status": 400}, status=200)
-    return Response({"data": None, "message": "Password Incorrect", "isSuccess": False, "status": 500}, status=200)
+class ResendEmailOtpView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
 
-
-@api_view(['POST'])
-def resend_email_otp_view(request):
-    email = request.POST.get('email')
-    user = User.objects.filter(email=email).first()
-    if user:
-        if not user.is_email:
-            otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
-            user.email_otp = otp
-            user.save()
-            _send_account_confirmation_email(user, otp=otp)
-            return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
-        return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_password_change_view(request):
-    if request.user.is_authenticated:
-        if request.POST.get('phone'):
-            request.user.phone = request.POST.get('phone')
-        if request.user.check_password(request.POST.get('old_password')):
-            request.user.set_password(request.POST.get('password'))
-            request.user.save()
-            return Response({"data": None, "isSuccess": True, "message": "Successfully password changed", "status": 200}, status=200)
-        return Response({"data": None, "isSuccess": True, "message": "Incorrect password", "status": 200}, status=200)
-    return Response({"data": None, "message": "Permission Denied", "isSuccess": False, "status": 500}, status=200)
-
-
-@api_view(['POST'])
-def user_forgot_password_email_send_view(request):
-    email = request.data['email']
-    user = User.objects.filter(email=email)
-    if user.exists():
-        if user.first().is_email:
-            token = default_token_generator.make_token(user.first())
-            url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
-            _send_account_confirmation_email(user.first(), url=url)
-            return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
-        return Response({"data": None, "message": "Email is not verified", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['POST'])
-def user_forgot_password_view(request):
-    token = request.GET.get('token')
-    email = request.GET.get('email')
-    user = User.objects.filter(email=email).first()
-    if user:
-        if user.is_email and user.is_phone:
-            if default_token_generator.check_token(user, token):
-                user.set_password(request.POST.get('password'))
+    def create(self, request, *args, **kwargs):
+        email = request.POST.get('email')
+        user = User.objects.filter(email=email).first()
+        if user:
+            if not user.is_email:
+                otp = randint(10 ** (6 - 1), (10 ** 6) - 1)
+                user.email_otp = otp
                 user.save()
-                return Response({"data": None, "message": "Successfully changed password", "isSuccess": True, "status": 200}, status=200)
-            return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
-        return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 404}, status=200)
+                _send_account_confirmation_email(user, otp=otp)
+                return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
+            return Response({"data": None, "message": "Email Already Verified", "isSuccess": True, "status": 200}, status=200)
+        return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
 
 
-@api_view(['GET'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_group_of_permissions_view(request, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        many = True
-        if id:
-            if Group.objects.filter(id=id).exists():
-                obj = Group.objects.get(id=id)
-                many = False
-            else:
-                return Response({"data": None, "message": "Permission`s Group not found", "isSuccess": False, "status": 404}, status=200)
-        else:
-            obj = Group.objects.filter()
-        serializer = AuthUserGroupOFPermissionsSerializer(instance=obj, many=many).data
-        return Response({"data": serializer, "message": "Roles Permission`s Group", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+class UserPasswordChangeView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSimpleDataSerializer
+    queryset = User.objects.all()
+    permission_classes = [IsAuthenticated, ]
+
+    def create(self, request, *args, **kwargs):
+        if request.data['phone']:
+            request.user.phone = request.data['phone']
+        if request.user.check_password(request.data['old_password']):
+            request.user.set_password(request.data['password'])
+            request.user.save()
+        response_data = self.get_serializer(request.user)
+        return Response({"data": response_data.data, "isSuccess": True, "message": "Successfully password changed", "status": 200}, status=200)
 
 
-@api_view(['PUT'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_update_profile_view(request, id=None):
-    if id and request.user.is_superuser or request.user.is_staff:
-        user = User.objects.get(id=id)
-        if 'email' in request.data and request.data['email']:
-            if User.objects.filter(email=request.data['email']).exists():
-                return Response({"data": None, "message": "Email Already Exists", "isSuccess": True, "status": 409}, status=200)
-            user.email = request.data['email']
-            user.is_email = False
-        if 'phone' in request.data and request.data['phone']:
-            user.phone = request.data['phone']
-            user.is_phone = False
-        if 'role' in request.data and request.data['role']:
-            if not Role.objects.filter(id=request.data['role']).exists():
-                return Response({"data": None, "message": "Role Not Exists", "isSuccess": True, "status": 404}, status=200)
-            user.role = Role.objects.get(id=request.data['role'])
-    elif request.user.is_authenticated:
-        user = request.user
-    else:
-        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
-    if 'first_name' in request.data and request.data['first_name']:
-        user.first_name = request.data['first_name']
-    if 'employee_id' in request.data and request.data['employee_id']:
-        user.employee_id = request.data['employee_id']
-    if 'department' in request.data and request.data['department']:
-        user.department = request.data['department']
-    if 'image' in request.FILES and request.FILES['image']:
-        image = request.FILES['image']
-        user.image.save(image.name, image)
-    user.save()
-    serializer = AuthUserSerializer(instance=user, many=False).data
-    return Response({"data": serializer, "message": "Successfully profile update", "isSuccess": True, "status": 200}, status=200)
+class UserForgotPasswordEmailSendView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        email = request.data['email']
+        user = User.objects.filter(email=email)
+        if user.exists():
+            if user.first().is_email:
+                token = default_token_generator.make_token(user.first())
+                url = f"https://casamelhor.onrender.com/api/v1/account/user/forgot-password/verify/?token={token}&email={user.first().email}"
+                _send_account_confirmation_email(user.first(), url=url)
+                return Response({"data": None, "message": "Successfully email send", "isSuccess": True, "status": 200}, status=200)
+            return Response({"data": None, "message": "Email is not verified", "isSuccess": True, "status": 200}, status=200)
+        return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 400}, status=200)
 
 
-@api_view(['GET'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-def user_permission_view(request, id=None):
-    if request.user.is_authenticated and request.user.is_superuser:
-        many = True
-        if id:
-            if Permission.objects.filter(id=id).exists():
-                obj = Permission.objects.filter(id=id)
-                many = False
-            else:
-                return Response({"data": None, "message": "Permission not found", "isSuccess": False, "status": 404}, status=200)
-        else:
-            obj = Permission.objects.filter()
-        serializer = AuthUserPermissionsSerializer(instance=obj, many=many).data
-        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
+class UserForgotPasswordView(viewsets.ModelViewSet):
+    serializer_class = AuthUserSerializer
+    queryset = User.objects.all()
 
-
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
-def create_user_group_of_permissions_view(request, form):
-    if request.user.is_authenticated and request.user.is_superuser:
-        group, created = Group.objects.get_or_create(name=form.cleaned_data['name'])
-        group.permissions.set(form.cleaned_data['group'])
-        serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
-        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['PUT'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(AuthUserGroupOFPermissionsMiddleware)
-def edit_user_group_of_permissions_view(request, id, form):
-    if request.user.is_authenticated and request.user.is_superuser:
-        group = Group.objects.get(id=id)
-        if group.name != form.cleaned_data['name']:
-            group.name = form.cleaned_data['name']
-            group.save()
-        group.permissions.set(form.cleaned_data['group'])
-        serializer = AuthUserGroupOFPermissionsSerializer(instance=group).data
-        return Response({"data": serializer, "message": "Roles Permissions", "isSuccess": True, "status": 200}, status=200)
-    return Response({"data": None, "message": "Unauthorized Use", "isSuccess": False, "status": 400}, status=200)
-
-
-@api_view(['POST'])
-@decorator_from_middleware(TokenAuthenticationMiddleware)
-@decorator_from_middleware(VaultMiddleware)
-def create_user_vault_view(request, form):
-    if request.user.is_authenticated:
-        if Vault.objects.filter(user=request.user).exists():
-            return Response({"data": None, "message": "User Vault Already exists", "isSuccess": False, "status": 409}, status=200)
-        form.cleaned_data['user'] = request.user.id
-        serializer = VaultSerializer(data=form.cleaned_data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"data": serializer.data, "message": "User Vault Create Successfully", "isSuccess": True, "status": 200}, status=200)
-        else:
-            error = serializer.errors
-            error = error["__all__"][0] if "__all__" in error else {key: error[key][0] for key in error}
-            return Response({"data": None, "message": error, "isSuccess": False, "status": 500}, status=200)
-    return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 400}, status=200)
+    def create(self, request, *args, **kwargs):
+        token = request.GET.get('token')
+        email = request.GET.get('email')
+        user = User.objects.filter(email=email).first()
+        if user:
+            if user.is_email and user.is_phone:
+                if default_token_generator.check_token(user, token):
+                    user.set_password(request.POST.get('password'))
+                    user.save()
+                    return Response({"data": None, "message": "Successfully changed password", "isSuccess": True, "status": 200}, status=200)
+                return Response({"data": None, "message": "Invalid Token", "isSuccess": False, "status": 400}, status=200)
+            return Response({"data": None, "message": "Email or phone is not verified", "isSuccess": True, "status": 200}, status=200)
+        return Response({"data": None, "message": "User not found", "isSuccess": False, "status": 404}, status=200)
 
 
 class CompanyView(viewsets.ModelViewSet):
@@ -358,6 +222,68 @@ class CompanyView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
 
 
+class RoleView(viewsets.ModelViewSet):
+    serializer_class = AuthUserGroupOFPermissionsSerializer
+    queryset = Role.objects.all()
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data, "message": "Client admin Company Get Successfully", "isSuccess": True, "status": 200})
+
+    def create(self, request, *args, **kwargs):
+        response_data = super(RoleView, self).create(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "Client admin Company Create Successfully", "isSuccess": True, "status": 200})
+
+    def update(self, request, *args, **kwargs):
+        response_data = super(RoleView, self).update(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "Client admin Company Edit Successfully", "isSuccess": True, "status": 200})
+
+    def destroy(self, request, *args, **kwargs):
+        super(RoleView, self).destroy(request, *args, **kwargs)
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
+
+
+class VaultView(viewsets.ModelViewSet):
+    serializer_class = VaultSerializer
+    queryset = Vault.objects.all()
+    permission_classes = [IsAuthenticated, ]
+
+    def list(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+            return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+
+    def retrieve(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            serializer = self.get_serializer(self.get_object())
+            return Response({"data": serializer.data, "message": "Client admin Company Get Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+
+    def create(self, request, *args, **kwargs):
+        response_data = super(VaultView, self).create(request, *args, **kwargs)
+        return Response({"data": response_data.data, "message": "Client admin Company Create Successfully", "isSuccess": True, "status": 200})
+
+    def update(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            response_data = super(VaultView, self).update(request, *args, **kwargs)
+            return Response({"data": response_data.data, "message": "Client admin Company Edit Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+
+    def destroy(self, request, *args, **kwargs):
+        if request.user.is_superuser or request.user.is_staff:
+            super(VaultView, self).destroy(request, *args, **kwargs)
+            serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+            return Response({"data": serializer.data, "message": "Client admin Company Delete Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Unauthorized User", "isSuccess": False, "status": 401}, status=200)
+
+
 class CasamelhorAdminView(viewsets.ModelViewSet):
     serializer_class = AuthUserSerializer
     queryset = User.objects.filter(role__role='Casamelhor Admin')
@@ -376,6 +302,20 @@ class CasamelhorBookingManagerView(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
         return Response({"data": serializer.data, "message": "All Client admin Companies Get Successfully", "isSuccess": True, "status": 200})
+
+
+class AuthUserPermissionsView(viewsets.ModelViewSet):
+    serializer_class = AuthUserPermissionsSerializer
+    queryset = Permission.objects.all()
+    permission_classes = [IsSuperUser, ]
+
+    def list(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.filter_queryset(self.get_queryset()), many=True)
+        return Response({"data": serializer.data, "message": "Get All Auth User Permissions Successfully", "isSuccess": True, "status": 200})
+
+    def retrieve(self, request, *args, **kwargs):
+        serializer = self.get_serializer(self.get_object())
+        return Response({"data": serializer.data, "message": "Auth User Permissions Get Successfully", "isSuccess": True, "status": 200})
 
 
 class CasamelhorPropertyManagerView(viewsets.ModelViewSet):

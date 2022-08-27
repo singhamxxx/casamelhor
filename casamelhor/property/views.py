@@ -1,12 +1,7 @@
-from rest_framework.decorators import api_view
-from django.utils.decorators import decorator_from_middleware
-from ..account.middleware import TokenAuthenticationMiddleware
-from .middleware import *
 from .serializer import *
-from rest_framework import viewsets, renderers
-from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
+from rest_framework import viewsets
+from rest_framework.response import Response
 from ..permissions import IsSuperUser, IsAuthenticated, IsBookingUser, IsCasamelhorPropertyManagerUser
-from .forms import PropertyImagesForm
 
 
 class PropertySearchView(viewsets.ModelViewSet):
@@ -48,8 +43,10 @@ class PropertyImageView(viewsets.ModelViewSet):
     permission_classes = [IsSuperUser, ]
 
     def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(Property.objects.get(id=kwargs['pk']).property_image.all(), many=True)
-        return Response({"data": serializer.data, "message": "Property Images Get Successfully", "isSuccess": True, "status": 200})
+        if Property.objects.filter(id=kwargs['pk']).exists():
+            serializer = self.get_serializer(Property.objects.get(id=kwargs['pk']).property_image.all(), many=True)
+            return Response({"data": serializer.data, "message": "Property Images Get Successfully", "isSuccess": True, "status": 200})
+        return Response({"message": "Property Image Not Found", "isSuccess": False, "status": 404})
 
     def create(self, request, *args, **kwargs):
         property_id = request.data['property_id']
@@ -99,8 +96,10 @@ class PropertySettingsView(viewsets.ModelViewSet):
     permission_classes = [IsSuperUser, ]
 
     def retrieve(self, request, *args, **kwargs):
-        serializer = GetPropertySettingSerializer(instance=Property.objects.get(id=kwargs['pk']), many=False)
-        return Response({"data": serializer.data, "message": "Property Settings Get All Successfully", "isSuccess": True, "status": 200})
+        if Property.objects.filter(id=kwargs['pk']).exists():
+            serializer = GetPropertySettingSerializer(instance=Property.objects.get(id=kwargs['pk']), many=False)
+            return Response({"data": serializer.data, "message": "Property Settings Get All Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Property Settings Not Found", "isSuccess": False, "status": 404})
 
     def create(self, request, *args, **kwargs):
         data = request.data['property_emergency_contact']
@@ -173,8 +172,10 @@ class RoomImageView(viewsets.ModelViewSet):
     permission_classes = [IsSuperUser, ]
 
     def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(Room.objects.get(id=kwargs['pk']).property_rooms_image.all(), many=True)
-        return Response({"data": serializer.data, "message": "Room Images Get Successfully", "isSuccess": True, "status": 200})
+        if Room.objects.filter(id=kwargs['pk']).exists():
+            serializer = self.get_serializer(Room.objects.get(id=kwargs['pk']).property_rooms_image.all(), many=True)
+            return Response({"data": serializer.data, "message": "Room Images Get Successfully", "isSuccess": True, "status": 200})
+        return Response({"data": None, "message": "Rooms Images Not Found", "isSuccess": False, "status": 404})
 
     def create(self, request, *args, **kwargs):
         room_id = request.data['room_id']
@@ -185,7 +186,7 @@ class RoomImageView(viewsets.ModelViewSet):
         return Response({"data": response_data.data, "message": "Room Images Create Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
-        obj = self.get_object().property.property_rooms_image.all()
+        obj = self.get_object().room.property_rooms_image.all()
         super(RoomImageView, self).destroy(request, *args, **kwargs)
         serializer = self.get_serializer(obj, many=True)
         return Response({"data": serializer.data, "message": "Property Images Delete Successfully", "isSuccess": True, "status": 200})
