@@ -140,7 +140,7 @@ class RoomsView(viewsets.ModelViewSet):
         return Response({"data": serializer.data, "message": "All Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def retrieve(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.get_object())
+        serializer = GetRoomSerializer(self.get_object(), many=False)
         return Response({"data": serializer.data, "message": "Rooms Images Get Successfully", "isSuccess": True, "status": 200})
 
     def create(self, request, *args, **kwargs):

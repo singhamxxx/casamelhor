@@ -171,6 +171,19 @@ class GetPropertySerializer(serializers.ModelSerializer):
         return data
 
 
+class GetRoomSerializer(serializers.ModelSerializer):
+    amenities = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Room
+        fields = "__all__"
+
+    def get_amenities(self, obj):
+        ids = [i['id'] for i in obj.room_amenities.filter().values('id')]
+        data = GetAmenitiesGroupSerializer(instance=AmenitiesGroup.objects.all(), many=True, context=ids).data
+        return data
+
+
 class SettingsOfPropertySerializer(serializers.ModelSerializer):
     reason = PropertyInactiveReasonsSerializer(read_only=True)
 

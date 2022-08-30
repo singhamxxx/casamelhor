@@ -57,6 +57,7 @@ urlpatterns = [
     path('room/edit/<int:pk>/', RoomsView.as_view({'put': 'update'}), name='room_edit_one'),
     path('room/delete/<int:pk>/', RoomsView.as_view({'delete': 'destroy'}), name='room_destroy_one'),
     path('rooms/get/<int:pk>/', PropertyRoomsView.as_view({'get': 'retrieve'}), name='property_room_get'),
+    path('room/get/<int:pk>/', PropertyRoomsView.as_view({'get': 'retrieve'}), name='property_room_get'),
 
     # Property Rooms Images urls
     path('room/image/create/', RoomImageView.as_view({'post': 'create'}), name='room_image_create'),
