@@ -218,4 +218,4 @@ class GetPropertyRoomsSerializer(serializers.ModelSerializer):
         extra_fields = ['property_room', ]
 
     def get_property_room(self, obj):
-        return RoomsOfPropertySerializer(instance=obj.property_room.first(), many=False).data
+        return RoomsOfPropertySerializer(instance=obj.property_room.all(), many=True).data
