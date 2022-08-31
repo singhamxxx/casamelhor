@@ -15,11 +15,11 @@ class ChildAmenitiesAttributeSerializer(serializers.ModelSerializer):
 
 
 class ChildAmenitiesGroupSerializer(serializers.ModelSerializer):
-    attributes = ChildAmenitiesAttributeSerializer(read_only=True, many=True)
+    amenities_groups_attribute = ChildAmenitiesAttributeSerializer(read_only=True, many=True)
 
     class Meta:
         model = AmenitiesGroup
-        fields = ('id', 'name', 'is_active', 'attributes')
+        fields = ('id', 'name', 'is_active', 'amenities_groups_attribute')
 
 
 class AmenitiesSerializer(serializers.ModelSerializer):
