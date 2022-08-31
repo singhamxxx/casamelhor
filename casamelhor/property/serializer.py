@@ -6,7 +6,25 @@ from django.db.models.query import QuerySet
 from ..account.serializer import AuthUserSimpleDataSerializer
 
 
+class ChildAmenitiesAttributeSerializer(serializers.ModelSerializer):
+    is_select = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = AmenitiesAttribute
+        fields = "__all__"
+
+
+class ChildAmenitiesGroupSerializer(serializers.ModelSerializer):
+    attributes = ChildAmenitiesAttributeSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = AmenitiesGroup
+        fields = ('id', 'name', 'is_active', 'attributes')
+
+
 class AmenitiesSerializer(serializers.ModelSerializer):
+    amenities_group = ChildAmenitiesGroupSerializer(read_only=True, many=True)
+
     class Meta:
         model = Amenities
         fields = ('id', 'name', 'is_active', 'created_at', 'updated_at', 'amenities_group')

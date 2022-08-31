@@ -9938,3 +9938,8 @@ django.template.exceptions.TemplateDoesNotExist: versatileimagefield/forms/widge
 2022-08-30 05:33:17,228 Watching for file changes with StatReloader
 2022-08-30 11:07:13,703 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
 2022-08-30 11:07:19,360 Watching for file changes with StatReloader
+2022-08-31 04:50:43,884 Watching for file changes with StatReloader
+2022-08-31 05:30:46,570 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/serializer.py changed, reloading.
+2022-08-31 05:30:47,970 Watching for file changes with StatReloader
+2022-08-31 05:34:01,030 /media/tst/276f9705-5305-4677-a95b-28368dfe3f4e2/home/lokesh/Documents/lokesh/casamelhor/casamelhor/property/views.py changed, reloading.
+2022-08-31 05:34:01,506 Watching for file changes with StatReloader

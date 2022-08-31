@@ -54,7 +54,8 @@ class PropertyImageView(viewsets.ModelViewSet):
         response_data = self.get_serializer(data=data, many=True)
         response_data.is_valid(raise_exception=True)
         response_data.save()
-        return Response({"data": response_data.data, "message": "Property Images Create Successfully", "isSuccess": True, "status": 200})
+        serializer = self.get_serializer(Property.objects.get(id=property_id).property_image.all(), many=True)
+        return Response({"data": serializer.data, "message": "Property Images Create Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         obj = self.get_object().property.property_image.all()
@@ -183,7 +184,8 @@ class RoomImageView(viewsets.ModelViewSet):
         response_data = self.get_serializer(data=data, many=True)
         response_data.is_valid(raise_exception=True)
         response_data.save()
-        return Response({"data": response_data.data, "message": "Room Images Create Successfully", "isSuccess": True, "status": 200})
+        serializer = self.get_serializer(Room.objects.get(id=room_id).property_rooms_image.all(), many=True)
+        return Response({"data": serializer.data, "message": "Room Images Create Successfully", "isSuccess": True, "status": 200})
 
     def destroy(self, request, *args, **kwargs):
         obj = self.get_object().room.property_rooms_image.all()
